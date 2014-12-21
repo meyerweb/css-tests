@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Radial Gradient Sizing</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="c/style-insert-tests.css">
+<style type="text/css" media="all" id="tests">
+div {float: left; margin: 10px; width: 300px; height: 200px; border: 1px dotted red;}
+div:nth-child(3n+1) {clear: left;}
+.d01 {background-image: radial-gradient(300px 200px ellipse at center, red 0%, green 33%, blue 99%, transparent);}
+.d02 {background-image: radial-gradient(100% 100% ellipse at center, red 0%, green 33%, blue 99%, transparent);}
+.d03 {background-image: radial-gradient(150px 100px ellipse at center, red 0%, green 33%, blue 99%, transparent);}
+.d04 {background-image: radial-gradient(300px circle at center, red 0%, green 25%, blue 99%, transparent);}
+.d05 {background-image: radial-gradient(300px circle at center, red 0%, green 25%, blue 99%, transparent);}
+.d06 {background-image: radial-gradient(150px circle at center, red 0%, green 25%, blue 99%, transparent);}
+</style>
+</head>
+<body>
+
+<div class="d01"><p></p></div>
+<div class="d02"><p></p></div>
+<div class="d03"><p></p></div>
+<div class="d04"><p></p></div>
+<div class="d05"><p></p></div>
+<div class="d06"><p></p></div>
+
+</body>
+</html>
