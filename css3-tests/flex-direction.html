@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: flex-wrap</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.arena ol {display: flex;
+   width: 90%; margin: 2em 0; padding: 0; border: 3px solid green;}
+.arena ol li {list-style: none; border: 2px dotted gray; min-width: 5%; margin: 1px;}
+.arena ol li img {width: 200px; height: 50px;}
+.arena ol li:nth-of-type(even) {padding-top: 60px; background: silver;}
+.arena ol li:nth-of-type(even) img {opacity: 0.5;}
+
+.arena ol {flex-direction: row;}
+.arena ol + ol {flex-direction: column;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-flexbox/#flex-direction-property">http://www.w3.org/TR/css3-flexbox/#flex-direction-property</a></p>
+
+<div class="arena">
+
+<ol>
+<li><img src="i/box-red.gif" alt=""></li>
+<li><img src="i/box-red.gif" alt=""></li>
+<li><img src="i/box-red.gif" alt=""></li>
+<li><img src="i/box-red.gif" alt=""></li>
+<li><img src="i/box-red.gif" alt=""></li>
+</ol>
+
+<ol>
+<li><img src="i/box-red.gif" alt=""></li>
+<li><img src="i/box-red.gif" alt=""></li>
+<li><img src="i/box-red.gif" alt=""></li>
+<li><img src="i/box-red.gif" alt=""></li>
+<li><img src="i/box-red.gif" alt=""></li>
+</ol>
+
+</div>
+
+</body>
+</html>

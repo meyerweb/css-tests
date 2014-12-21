@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: align-items</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.arena ol {display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex;
+   width: 90%; margin: 2em 0; padding: 0; border: 3px solid green;}
+.arena ol li {list-style: none; border: 2px dotted gray; min-width: 5%; margin: 1px;}
+.arena ol li {padding: 10px 0;}
+.arena ol li + li {padding: 35px 0 45px;}
+.arena ol li + li + li {padding: 15px 0 5px;}
+
+#l01 {align-items: flex-start;}
+#l02 {align-items: flex-end;}
+#l03 {align-items: center;}
+#l04 {align-items: baseline;}
+#l05 {align-items: stretch;}
+
+input:checked + a + .arena ol, a:focus + .arena ol {flex-direction: column; width: 17em; height: 17em;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-flexbox/#align-items">http://www.w3.org/TR/css3-flexbox/#align-items</a></p>
+
+<p>Check the box or focus (not hover) the link to switch flex direction.</p>
+<input type="checkbox">
+<a href="">switch direction</a>
+
+<div class="arena">
+
+<ol id="l01">
+<li>[#l01] List item 1</li>
+<li>List item 2</li>
+<li>List item 3</li>
+</ol>
+
+<ol id="l02">
+<li>[#l02] List item 1</li>
+<li>List item 2</li>
+<li>List item 3</li>
+</ol>
+
+<ol id="l03">
+<li>[#l03] List item 1</li>
+<li>List item 2</li>
+<li>List item 3</li>
+</ol>
+
+<ol id="l04">
+<li>[#l04] List item 1</li>
+<li>List item 2</li>
+<li>List item 3</li>
+</ol>
+
+<ol id="l05">
+<li>[#l05] List item 1</li>
+<li>List item 2</li>
+<li>List item 3</li>
+</ol>
+
+</div>
+
+</body>
+</html>

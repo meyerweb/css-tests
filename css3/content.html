@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: content</title>
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css" id="tests">
+p span {content: "without a trace of sense";}
+p + p span {content: url(i/dot-red.gif);}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-content/#content">http://www.w3.org/TR/css3-content/#content</a></p>
+
+<div class="arena">
+
+<p>
+This is a paragraph <span>containing a <code>span</code> element</span> within its content.
+</p>
+<p>
+This is a paragraph <span>containing a <code>span</code> element</span> within its content.
+</p>
+
+</div>
+
+</body>
+</html>

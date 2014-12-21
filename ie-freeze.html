@@ -1,0 +1,565 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head  profile="http://gmpg.org/xfn/1">
+<title>Internet Explorer Freezes -- BEWARE!</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="WordPress 1.2"> <!-- leave this for stats -->
+<style type="text/css" media="screen, projection">
+/* recover from old-browser styling */
+
+*.oldbl {display: block !important;}
+*.oldin {display: inline !important;}
+*.ahem {display: none !important;}
+img.pic {display: block !important;}
+
+html {background: gray; padding: 1.5em;}
+body {font: 0.84em/1.3 Arial, sans-serif; margin: 0; padding: 0;
+  color: #000; background: rgb(99%,99%,99%);
+  max-width: 1280px; min-width: 40em; margin: 0 auto;
+  border: 1px solid #000; border-width: 1px;
+  position: relative;}
+
+.skipper, #aboutsite, #aboutsite * {display: none !important;}
+* {font-size: 100%;}
+h1 {font-size: 2em;}
+h2 {font-size: 1.5em;}
+h3 {font-size: 1.33em;}
+h4 {font-size: 1.1em;}
+h5 {font-size: 0.9em;}
+h6 {font-size: 0.75em;}
+pre, code, tt {font: 110% "Andale Mono", Courier, "Courier New", monospace;}
+small {font-size: 85%;}
+big {font-size: 115%;}
+img.pic {float: right; position: relative; margin: 0.25em 0 0.66em 1.5em;}
+img.standalone {display: block; margin: 0.5em auto; width: auto; max-width: 100%;}
+img.border {border: 3px double;}
+a img {border: none;}
+.warning {background: #FF8; color: red; border: 2px solid; padding: 1em;}
+
+#sitemast {padding: 0; margin: 0; overflow: hidden; border-bottom: 1px solid #000;
+  height: 96px; width: 100%; position: relative;}
+#sitemast h1 {font-size: 1.75em; letter-spacing: 0.13em; 
+  padding: 0; margin: 0;
+  position: absolute; left: 0; top: 100px;
+  /* hide-from-IE5/Mac hack \*/
+  top: auto; bottom: 0;
+  /* end hack */}
+#sitemast h1 a {padding: 0 0.25em;}
+#sitemast h1 a, .panel a {text-decoration: none;}
+
+#main {margin: 0 15em 0 0; padding: 3em 4em 3em 4em;
+  border-right: 1px solid #AAA; background: #FFF;
+  min-height: 30em;}  /* [FREEZER] padding: 3em 4em 3em 4em */
+
+#main h2 {border-bottom: 1px solid; margin: 1.5em 0 0 -1em; padding: 0;
+  font-size: 1.25em; line-height: 0.95em;}
+#main p.contact {margin: 0 1em; text-align: right; font-size: 90%;}
+
+#main blockquote {font-style: normal; margin: 1em 1em 1em 2em;}
+#main blockquote em {font-style: italic; font-weight: inherit;}
+#main blockquote p {margin: 0.33em 2.5% 0.33em 0 !important;
+  line-height: 1.2; text-indent: 2em;}
+#main blockquote.book p {margin: 0 2.5% 0 0 !important;}
+#main blockquote.lyric {font-style: italic; white-space: pre;
+  border: none; margin-left: 1em;}
+.quoteattrib {margin: -0.75em 3em 0.66em; font-size: 87.5%;}
+.quoteattrib cite {font-style: italic;}
+
+#main p {line-height: 1.4em;}
+#main li {line-height: 1.33em; margin-bottom: 0.33em;}
+#main .compact li {line-height: normal; margin-bottom: 0;}
+#main ul li {list-style: square;}
+
+#extra {position: absolute; top: 98px; right: 0; font-size: 1em; line-height: 1.1;
+  width: 15em; padding: 0; margin: 0;}
+
+.panel {padding-top: 1px;}
+.panel h4, .panel h5 {margin: 0.5em 0 0.25em; font-size: 90%; line-height: 1em; padding: 0 0.5em;
+  border-bottom: 1px solid #CCC;}
+.panel ul {list-style: none; margin: 0 0.5em 1em; padding: 0; font-size: 90%;}
+.panel li {margin-left: 0.66em; text-indent: -0.66em; line-height: 1.1em;}
+
+#navigate h4 {margin: 0; padding-top: 0.25em;}
+#navigate li {float: left; border: 1px solid #CCC; border-width: 0 1px 1px 0;
+  text-indent: 0; margin: 0; padding: 2px 0 0;}
+#navigate li a {display: block; float: left; margin-left: 0.5em; padding-right: 0.5em;
+  text-align: center;}
+#navlinks {height: 1em; padding: 0; margin-left: 0;}
+
+#explore form {width: 95%; margin: 0 0 1em 5%;}
+#explore form input[type="text"] {width: 97%;}
+
+#reading img {border: 1px solid silver;}
+#extra #reading img {margin: 0.5em;}
+
+#footer {margin: 0; padding: 0 0 1.5em 4.7em;
+  font-size: 0.85em; background: #FFF;}
+#footer p {line-height: 1em; margin: 0; padding: 0.5em 1em 0 0;}
+#footer p.sosumi {border-top: 1px solid silver; padding-top: 1em} 
+
+.book #main img.cover {float: right; margin: 1em 0 1em 2em;
+  border: 1px solid; border-color: #AAA #444 #444 #AAA;}
+</style>
+<style type="text/css">
+#thoughts h3#thtitle {margin: 0; padding-right: 180px; position: relative; top: 1.1em; 
+  line-height: 0.85em;
+  border-bottom: 1px solid #999;}
+#syndicate {text-align: right; margin: 0; padding: 0 1px 1px 0;
+  border-right: 3px double #999;
+  position: relative; z-index: 10;}
+#syndicate li {display: inline; vertical-align: bottom;}
+
+.entry {border-bottom: 1px solid silver; padding: 0 0 1em;}
+.columnar, .columnar li {float: left; margin: 0; padding: 0;
+  list-style: none !important;}
+.columnar {width: 100%; padding: 0 0 0.75em;}
+.two li {width: 45%;}
+.three li {width: 30%;}
+
+#thoughts h4 {font-size: 1.2em; line-height: 1em;
+  margin: 1.5em 0 0.5em; padding: 0;
+  clear: both;}
+#thoughts h4 a {text-decoration: none;
+ border-bottom: 1px dotted; padding: 0 0 0.125em;}
+#thoughts h4 a:hover {border-bottom-style: solid;}
+#thoughts h4 a:hover:after {content: " \B6"; padding-left: 0.33em;}
+#thoughts h5 {font-size: 1em; line-height: 1em;
+  margin: 0 0 0.5em; padding: 0; color: #CCC;}
+#thoughts h5 b {font-weight: normal; font-size: 0.9em;}
+#thoughts h5>a {text-decoration: none; color: #666;
+  margin-left: 0.25em; padding: 0 0.25em; border: 1px solid #CCC;}
+#thoughts p {margin: 0 0 0.75em; line-height: 1.4em;}
+#thoughts .aside {float: right; clear: right; width: 10em;
+  border: 3px double #ABABAB; background: #EFEFEF; color: #888;
+  padding: 0.5em 0.5em 0.5em 1em; margin: 0.25em 0 0.75em 1.5em;
+  font-size: 95%; font-style: italic; line-height: 1.2em;}
+
+#thoughts pre {margin-left: 0.5em; padding-left: 1em;
+  border-left: 0.5em double #EEE;}
+#thoughts blockquote {margin-left: 0; padding-left: 1em; 
+  border-left: 1em solid #EEE;}
+</style>
+<style type="text/css">
+.prev-next {margin: 0; padding: 0.25em 1% 0; 
+  width: 98%; float: left;}  /* [FREEZER] float: left */
+.prev-next li {list-style: none !important; float: left; width: 40%;}
+.prev-next li.main {text-align: center; width: 19%;}
+.prev-next li.next {text-align: right;}
+.prev-next#pn-top {margin-bottom: 3em;}
+.prev-next#pn-bot {margin-top: 3em;}
+
+p.comments {font-style: italic; text-align: right;
+  margin: 0.5em 0 -1em auto !important;}
+p.comments a {color: gray; text-decoration: none; padding: 0.2em 0.33em;
+  border: 1px solid silver; font-size: 0.9em;}
+p.comments :link:hover, p.comments :visited:hover {background: #EEE;}
+p.comments a.off {border: none; color: #CCC;}
+p.nocomments {color: #CCC; font-style: italic; text-align: right;
+  margin-top: 2em !important;}
+
+#extra {background: white;}
+#extra h4 {clear: left;}
+#extra ul ul {font-size: 1em;}
+#categories p {margin: 0 0.75em; font-size: 0.9em; line-height: 1.5em;}
+
+#calendar {margin-bottom: 1em;}
+#calendar table {font-size: 1em; width: 100%;
+  border-collapse: separate; border-spacing: 0;}
+#calendar caption {border-top: 1px solid #AAA; background: #CCC; font-weight: bold;}
+#calendar caption a {color: #000; display: block; padding: 0.25em;}
+
+#calendar thead th, #calendar tfoot td {background: #EEE; color: #CCC;
+  border: 1px solid #CCC; border-width: 1px 1px 1px 0;}
+
+#calendar tbody td {text-align: right; padding: 0.2em 0.5em; color: #BBB;}
+#calendar td.posts {padding: 0; background: #EEE;
+  border: 1px solid white; border-width: 0 1px 1px 0;}
+#calendar td#today {border: 1px solid #999; color: #000;}
+#calendar tbody a {display: block; padding: 0.2em 0.5em; color: #000; font-weight: bold;}
+#calendar tbody a:hover {background: yellow;}
+
+#calendar tfoot a {display: block; padding: 0.15em 0.33em; text-align: center; color: #444;}
+#calendar tfoot a:hover {background: #CCC;}
+
+#monthly li {padding-top: 0.25em;}
+
+hr {clear: both; visibility: hidden;}
+
+#thoughts h3 {margin: 3em 0 0; border-bottom: 1px dotted; line-height: 1.1em;}
+#thoughts h3 a {text-decoration: none;}
+#thoughts h5 {margin: 0.25em 0 1.25em;}
+#thoughts h5 a {color: silver;}
+.hpg #thoughts h5 {margin: 0.25em 0 0.5em;}
+
+#thoughts #comments, #thoughts #postcomment {margin-top: 4em;}
+
+#rss-tb {border-bottom: 1px dotted; margin: 0 0 1.5em; padding: 0.5em 1px 0.25em;
+  width: 100%; float: left;}
+#thoughts #rss-tb ul {margin: 0; padding: 0;}
+#thoughts #rss-tb li {list-style: none; float: right;
+  margin: 0; padding: 0; font-style: italic;}
+#thoughts #rss-tb #tb {float: left; margin-right: 2em;}
+
+#commentform div {float: left; width: 23em;}
+#commentform #form-info {margin: 1em 0 0 25em;}
+#form-info code {display: block; line-height: 1.5em;}
+
+#commentlist {margin-bottom: 2em; clear: left;}
+ol#commentlist li {margin-bottom: 2em;}
+#commentlist .Trackback, #commentlist .Pingback {
+  color: #999; background: url(cmt-ping.gif) 0 0.5em no-repeat;
+  padding-left: 35px;}
+
+#commentlist li p.meta {color: #999;}
+#commentlist li p.meta a {color: #669;}
+#thoughts h5>a, #main p.meta>a {text-decoration: none; color: #666; background: #EEE; 
+  margin: 0 0 0 0.25em; padding: 0 0.25em; border: 1px solid #CCC;}
+#thoughts h5>a {float: right; margin-top: -1em; padding: 0.25em; font-size: 1.33em;}
+#thoughts h5>a:hover, #main p.meta>a:hover {background: #FBB; color: #333;}
+</style>
+<link rel="stylesheet" type="text/css" media="print" href="/print.css">
+</head>
+
+<body id="www-meyerweb-com">
+
+<div id="sitemast">
+<h1><a href="/"><span>meyerweb</span>.com</a></h1>
+</div>
+
+<div id="main">
+<div class="skipper">Skip to: <a href="#navhead">site navigation/presentation</a></div>
+<div class="skipper">Skip to: <a href="#thoughts">Thoughts From Eric</a></div>
+
+<ul class="prev-next" id="pn-top">
+<li class="prev">&larr; <a href="http://www.meyerweb.com/eric/thoughts/2004/09/13/things-that-go-beep-in-the-night/">Things That Go Beep In The Night</a></li>
+<li class="main"><a href="/eric/thoughts/">Main</a></li>
+<li class="next"><a href="http://www.meyerweb.com/eric/thoughts/2004/09/14/scenes-from-an-ichat-window/">Scenes From An iChat Window</a> &rarr;</li>
+</ul>
+
+<div class="warning" style="clear: both;">
+<strong>Warning: this page will freeze Internet Explorer for Windows!</strong>  In the embedded style sheets, there are lines marked in a CSS comment with the string "[FREEZER]".  Removing the indicated declaration from either one will avoid the freeze bug in IE/Win.  Leaving them both in will cause it to freeze, requiring a force-quit of the application in order to get the computer back.  This freezing has been observed under Windows 98, Windows 2000 Professional, and Windows XP.
+</div>
+
+<div id="thoughts">
+
+
+<h3><a href="http://www.meyerweb.com/eric/thoughts/2004/09/14/ten-things-to-do-in-cleveland-before-youre-dead/" rel="bookmark" title="Permanent Link: Ten Things To Do In Cleveland Before You&#8217;re Dead">Ten Things To Do In Cleveland Before You&#8217;re Dead</a></h3>
+<h5><b>Tuesday, 14 September 2004 :: 1154 EDT | <a href="http://www.meyerweb.com/eric/thoughts/category/cleveland/" title="View all posts in Cleveland">Cleveland</a></b>  <a href="http://www.meyerweb.com/eric/thoughts/wp-admin/post.php?action=edit&amp;post=483">&#9999;</a> </h5>
+
+<p>
+
+I quick-linked <a href="http://cleveland.citysearch.com/roundup/40044?ulink=home__contentslot3_1___roundup__1">10 Things to Do in Cleveland Before You Die</a>, but the more I looked at the list, the less happy it made me.  So I&#8217;ve decided to compile my own list.  Note that this list doesn&#8217;t include restaurants.  As much as I love to eat, I just don&#8217;t think that a single meal is worthy of a &#8220;things to do before you&#8217;re dead&#8221; list, no matter how amazing the meal.  I might compile a separate &#8220;Ten Places to Eat In Cleveland&#8221; list, but that&#8217;s a subject for another day.
+
+</p>
+
+
+
+<ol>
+
+<li>
+
+<strong>Hear the <a href="http://www.clevelandorch.com/">Cleveland Orchestra</a>.</strong>
+
+<p>
+
+Not on CD, you goof&mdash;anyone can do that.  Hear them perform live and in person at least once in your life.  Odds are you&#8217;ll want to make it more than once, given that they&#8217;re one of the best orchestras in the world.  Bonus points for seeing them at Blossom Music Center, followed by a fireworks display.
+
+</p>
+
+</li>
+
+<li>
+
+<strong>Tour the cultural institutions of <a href="http://www.universitycircle.org/">University Circle</a>.</strong>
+
+<p>
+
+That includes the <a href="http://www.clemusart.com/">Cleveland Museum of Art</a>; the <a href="http://www.cmnh.org/">Cleveland Museum of Natural History</a>, which includes the <a href="http://astronomy.cmnh.org/">Shafran Planetarium</a>; the <a href="http://www.wrhs.org/">Western Reserve Historical Society</a>, which includes the <a href="http://www.wrhs.org/crawford/default.asp">Crawford Auto-Aviation Museum</a>; and the <a href="http://www.cbgarden.org/">Cleveland Botanical Gardens</a>, all within a quarter-mile radius.  Included in that grouping is <a href="http://www.clevelandorch.com/html/Severance/SevHistory.asp">Severance Hall</a>, home of the Cleveland Orchestra.  This one&#8217;s kind of a cheat, since if I mentioned them all separately that would make this a &#8220;Top 15 Things To Do&#8221; list, which for some reason doesn&#8217;t sound as interesting.
+
+</p>
+
+</li>
+
+<li>
+
+<strong>Spend a day at the <a href="http://www.clemetparks.com/">Cleveland Metroparks</a>.</strong>
+
+<p>
+
+Known as the &#8220;Emerald Necklace", the extensive park system (20,000 acres in 14 reservations) not only girds the city but also runs throughout the greater metropolitan area.  There are hiking trails, picnic areas, educational events, and a whole lot more, including the <a href="http://www.clemetzoo.com/">Cleveland Metroparks Zoo</a>.
+
+</p>
+
+</li>
+
+<li>
+
+<strong>Tour the <a href="http://www.rockhall.com/">Rock and Roll Hall of Fame</a>.</strong>
+
+<p>
+
+The real joy is in the smaller cases, where you can find original lyrics sheets to landmark songs complete with scratched-out ideas and arrows marking rearrangements, bills for hotel-room damage, and other tidbits.  The architecture of the building is fascinating as well.
+
+</p>
+
+</li>
+
+<li>
+
+<strong>Visit the <a href="http://www.westsidemarket.com/">West Side Market</a>.</strong>
+
+<p>
+
+Besides the dozens of fruit and vegetable stalls in the outside promenade, the interior market space is filled with local butchers, bakers, and other amazing treats.  Come early on Saturday morning for the best selection.
+
+</p>
+
+</li>
+
+<li>
+
+<strong>Spend Labor Day weekend downtown.</strong>
+
+<p>
+
+That&#8217;s where and when you&#8217;ll find the <a href="http://www.cleveland.com/tasteofcleveland/">Taste of Cleveland</a>, a great way to sample various cuisines, while the aerial displays of the <a href="http://www.clevelandairshow.com/">Cleveland National Air Show</a>, based not half a mile away, soar overhead.  (Assuming the FAA relaxes its restrictions on such flights near sporting events, that is.)  If you stick around until nightfall, you&#8217;ll have a perfect excuse to go party in the Flats, too.
+
+</p>
+
+</li>
+
+<li>
+
+<strong>Hit one of the amusement parks.</strong>
+
+<p>
+
+Technically these aren&#8217;t in Cleveland itself, but they&#8217;re close enough to warrant inclusion.  About forty minutes southeast of downtown is <a href="http://www.geaugalake.com/">Geauga Lake</a> (formerly Six Flags Worlds of Adventure), a combination amusement park and water park.  Just over an hour west of downtown, you&#8217;ll find <a href="http://www.cedarpoint.com/">Cedar Point</a>, one of the nation&#8217;s premiere amusements parks and <strong>the</strong> roller coaster capital of the world.
+
+</p>
+
+</li>
+
+<li>
+
+<strong>Go sailing on Lake Erie.</strong>
+
+<p>
+
+Whether you take out a two-man boat or take a dinner cruise on the <a href="http://goodtimeiii.com/boatride/index.shtml">Good Time III</a>, it&#8217;s worth seeing the city from the water.  Even better, if you&#8217;re captain of your own boat, you can sail to one of the islands or head west along the shoreline to Cedar Point.
+
+</p>
+
+</li>
+
+<li>
+
+<strong>See a game.</strong>
+
+<p>
+
+With three major-league teams (the <a href="http://www.indians.com/">Indians</a>, <a href="http://www.clevelandbrowns.com/">Browns</a>, and <a href="http://www.nba.com/cavaliers/">Cavaliers</a>) playing downtown, if you&#8217;re a sports fan, you&#8217;ll find a game to watch.  There are a number of other teams in town as well, including the <a href="http://www.clevelandbarons.net/">Barons</a> (hockey) and the <a href="http://www.clevelandforce.com/">Force</a> (soccer).
+
+</p>
+
+</li>
+
+<li>
+
+<strong>Drop by <a href="http://www.lakeviewcemetery.com/index.asp">Lakeview Cemetery</a>.</strong>
+
+<p>
+
+Do it while you&#8217;re still alive, okay?  You&#8217;ll not only get great views of the city, but also see artistic, beautiful monuments to James A. Garfield, John D. Rockefeller, Eliot Ness, and others.  The Wade Chapel, situated on the shores of a pond, features an interior designed by Louis Comfort Tiffany and full of the famous glasswork bearing his name.  Who knows?  Maybe you&#8217;ll find a place to rest after you&#8217;re dead.
+
+</p>
+
+</li>
+
+</ol>
+
+<p>
+
+I have to be honest and admit that I haven&#8217;t even done everything on my own list.  However, I suspect that as our kids grow up, we&#8217;ll do all of those things more than once.
+
+</p>
+
+<!-- You can start editing here. -->
+
+<h2 id="comments">1 Response
+<a href="#postcomment" title="Leave a comment">&raquo;</a>
+</h2>
+
+<div id="rss-tb">
+<ul>
+<li id="tb">http://www.meyerweb.com/eric/thoughts/2004/09/14/ten-things-to-do-in-cleveland-before-youre-dead/trackback/</li>
+<li><a href='http://www.meyerweb.com/eric/thoughts/2004/09/14/ten-things-to-do-in-cleveland-before-youre-dead/feed/'>Comments <abbr title="Really Simple Syndication">RSS</abbr> feed</a></li>
+</ul>
+</div>
+
+<ol id="commentlist">
+<li id="comment-853" class="Comment">
+	<p>You are from Cleveland???
+</p>
+<p class="meta"><cite><a href="#comment-853">Comment</a> by Mark |  Tuesday, 14 September 2004 ::  1258 EDT</cite>  <a href='http://www.meyerweb.com/eric/thoughts/wp-admin/post.php?action=editcomment&amp;comment=853'>&#9999;</a> </p>
+</li>
+
+</ol>
+
+
+<h2 id="postcomment">Leave a comment</h2>
+<form action="dead" method="post" id="commentform">
+<div>
+<p>
+  <input type="text" name="author" id="author" class="textarea" value="Eric" size="28" tabindex="1" />
+   <label for="author">Name</label>
+<input type="hidden" name="comment_post_ID" value="483" />
+<input type="hidden" name="redirect_to" value="/eric/thoughts/2004/09/14/ten-things-to-do-in-cleveland-before-youre-dead/" />
+</p>
+
+<p>
+  <input type="text" name="email" id="email" value="eric@meyerweb.com" size="28" tabindex="2" />
+   <label for="email">E-mail</label>
+</p>
+
+<p>
+  <input type="text" name="url" id="url" value="http://www.meyerweb.com/" size="28" tabindex="3" />
+   <label for="url"><acronym title="Uniform Resource Identifier">URI</acronym></label>
+</p>
+</div>
+<p id="form-info">Line and paragraph breaks automatic, e-mail address never displayed, <acronym title="Hypertext Markup Language">HTML</acronym> allowed: <code>&lt;a href=&quot;&quot; title=&quot;&quot; rel=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;code&gt; &lt;em&gt; &lt;i&gt; &lt;strike&gt; &lt;strong&gt; </code></p>
+<hr>
+<p>
+  <label for="comment">Your Comment</label>
+<br />
+  <textarea name="comment" id="comment" cols="70" rows="10" tabindex="4"></textarea>
+</p>
+<p>
+ <strong>Remember to encode character entities if you're posting markup examples!</strong> Management reserves the right to edit or remove any comment&mdash;especially those that are abusive, irrelevant to the topic at hand, or made by anonymous posters&mdash;although honestly, most edits are a matter of fixing mangled markup.  Thus the note about encoding your entities.  If you're satisfied with what you're written, then go ahead...
+</p>
+<p>
+  <input name="submit" type="submit" tabindex="5" value="Say It!" />
+</p>
+  
+</form>
+
+
+<ul class="prev-next" id="pn-bot">
+<li class="prev">&larr; <a href="http://www.meyerweb.com/eric/thoughts/2004/09/13/things-that-go-beep-in-the-night/">Things That Go Beep In The Night</a></li>
+<li class="main"><a href="/eric/thoughts/">Main</a></li>
+<li class="next"><a href="http://www.meyerweb.com/eric/thoughts/2004/09/14/scenes-from-an-ichat-window/">Scenes From An iChat Window</a> &rarr;</li>
+</ul>
+<hr>
+</div>
+
+</div>
+<div id="extra">
+
+<div class="panel" id="navigate">
+<h4>Navigation</h4>
+<ul id="navlinks">
+<li id="ericLink"><a href="/eric/">Eric</a></li>
+<li id="katLink"><a href="/kat/">Kat</a></li>
+<li id="carolynLink"><a href="/carolyn/">Carolyn</a></li>
+<li id="otherLink"><a href="/other/">Other</a></li>
+<li id="aboutsite"><a href="/ui/about.html">About this site</a></li>
+</ul>
+</div>
+
+<div class="panel" id="explore">
+<h4>Exploration</h4>
+<form method="get" action="http://www.google.com/custom">
+<input type="text" name="q" size="20" maxlength="255" value="">
+<input type="submit" name="sa" value="Search">
+<input type="hidden" name="sitesearch" value="meyerweb.com">
+<!--
+<input type="radio" name="sitesearch" value="">WWW
+-->
+<small>(<a href="http://www.google.com/search">Powered by Google</a>)</small>
+</form>
+</div>
+
+<div class="panel" id="search">
+<h4>Reflection</h4>
+
+<form id="searchform" method="get" action="/eric/thoughts/index-post.php">
+<div>
+	<input type="text" name="s" size="15">
+	<input type="submit" name="submit" value="search">
+</div>
+</form>
+</div>
+
+<div class="panel">
+<h4>Feeds</h4>
+ 	<ul>
+	<li>Posts:
+	<ul>
+		<li><a href="http://www.meyerweb.com/feed/rss2/" title="Syndicate this site using RSS"><acronym title="Really Simple Syndication">RSS</acronym> 2.0</a></li>
+		<li><a href="http://www.meyerweb.com/feed/rss/" title="Syndicate this site using RSS"><acronym title="Really Simple Syndication">RSS</acronym> 0.92</a></li>
+		<li><a href="http://www.meyerweb.com/feed/atom/" title="Syndicate this site using Atom">Atom</a></li>
+	</ul></li>
+	<li>Comments:
+	<ul>
+		<li><a href="http://www.meyerweb.com/comments/feed/rss2/" title="The latest comments to all posts in RSS"><acronym title="Really Simple Syndication">RSS</acronym> 2.0</a></li>
+</ul></li>
+ </ul>
+</div>
+ <div id="calendar" class="panel">
+<table id="wp-calendar">
+<caption><a href="http://www.meyerweb.com/eric/thoughts/2004/09/" title="View all posts for this month">September 2004</a></caption>
+<thead>
+<tr>
+	<th abbr='Sunday' scope='col' title='Sunday'>S</th>
+	<th abbr='Monday' scope='col' title='Monday'>M</th>
+	<th abbr='Tuesday' scope='col' title='Tuesday'>T</th>
+	<th abbr='Wednesday' scope='col' title='Wednesday'>W</th>
+	<th abbr='Thursday' scope='col' title='Thursday'>T</th>
+	<th abbr='Friday' scope='col' title='Friday'>F</th>
+	<th abbr='Saturday' scope='col' title='Saturday'>S</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+	<td abbr="August" colspan="3" id="prevMonth"><a href="http://www.meyerweb.com/eric/thoughts/2004/08/" title="View posts for August 2004"> August</a></td>
+	<td class="pad" id="thisMonth"><a href="" title="Jump to latest posts"></a></td>
+	<td colspan="3" id="nextMonth" class="pad">&nbsp;</td>
+</tr>
+</tfoot>
+<tbody>
+<tr>
+	<td colspan='3' class='pad'>&nbsp;</td><td >1</td><td >2</td><td class="posts"><a href="http://www.meyerweb.com/eric/thoughts/2004/09/03/" title="Sliding Faux Columns">3</a></td><td >4</td>
+</tr>
+<tr>
+	<td class="posts"><a href="http://www.meyerweb.com/eric/thoughts/2004/09/05/" title="CSS Gridlock">5</a></td><td class="posts"><a href="http://www.meyerweb.com/eric/thoughts/2004/09/06/" title="To Be Tabled
+A Labor Day Weekend of Love">6</a></td><td class="posts"><a href="http://www.meyerweb.com/eric/thoughts/2004/09/07/" title="On The Outside">7</a></td><td >8</td><td class="posts"><a href="http://www.meyerweb.com/eric/thoughts/2004/09/09/" title="Automated Language Setting">9</a></td><td >10</td><td >11</td>
+</tr>
+<tr>
+	<td >12</td><td class="posts"><a href="http://www.meyerweb.com/eric/thoughts/2004/09/13/" title="Standards Savings
+Things That Go Beep In The Night">13</a></td><td class="posts"><a href="http://www.meyerweb.com/eric/thoughts/2004/09/14/" title="Ten Things To Do In Cleveland Before You're Dead
+Scenes From An iChat Window">14</a></td><td class="posts"><a href="http://www.meyerweb.com/eric/thoughts/2004/09/15/" title="&lt;em&gt;Really&lt;/em&gt; Undoing html.css
+When Blog Software Attacks!">15</a></td><td class="posts"><a href="http://www.meyerweb.com/eric/thoughts/2004/09/16/" title="When Browsers Attack!">16</a></td><td id="today">17</td><td >18</td>
+</tr>
+<tr>
+	<td >19</td><td >20</td><td >21</td><td >22</td><td >23</td><td >24</td><td >25</td>
+</tr>
+<tr>
+	<td >26</td><td >27</td><td >28</td><td >29</td><td >30</td>
+	<td class='pad' colspan='2'>&nbsp;</td>
+</tr>
+</tbody>
+</table> </div>
+
+
+</div>
+
+<div id="footer">
+<p class="sosumi">All contents of this site, unless otherwise noted, are &copy;1995-2004 <strong>Eric A. and Kathryn S. Meyer</strong>.  All Rights Reserved.</p>
+<p>Hosting service, support, and bandwidth courtesy the fine folks at <strong><a href="http://www.theopalgroup.com/">The OPAL Group</a></strong>.</p>
+<p>"<a href="/eric/thoughts/">Thoughts From Eric</a>" powered by the &uuml;bercool <a href="http://www.wordpress.org/">WordPress</a>, albeit an install I've hacked like it was attacking my family.</p>
+</div>
+</body>
+</html>

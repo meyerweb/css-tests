@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"
+			"http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+<head>
+<title>Hover-Before Test</title>
+<style type="text/css">
+a.gcb:before {content: " :: ";}
+a.gcbn:before {content: "";}
+a.gcan:after {content: "";}
+a:hover:before {content: "--> "; font-family: monospace;}
+</style>
+</head>
+<body>
+
+<p>
+<a>This is an anchor (although not a link).</a>
+</p>
+<p>
+<a class="gcb">This is an anchor (although not a link).</a>
+</p>
+<p>
+<a class="gcbn">This is an anchor (although not a link).</a>
+</p>
+<p>
+<a class="gcan">This is an anchor (although not a link).</a>
+</p>
+
+</body>
+</html>

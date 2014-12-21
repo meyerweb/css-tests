@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Parsing bug testing</title>
+<style type="text/css" media="all">
+li {color: green; font-style: italic; font-weight: normal; padding: 0.33em 0;}
+code {padding: 0.1em 0.2em; border: 1px solid;}
+* html #id01,
+*html #id02,
+html* #id03,
+* + html #id04,
+*+html #id05,
+html > /**/body #id06,
+html>/**/body #id07,
+li/* comment */#id08,
+li/**/#id09
+{
+   color: red; background: yellow;
+   font-style: normal; font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<p>
+Italic green passes (correctly fails to match), bold red-on-yellow fails (matches when it should not).
+</p>
+
+<ol>
+
+<li id="id01">
+Testing <code>* html #id01</code>
+</li>
+
+<li id="id02">
+Testing <code>*html #id02</code>
+</li>
+
+<li id="id03">
+Testing <code>html* #id03</code>
+</li>
+
+<li id="id04">
+Testing <code>* + html #id04</code>
+</li>
+
+<li id="id05">
+Testing <code>*+html #id05</code>
+</li>
+
+<li id="id06">
+Testing <code>html &gt; /**/body #id06</code>
+</li>
+
+<li id="id07">
+Testing <code>html&gt;/**/body #id07</code>
+</li>
+
+<li id="id08">
+Testing <code>li/* comment */#id08</code>
+</li>
+
+<li id="id09">
+Testing <code>li/**/#id09</code>
+</li>
+
+</ol>
+
+<p>
+Any failures point to potential CSS hacks that will target a browser, and any passes indicate hacks that will not work.
+</p>
+
+</body>
+</html>

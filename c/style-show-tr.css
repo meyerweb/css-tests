@@ -1,0 +1,6 @@
+head {display: block;}
+style {display: block; position: fixed;
+	top: 0; right: 0; width: 17.5em; padding: 0 1em 1em;
+	background: #BBB; border: 1px solid gray; border-width: 0 0 1px 1px;
+	font-family: monospace; white-space: pre;}
+style:hover, style:focus {background: transparent; border-width: 0;}

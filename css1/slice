@@ -1,0 +1,2 @@
+rm *.htm
+./slicer.pl < w3c-suite

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: length units</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+html {font-size: 20px;}
+div {background: #BBB; color: #000; width: 0;
+	padding: 0.25em 0 0.15em; margin-bottom: 0.5em;
+	text-indent: 1em; white-space: nowrap;}
+#pixel {width: 400px;}
+#em {width: 20em;}
+#rem {width: 20rem;}
+#inch {width: 4.167in;}
+#cm {width: 10.5833cm;}
+#mm {width: 105.833mm;}
+#pt {width: 300pt;}
+#pc {width: 25pc;}
+#ex {width: 40ex;}
+#ch {width: 40ch;}
+#vw {width: 50vw;}
+#vh {width: 50vh;}
+#vmin {width: 50vmin;}
+#vmax {width: 50vmax;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-values/">http://www.w3.org/TR/css3-values/</a></p>
+
+<p class="note">Based on <a href="http://codepen.io/anon/pen/JLdzg">http://codepen.io/anon/pen/JLdzg</a></p>
+
+<div class="arena">
+
+<div id="pixel">400px - pixels (device pixels)</div>
+<div id="em">20em - relative unit</div>
+<div id="rem">20rem - root em</div>
+<div id="inch">4.167in - inches</div>
+<div id="cm">10.5833cm - centimeters</div>
+<div id="mm">105.833mm - millimeters</div>
+<div id="pt">300pt - points</div>
+<div id="pc">25pc - picas</div>
+<div id="ex">40ex - x-height</div>
+<div id="ch">40ch - based on width of zero (0) character</div>
+<div id="vw">50vw - viewport width</div>
+<div id="vh">50vh - viewport height</div>
+<div id="vmin">50vmin - smaller of vw or vh</div>
+<div id="vmax">50vmax - larger of vw or vh</div>
+
+</div>
+
+</body>
+</html>

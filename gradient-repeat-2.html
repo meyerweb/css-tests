@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Repeating Linear Gradients</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style type="text/css" media="all">
+ol {margin: 0; padding: 0;}
+li {margin: 1em 0 1em 2em; padding: 1em 0;
+	font: 1em Times, serif; width: 1000px;
+	background-color: #FFF;
+	font-size: 16px;
+	line-height: 1;}
+
+li .red {margin-top: -8px;}
+
+li .r {background: url(i/ruler-h.gif) repeat-x;}
+
+#l1 .lrg {
+	background-image: -webkit-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 1px, transparent 1px, transparent 2px);
+	background-image: -moz-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 1px, transparent 1px, transparent 2px);
+	background-image: -ms-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 1px, transparent 1px, transparent 2px);
+	background-image: -o-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 1px, transparent 1px, transparent 2px);
+	background-image: repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 1px, transparent 1px, transparent 2px);
+}
+#l1 .red {background: url(gradient-repeat/l1.png) repeat 1px 0;}
+
+#l2 .lrg {
+	background-image: -webkit-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 2px, transparent 2px, transparent 4px);
+	background-image: -moz-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 2px, transparent 2px, transparent 4px);
+	background-image: -ms-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 2px, transparent 2px, transparent 4px);
+	background-image: -o-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 2px, transparent 2px, transparent 4px);
+	background-image: repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 2px, transparent 2px, transparent 4px);
+}
+#l2 .red {background: url(gradient-repeat/l2.png) repeat 2px 0;}
+
+#l3 .lrg {
+	background-image: -webkit-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 3px, transparent 3px, transparent 6px);
+	background-image: -moz-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 3px, transparent 3px, transparent 6px);
+	background-image: -ms-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 3px, transparent 3px, transparent 6px);
+	background-image: -o-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 3px, transparent 3px, transparent 6px);
+	background-image: repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 3px, transparent 3px, transparent 6px);
+}
+#l3 .red {background: url(gradient-repeat/l3.png) repeat 3px 0;}
+
+#l4 .lrg {
+	background-image: -webkit-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 4px, transparent 4px, transparent 8px);
+	background-image: -moz-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 4px, transparent 4px, transparent 8px);
+	background-image: -ms-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 4px, transparent 4px, transparent 8px);
+	background-image: -o-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 4px, transparent 4px, transparent 8px);
+	background-image: repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 4px, transparent 4px, transparent 8px);
+}
+#l4 .red {background: url(gradient-repeat/l4.png) repeat 4px 0;}
+
+
+#l5 .lrg {
+	background-image: -webkit-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 5px, transparent 5px, transparent 10px);
+	background-image: -moz-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 5px, transparent 5px, transparent 10px);
+	background-image: -ms-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 5px, transparent 5px, transparent 10px);
+	background-image: -o-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 5px, transparent 5px, transparent 10px);
+	background-image: repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 5px, transparent 5px, transparent 10px);
+}
+#l5 .red {background: url(gradient-repeat/l5.png) repeat 5px 0;}
+
+
+#l6 .lrg {
+	background-image: -webkit-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 6px, transparent 6px, transparent 12px);
+	background-image: -moz-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 6px, transparent 6px, transparent 12px);
+	background-image: -ms-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 6px, transparent 6px, transparent 12px);
+	background-image: -o-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 6px, transparent 6px, transparent 12px);
+	background-image: repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 6px, transparent 6px, transparent 12px);
+}
+#l6 .red {background: url(gradient-repeat/l6.png) repeat 6px 0;}
+
+
+#l7 .lrg {
+	background-image: -webkit-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 7px, transparent 7px, transparent 14px);
+	background-image: -moz-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 7px, transparent 7px, transparent 14px);
+	background-image: -ms-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 7px, transparent 7px, transparent 14px);
+	background-image: -o-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 7px, transparent 7px, transparent 14px);
+	background-image: repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 7px, transparent 7px, transparent 14px);
+}
+#l7 .red {background: url(gradient-repeat/l7.png) repeat 7px 0;}
+
+
+#l8 .lrg {
+	background-image: -webkit-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 8px, transparent 8px, transparent 16px);
+	background-image: -moz-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 8px, transparent 8px, transparent 16px);
+	background-image: -ms-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 8px, transparent 8px, transparent 16px);
+	background-image: -o-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 8px, transparent 8px, transparent 16px);
+	background-image: repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 8px, transparent 8px, transparent 16px);
+}
+#l8 .red {background: url(gradient-repeat/l8.png) repeat 8px 0;}
+
+
+#l9 .lrg {
+	background-image: -webkit-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 9px, transparent 9px, transparent 18px);
+	background-image: -moz-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 9px, transparent 9px, transparent 18px);
+	background-image: -ms-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 9px, transparent 9px, transparent 18px);
+	background-image: -o-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 9px, transparent 9px, transparent 18px);
+	background-image: repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 9px, transparent 9px, transparent 18px);
+}
+#l9 .red {background: url(gradient-repeat/l9.png) repeat 9px 0;}
+
+
+#l10 .lrg {
+	background-image: -webkit-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 10px, transparent 10px, transparent 20px);
+	background-image: -moz-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 10px, transparent 10px, transparent 20px);
+	background-image: -ms-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 10px, transparent 10px, transparent 20px);
+	background-image: -o-repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 10px, transparent 10px, transparent 20px);
+	background-image: repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 10px, transparent 10px, transparent 20px);
+}
+#l10 .red {background: url(gradient-repeat/l10.png) repeat 10px 0;}
+
+</style>
+</head>
+<body>
+
+<h1>Repeating linear gradients</h1>
+
+<p>
+<strong>WARNING: NOTHING IN THIS TEST SHOULD BE TAKEN SERIOUSLY.  THE REPEATING-LINEAR-GRADIENT SYNTAX COULD BE ALL WRONG, LEADING TO USELESS RESULTS.  PROCEED AT YOUR OWN RISK.  CORRECTIONS ARE WELCOME.</strong>
+</p>
+
+<p>
+The ruler is a <code>background-repeat</code>-repeated GIF, included for measurement purposes.  As you might expect.
+</p>
+<p>
+Each blue pattern is a repeating-linear-gradient of the form…<br> <code>repeating-linear-gradient(left, rgba(0,0,255,0.5) 0px, rgba(0,0,255,0.5) 1px, transparent 1px, transparent 2px);</code><br> …where the lengths are multiplied by the number of each test.  Thus, for test 6, they are <code>6px</code>, <code>12px</code>, <code>12px</code>, and <code>18px</code>, respectively.
+</p>
+<p>
+Each red pattern is a <code>background-repeat</code>-repeated PNG which alternates half-transparent red and full transparency.
+</p>
+
+<ol>
+<li id="l1">
+<div class="r">O</div>
+<div class="lrg">O</div>
+<div class="red">O</div>
+</li>
+<li id="l2">
+<div class="r">O</div>
+<div class="lrg">O</div>
+<div class="red">O</div>
+</li>
+<li id="l3">
+<div class="r">O</div>
+<div class="lrg">O</div>
+<div class="red">O</div>
+</li>
+<li id="l4">
+<div class="r">O</div>
+<div class="lrg">O</div>
+<div class="red">O</div>
+</li>
+<li id="l5">
+<div class="r">O</div>
+<div class="lrg">O</div>
+<div class="red">O</div>
+</li>
+<li id="l6">
+<div class="r">O</div>
+<div class="lrg">O</div>
+<div class="red">O</div>
+</li>
+<li id="l7">
+<div class="r">O</div>
+<div class="lrg">O</div>
+<div class="red">O</div>
+</li>
+<li id="l8">
+<div class="r">O</div>
+<div class="lrg">O</div>
+<div class="red">O</div>
+</li>
+<li id="l9">
+<div class="r">O</div>
+<div class="lrg">O</div>
+<div class="red">O</div>
+</li>
+<li id="l10">
+<div class="r">O</div>
+<div class="lrg">O</div>
+<div class="red">O</div>
+</li>
+</ol>
+
+</body>
+</html>

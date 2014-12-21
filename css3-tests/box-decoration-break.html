@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: box-decoration-break</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+p span {border: 2px solid red; background: url(i/blob-green.gif);
+	padding: 3px 1em; line-height: 2;}
+#p01 span {box-decoration-break: slice;}
+#p02 span {box-decoration-break: clone;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-background/#the-box-decoration-break">http://www.w3.org/TR/css3-background/#the-box-decoration-break</a></p>
+
+<p id="p01">
+[#p01] This is a paragraph.  <span>It contains within it a <tt>span</tt> element.  This inline element has been decorated and backgrounded in order to test the outcome of <code>box-decoration-break</code>.  There should be two different effects between the first test and the second.</span>  Let us hope it is so.
+</p>
+<p id="p02">
+[#p02] This is a paragraph.  <span>It contains within it a <tt>span</tt> element.  This inline element has been decorated and backgrounded in order to test the outcome of <code>box-decoration-break</code>.  There should be two different effects between the first test and the second.</span>  Let us hope it is so.
+</p>
+
+</body>
+</html>

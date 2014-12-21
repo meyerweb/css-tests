@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Helvetial</title>
+<style type="text/css" media="all">
+.arena [id]:before {content: "[#" attr(id) "] ";}
+.arena [class]:before {content: "[." attr(class) "] ";}
+.arena li span {border-bottom: 1px dotted silver;}
+
+@font-face {
+	font-family: "H";
+	src: local(Helvetica);
+	}
+@font-face {
+	font-family: "A";
+	src: local(Arial);
+	}
+body {font-family: serif;}
+.arena ol {font-size: 125%;}
+#l01 .s01 {font-family: Helvetica, monospace;}
+#l01 .s02 {font-family: Arial, monospace;}
+#l02 .s01 {font-family: H, monospace;}
+#l02 .s02 {font-family: A, monospace;}
+</style>
+</head>
+<body>
+
+<div class="arena">
+
+<ol>
+<li id="l01">A list item with <span class="s01">one GR span</span> and <span class="s02">another GR span</span> inside.</li>
+<li id="l02">A list item with <span class="s01">one GR span</span> and <span class="s02">another GR span</span> inside.</li>
+</ol>
+
+</div>
+
+</body>
+</html>

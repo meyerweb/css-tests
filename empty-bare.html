@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Bare :empty</title>
+<link rel="stylesheet" href="c/style-show-tr.css" type="text/css" media="all" />
+<style type="text/css" media="all" contenteditable>
+html {background: #CCC;}
+body {background: #FFF;}
+ul {margin-left: 0;
+  padding-left: 3em;}
+li {margin: 0.75em 0;}
+
+*:empty {
+   padding: 0.25em;
+   outline: 1px dashed red;
+   background: yellow;
+}
+body:empty {
+   background: #FCC;
+}
+</style>
+</head>
+<body>
+
+un-elemented text (so it's a node of the <code>body</code>)
+
+<h2>Empties</h2>
+<ul>
+<li>empty line item, a return-only, and a space-only line item follow (in that order):</li>
+<li></li>
+<li>
+</li>
+<li> </li>
+<li>empty span [ <span></span> ]</li>
+<li><span>all of the text in this list item is inside a <code>span</code></span></li>
+<li>missing image [ <img src="!" alt="" title="missing image" /> ]</li>
+<li>loaded image [ <img src="i/tester.jpg" title="blah" alt="blah" /> ]</li>
+<li>break element [ <br /> ]</li>
+<li><form action="#">a form with...
+<ul>
+<li>a text input [ <input type="text" /> ]</li>
+<li>a text input with a value [ <input type="text" value="a value" /> ]</li>
+<li>a radio input [ <input type="radio" /> ]</li>
+<li>a checkbox input [ <input type="checkbox" /> ]</li>
+<li>a submit input [ <input type="submit" /> ]</li>
+<li>a textarea [<textarea rows="3" cols="30"></textarea> ]</li>
+<li>a textarea with content [<textarea rows="3" cols="30">content</textarea> ]</li>
+</ul>
+</form></li>
+</ul>
+
+</body>
+</html>

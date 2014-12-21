@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<title>Cicadients</title>
+<style type="text/css" media="all">
+
+h1 { margin: 1.25em 0 0; border-bottom: 1px solid #666;}
+h2 {margin: 1.5em 0 0; border-bottom: 1px solid #BBB;}
+p {margin: 0.5em 0;}
+div[id^="d"] {
+	margin: 0 0 2em 0; padding: 0;
+	border: 1px solid gray; background: #FFF;}
+#d1 {
+	background-image:
+		-webkit-linear-gradient(
+			0deg,
+			rgba(171,191,196,0.6),
+			rgba(171,191,196,8) 50%,			
+			rgba(255,0,0,0) 50%,
+			rgba(255,0,0,0)
+		)
+		,
+		-webkit-linear-gradient(
+			0deg,
+			rgba(203,138,153,0.7),
+			rgba(203,138,153,0.7) 49%,
+			rgba(203,138,153,0.5) 50%,
+			rgba(255,0,0,0) 50%,
+			rgba(255,0,0,0)
+		)
+		,
+		-webkit-linear-gradient(
+			0deg,
+			rgba(220,209,185,0) 0%,
+			rgba(220,209,185,0) 20%,
+			rgba(220,209,185,0.4) 20%,
+			rgba(220,209,185,0.8) 80%,
+			rgba(255,0,0,0) 80%,
+			rgba(255,0,0,0)
+		)
+		;
+	background-image:
+		-moz-linear-gradient(
+			0deg,
+			rgba(171,191,196,0.6),
+			rgba(171,191,196,8) 50%,			
+			rgba(255,0,0,0) 50%,
+			rgba(255,0,0,0)
+		)
+		,
+		-moz-linear-gradient(
+			0deg,
+			rgba(203,138,153,0.7),
+			rgba(203,138,153,0.7) 49%,
+			rgba(203,138,153,0.5) 50%,
+			rgba(255,0,0,0) 50%,
+			rgba(255,0,0,0)
+		)
+		,
+		-moz-linear-gradient(
+			0deg,
+			rgba(220,209,185,0) 0%,
+			rgba(220,209,185,0) 20%,
+			rgba(220,209,185,0.4) 20%,
+			rgba(220,209,185,0.8) 80%,
+			rgba(255,0,0,0) 80%,
+			rgba(255,0,0,0)
+		)
+		;
+	background-image:
+		-ms-linear-gradient(
+			0deg,
+			rgba(171,191,196,0.6),
+			rgba(171,191,196,8) 50%,			
+			rgba(255,0,0,0) 50%,
+			rgba(255,0,0,0)
+		)
+		,
+		-ms-linear-gradient(
+			0deg,
+			rgba(203,138,153,0.7),
+			rgba(203,138,153,0.7) 49%,
+			rgba(203,138,153,0.5) 50%,
+			rgba(255,0,0,0) 50%,
+			rgba(255,0,0,0)
+		)
+		,
+		-ms-linear-gradient(
+			0deg,
+			rgba(220,209,185,0) 0%,
+			rgba(220,209,185,0) 20%,
+			rgba(220,209,185,0.4) 20%,
+			rgba(220,209,185,0.8) 80%,
+			rgba(255,0,0,0) 80%,
+			rgba(255,0,0,0)
+		)
+		;
+	background-image:
+		-o-linear-gradient(
+			0deg,
+			rgba(171,191,196,0.6),
+			rgba(171,191,196,8) 50%,			
+			rgba(255,0,0,0) 50%,
+			rgba(255,0,0,0)
+		)
+		,
+		-o-linear-gradient(
+			0deg,
+			rgba(203,138,153,0.7),
+			rgba(203,138,153,0.7) 49%,
+			rgba(203,138,153,0.5) 50%,
+			rgba(255,0,0,0) 50%,
+			rgba(255,0,0,0)
+		)
+		,
+		-o-linear-gradient(
+			0deg,
+			rgba(220,209,185,0) 0%,
+			rgba(220,209,185,0) 20%,
+			rgba(220,209,185,0.4) 20%,
+			rgba(220,209,185,0.8) 80%,
+			rgba(255,0,0,0) 80%,
+			rgba(255,0,0,0)
+		)
+		;
+	background-image:
+		linear-gradient(
+			90deg,
+			rgba(171,191,196,0.6),
+			rgba(171,191,196,8) 50%,			
+			rgba(255,0,0,0) 50%,
+			rgba(255,0,0,0)
+		)
+		,
+		linear-gradient(
+			90deg,
+			rgba(203,138,153,0.7),
+			rgba(203,138,153,0.7) 49%,
+			rgba(203,138,153,0.5) 50%,
+			rgba(255,0,0,0) 50%,
+			rgba(255,0,0,0)
+		)
+		,
+		linear-gradient(
+			90deg,
+			rgba(220,209,185,0) 0%,
+			rgba(220,209,185,0) 20%,
+			rgba(220,209,185,0.4) 20%,
+			rgba(220,209,185,0.8) 80%,
+			rgba(255,0,0,0) 80%,
+			rgba(255,0,0,0)
+		)
+		;
+	background-size:
+		29px 100%,
+		37px 100%,
+		53px 100%
+		;
+	background-repeat: repeat-x;
+	height: 200px;
+}
+#d2 {
+	background-image:
+		-webkit-linear-gradient(
+			90deg,
+			rgba(255,128,128,0.25),
+			rgba(255,128,128,0) 75%
+		)
+		,
+		-webkit-linear-gradient(
+			-1deg,
+			transparent,
+			transparent 30%,
+			#510A0E 35%,
+			#510A0E 40%,
+			#61100F 43%,
+			#B93F3A 50%,
+			#4B0408 55%,
+			#6A0F18 60%,
+			#651015 65%,
+			#510A0E 70%,
+			#510A0E 75%,
+			rgba(255,128,128,0) 80%,
+			transparent
+		)
+		,
+		-webkit-linear-gradient(
+			2deg,
+			#510A0E,
+			#510A0E 20%,
+			#61100F 25%,
+			#B93F3A 40%,
+			#4B0408 50%,
+			#6A0F18 70%,
+			#651015 80%,
+			#510A0E 90%,
+			#510A0E
+		)		
+		;
+	background-image:
+		-moz-linear-gradient(
+			90deg,
+			rgba(255,128,128,0.25),
+			rgba(255,128,128,0) 75%
+		)
+		,
+		-moz-linear-gradient(
+			-1deg,
+			transparent,
+			transparent 30%,
+			#510A0E 35%,
+			#510A0E 40%,
+			#61100F 43%,
+			#B93F3A 50%,
+			#4B0408 55%,
+			#6A0F18 60%,
+			#651015 65%,
+			#510A0E 70%,
+			#510A0E 75%,
+			rgba(255,128,128,0) 80%,
+			transparent
+		)
+		,
+		-moz-linear-gradient(
+			2deg,
+			#510A0E,
+			#510A0E 20%,
+			#61100F 25%,
+			#B93F3A 40%,
+			#4B0408 50%,
+			#6A0F18 70%,
+			#651015 80%,
+			#510A0E 90%,
+			#510A0E
+		)		
+		;
+	background-image:
+		-ms-linear-gradient(
+			90deg,
+			rgba(255,128,128,0.25),
+			rgba(255,128,128,0) 75%
+		)
+		,
+		-ms-linear-gradient(
+			-1deg,
+			transparent,
+			transparent 30%,
+			#510A0E 35%,
+			#510A0E 40%,
+			#61100F 43%,
+			#B93F3A 50%,
+			#4B0408 55%,
+			#6A0F18 60%,
+			#651015 65%,
+			#510A0E 70%,
+			#510A0E 75%,
+			rgba(255,128,128,0) 80%,
+			transparent
+		)
+		,
+		-ms-linear-gradient(
+			2deg,
+			#510A0E,
+			#510A0E 20%,
+			#61100F 25%,
+			#B93F3A 40%,
+			#4B0408 50%,
+			#6A0F18 70%,
+			#651015 80%,
+			#510A0E 90%,
+			#510A0E
+		)		
+		;
+	background-image:
+		-o-linear-gradient(
+			90deg,
+			rgba(255,128,128,0.25),
+			rgba(255,128,128,0) 75%
+		)
+		,
+		-o-linear-gradient(
+			-1deg,
+			transparent,
+			transparent 30%,
+			#510A0E 35%,
+			#510A0E 40%,
+			#61100F 43%,
+			#B93F3A 50%,
+			#4B0408 55%,
+			#6A0F18 60%,
+			#651015 65%,
+			#510A0E 70%,
+			#510A0E 75%,
+			rgba(255,128,128,0) 80%,
+			transparent
+		)
+		,
+		-o-linear-gradient(
+			2deg,
+			#510A0E,
+			#510A0E 20%,
+			#61100F 25%,
+			#B93F3A 40%,
+			#4B0408 50%,
+			#6A0F18 70%,
+			#651015 80%,
+			#510A0E 90%,
+			#510A0E
+		)		
+		;
+	background-image:
+		linear-gradient(
+			0deg,
+			rgba(255,128,128,0.25),
+			rgba(255,128,128,0) 75%
+		)
+		,
+		linear-gradient(
+			89deg,
+			transparent,
+			transparent 30%,
+			#510A0E 35%,
+			#510A0E 40%,
+			#61100F 43%,
+			#B93F3A 50%,
+			#4B0408 55%,
+			#6A0F18 60%,
+			#651015 65%,
+			#510A0E 70%,
+			#510A0E 75%,
+			rgba(255,128,128,0) 80%,
+			transparent
+		)
+		,
+		linear-gradient(
+			92deg,
+			#510A0E,
+			#510A0E 20%,
+			#61100F 25%,
+			#B93F3A 40%,
+			#4B0408 50%,
+			#6A0F18 70%,
+			#651015 80%,
+			#510A0E 90%,
+			#510A0E
+		)		
+		;
+	background-size:
+		auto,
+		300px 100%,
+		109px 100%;
+	background-repeat: repeat-x;
+	height: 400px;
+}
+</style>
+</head>
+<body>
+
+<h1>Cicadients</h1>
+<p>
+A reworking of the first two examples of “<a href="http://designfestival.com/the-cicada-principle-and-why-it-matters-to-web-designers/">The Cicada Principle and Why It Matters to Web Designers</a>” using CSS gradients.  (The third example would be theoretically possible to do with gradients, but it would be the worst possible approach.)
+</p>
+
+<h2>Example #1</h2>
+<p>Unprefixed CSS: <strong>0.59KB</strong> (604 characters, unminified).  Total CSS, both prefixed and not: <strong>2.66KB</strong> (2,720 characters, unminified).  Total, original images: <strong>~7KB</strong> (plus two extra server hits).</p>
+<div id="d1"></div>
+
+<h2>Example #2</h2>
+<p>
+This only covers the first two of the three ‘layers’ in the original example; the third layer would be easily possible but hasn’t yet been done.
+</p>
+<p>Unprefixed CSS: <strong>0.63KB</strong> (643 characters, unminified).  Total CSS, both prefixed and not: <strong>2.81KB</strong> (2,882 characters, unminified).  Total, original images: <strong>~23KB</strong> (plus two extra server hits).</p>
+<div id="d2"></div>
+
+</body>
+</html>

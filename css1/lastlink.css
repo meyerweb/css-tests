@@ -1,0 +1,1 @@
+/*Import Test File*/@import url(lastlinkimport.css);@import url(lastlinkimportmediascreen.css) screen;@import url(lastlinkimportmediatty.css) tty;@import url(folder/lastlink.css);/* This line rests any browsers that got confused by the @import lines */  .ignored { color: black; }.lastlink { font-weight: bold; color: green; background: silver none; } 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: font-synthesis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+@font-face {
+	font-family: 'Myriad';
+	font-stretch: normal;
+	src: url('f/MyriadPro-Regular.otf') format('opentype');
+}
+.arena p {font-family: Myriad, serif;}
+#p01 {font-synthesis: none;}
+#p02 {font-synthesis: weight;}
+#p03 {font-synthesis: style;}
+#p04 {font-synthesis: weight style;}
+
+b, i {border-bottom: 1px dotted gray;}
+b {font-weight: bold;}
+i {font-style: italic;}
+
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://w3.org/TR/css3-fonts/#font-synthesis">http://w3.org/TR/css3-fonts/#font-synthesis</a></p>
+
+<p class="warning"><strong>WARNING:</strong> this test can only be passed if the font family in use lacks bold and italic faces. Therefore, a user agent can support <code>font-synthesis</code> and still appear to fail this test.</p>
+<p class="note"><strong>NOTE:</strong> this test uses the font face Myriad Pro Regular.  This single face was specifically selected because it lacks both bold and italic faces.  If the following paragraphs are in a serif font, then the font has failed to load.  If they are sans-serif, then the font has most likely loaded and the test should be valid.</p>
+
+<div class="arena">
+<p id="p01">[#p01] This is a paragraph with <b>bold</b> and <i>italic</i> children.  There should be neither bold nor italic.</p>
+<p id="p02">[#p02] This is a paragraph with <b>bold</b> and <i>italic</i> children.  There should be bold, but not italic.</p>
+<p id="p03">[#p03] This is a paragraph with <b>bold</b> and <i>italic</i> children.  There should be italic, but not bold.</p>
+<p id="p04">[#p04] This is a paragraph with <b>bold</b> and <i>italic</i> children.  There should be both bold and italic.</p>
+
+</div>
+
+</body>
+</html>

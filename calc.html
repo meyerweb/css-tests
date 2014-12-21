@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculation</title>
+<style type="text/css" media="all">
+ol {margin: 0; padding: 0;}
+li {margin: 1em 0 1em 2em; padding: 25px 0 10px;
+	font: 1em Times, serif; width: 1000px;
+	white-space: nowrap;
+	background: #FAA url(i/ruler.png) repeat-x;}
+div {padding: 25px 0 10px 0; text-align: center;
+	background: #AEA url(i/ruler.png) repeat-x;}
+#d1 {
+	width: -webkit-calc(100% - 200px); 
+	width: -moz-calc(100% - 200px); 
+	width: calc(100% - 200px); 
+}
+#d2 {
+	width: -webkit-calc(100px / 2 * 3);
+	width: -moz-calc(100px / 2 * 3);
+	width: -ms-calc(100px / 2 * 3);
+	width: -o-calc(100px / 2 * 3);
+	width: calc(100px / 2 * 3);
+}	
+#l1 {
+	width: -webkit-calc(100px / 2 * 3);
+	width: -moz-calc(100px / 2 * 3);
+	width: -ms-calc(100px / 2 * 3);
+	width: -o-calc(100px / 2 * 3);
+	width: calc(100px / 2 * 3);
+}	
+#l2 {
+	width: -webkit-calc((100px / 2) * 3);
+	width: -moz-calc((100px / 2) * 3);
+	width: -ms-calc((100px / 2) * 3);
+	width: -o-calc((100px / 2) * 3);
+	width: calc((100px / 2) * 3);
+}	
+#l3 {
+	width: -webkit-calc(100px / (2 * 3));
+	width: -moz-calc(100px / (2 * 3));
+	width: -ms-calc(100px / (2 * 3));
+	width: -o-calc(100px / (2 * 3));
+	width: calc(100px / (2 * 3));
+}	
+</style>
+</head>
+<body>
+
+<div>Testing div with width of 100%</div>
+<div id="d1">Testing div with width of (100% - 200px)</div>
+
+<ol>
+<li id="l1">calc(100px / 2 * 3)</li>
+<li id="l2">calc((100px / 2) * 3)</li>
+<li id="l3">calc(100px / (2 * 3))</li>
+</ol>
+
+</body>
+</html>

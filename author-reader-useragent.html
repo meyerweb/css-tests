@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Author versus user (reader) styles</title>
+<style type="text/css" id="tests">
+ol li {margin: 1em 0; width: 50%;}
+ol li p {padding: 0.5em;}
+ol li:hover p {background: rgba(255,255,255,0.85); width: 90%;}
+#meyerweb-eric-css-tests li.author {background: green;}
+#meyerweb-eric-css-tests li.author.important {background: red !important;
+	background: repeating-linear-gradient(-45deg,red,red 1em,yellow 1em,yellow 2em) !important;}
+.author.reader {border-left: 3em solid green;}
+</style>
+<link rel="stylesheet" type="text/css" href="c/style-insert-tests.css">
+</head>
+<body id="meyerweb-eric-css-tests">
+
+<p class="note">
+Note that <em>the following test <strong>will be invalid</strong></em> unless you have <a href="author-reader-useragent.css">a user (reader) style sheet</a> enabled with the following rules:
+</p>
+<pre>
+#meyerweb-eric-css-tests li.reader {background: red;
+	background: repeating-linear-gradient(-45deg,red,red 1em,yellow 1em,yellow 2em);}
+#meyerweb-eric-css-tests li.reader.important {background: green !important;}
+</pre>
+
+<hr>
+
+<ol>
+<li class="l01"><p>A user-agent paragraph.</p></li>
+<li class="author reader"><p>Author-reader conflict.</p></li>
+<li class="author reader important"><p>Important author-reader conflict.</p></li>
+</ol>
+
+</body>
+</html>

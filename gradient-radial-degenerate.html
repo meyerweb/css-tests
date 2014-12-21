@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Degenerate Radial Gradients</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="c/style-insert-tests.css">
+<style type="text/css" media="all" id="tests">
+div {height: 200px; width: 200px; float: left; margin: 10px; border: 1px dotted red;}
+section div:nth-child(5n+1) {clear: left;}
+
+.d01 {background-image: radial-gradient(100px,      purple,   gold);}
+.d02 {background-image: radial-gradient(25px 100px, purple,   gold);}
+.d03 {background-image: radial-gradient(1px 100px,  purple,   gold);}
+.d04 {background-image: radial-gradient(0 100px,    purple,   gold);}
+.d05 {background-image: radial-gradient(0 100px,    purple 0, gold 100px);}
+
+.d06 {background-image: radial-gradient(100px,      purple,   gold);}
+.d07 {background-image: radial-gradient(100px 25px, purple,   gold);}
+.d08 {background-image: radial-gradient(100px 1px,  purple,   gold);}
+.d09 {background-image: radial-gradient(100px 0,    purple,   gold);}
+.d10 {background-image: radial-gradient(100px 0,    purple 0, gold 100px);}
+</style>
+</head>
+<body>
+
+<h1>Degenerate radial gradients</h1>
+<p>(because it’s the best section title in the history of W3C specs, that’s why)</p>
+
+<section>
+
+<div class="d01"><p></p></div>
+<div class="d02"><p></p></div>
+<div class="d03"><p></p></div>
+<div class="d04"><p></p></div>
+<div class="d05"><p></p></div>
+<div class="d06"><p></p></div>
+<div class="d07"><p></p></div>
+<div class="d08"><p></p></div>
+<div class="d09"><p></p></div>
+<div class="d10"><p></p></div>
+
+</section>
+
+</body>
+</html>

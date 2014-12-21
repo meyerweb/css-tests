@@ -1,0 +1,39 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Monospace Font Sizing</title>
+<style type="text/css">
+body {font: medium serif; padding: 2em;}
+div {border: 1px solid #666; border-width: 1px 0;
+	padding: 1.5em 0; margin: -1px 0 0;}
+
+#tc01 {font: 1em serif;}
+#tc02 {font: 1em sans-serif;}
+#tc03 {font: 1em monospace;}
+#tc04 {font: 1em cursive;}
+#tc05 {font: 1em fantasy;}
+</style>
+<script type="text/javascript">
+<!--
+function showSize() {
+	var obj = document.getElementsByTagName('body')[0];
+	alert(getComputedStyle(obj,null).getPropertyValue('font-size'));
+}
+//-->
+</script>
+</head>
+<body>
+
+<a href="javascript: showSize();">show <code>body</code> size</a>
+
+
+<div id="tc01">A serif div.</div>
+<div id="tc02">A sans-serif div.</div>
+<div id="tc03">A monospace div.</div>
+<div id="tc04">A cursive div.</div>
+<div id="tc05">A fantasy div.</div>
+
+</body>
+</html>

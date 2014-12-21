@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: @font-face</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" media="all">
+@font-face {
+	font-family: 'SwitzeraADF';
+	src: url('f/SwitzeraADF-Regular.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'SwitzeraADF';
+	src: url('f/SwitzeraADF-Italic.otf') format('opentype');
+	font-weight: normal;
+	font-style: italic;
+	}
+@font-face {
+	font-family: 'SwitzeraADF';
+	src: url('f/SwitzeraADF-Bold.otf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
+	}
+@font-face {
+	font-family: 'SwitzeraADF';
+	src: url('f/SwitzeraADF-BoldItalic.otf') format('opentype');
+	font-weight: bold;
+	font-style: italic;
+	}
+
+@font-face {
+	font-family: 'SwitzeraADF-B';
+	src: url('f/SwitzeraADF-Bold.otf') format('opentype');
+	}
+@font-face {
+	font-family: 'SwitzeraADF-I';
+	src: url('f/SwitzeraADF-Italic.otf') format('opentype');
+	}
+@font-face {
+	font-family: 'SwitzeraADF-BI';
+	src: url('f/SwitzeraADF-BoldItalic.otf') format('opentype');
+	}
+
+
+.arena p {font-family: SwitzeraADF, serif;}
+</style>
+<style type="text/css" id="tests">
+.arena p {font-family: SwitzeraADF, serif;}
+.arena p span {border-bottom: 1px dotted #BBF;}
+
+#p01 span.desc {font-weight: normal; font-style: normal;}
+#p02 span.desc {font-weight: normal; font-style: italic;}
+#p03 span.desc {font-weight: bold; font-style: normal;}
+#p04 span.desc {font-weight: bold; font-style: italic;}
+
+#p01 span.face {font-family: SwitzeraADF;}
+#p02 span.face {font-family: SwitzeraADF-I;}
+#p03 span.face {font-family: SwitzeraADF-B;}
+#p04 span.face {font-family: SwitzeraADF-BI;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://w3.org/TR/css3-fonts/">http://w3.org/TR/css3-fonts/</a></p>
+
+<div class="arena">
+
+<p id="p01">[#p01] A paragraph containing <span class="desc">descriptor-styled text</span> and <span class="face">face-styled text</span> and <span>element-styled text</span>.</p>
+<p id="p02">[#p02] A paragraph containing <span class="desc">descriptor-styled text</span> and <span class="face">face-styled text</span> and <span><i>element-styled text</i></span>.</p>
+<p id="p03">[#p03] A paragraph containing <span class="desc">descriptor-styled text</span> and <span class="face">face-styled text</span> and <span><b>element-styled text</b></span>.</p>
+<p id="p04">[#p04] A paragraph containing <span class="desc">descriptor-styled text</span> and <span class="face">face-styled text</span> and <span><b><i>element-styled text</i></b></span>.</p>
+
+</div>
+
+</body>
+</html>

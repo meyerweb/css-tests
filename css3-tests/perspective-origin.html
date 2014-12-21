@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- perspective transform -->
+<title>CSS3 test: perspective-origin</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+div[id^="d"] {margin-top: 2em;}
+div[id^="d"] div {border: 1px solid silver; background: #DDD;
+	height: 50px; width: 100px;
+	transform: rotateY(45deg);}
+#d01 {perspective: 1000; perspective-origin: top left;}
+#d02 {perspective: 100; perspective-origin: bottom right;}
+#d03 {perspective: 10; perspective-origin: 50% 0%;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"></p>
+
+<div class="arena">
+
+<div id="d01">
+[#d01] Following is a div with some perspective (we hope).
+	<div>Total perspective!</div>
+</div>
+<div id="d02">
+[#d02] Following is a div with some perspective (we hope).
+	<div>Total perspective!</div>
+</div>
+<div id="d03">
+[#d03] Following is a div with some perspective (we hope).
+	<div>Total perspective!</div>
+</div>
+
+</div>
+
+</body>
+</html>

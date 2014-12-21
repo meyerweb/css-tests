@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+<head>
+<title>white-space: pre-line and pre-wrap</title>
+<style type="text/css">
+p {width: 25em; border: 1px dotted red;}
+.cl1 {white-space: pre;}
+.cl2 {white-space: nowrap;}
+.cl3 {white-space: normal;}
+.cl4 {white-space: pre-wrap;}
+.cl5 {white-space: pre-line;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css">
+
+<p class="cl1">
+[cl1] This paragraph should     show extra space  where there    would ordinarily         not be any.
+     There should also be preservation of returns
+as this sentence
+     very clearly demonstrates.
+</p>
+
+<p class="cl2">
+[cl2] This paragraph should not word-wrap, no matter how long the paragraph might be or over how many lines it would ordinarily wrap, as it has been set to <code>white-space: nowrap</code> and that should have the obvious effect.
+</p>
+
+<p class="cl1">
+[cl1] This paragraph      should     show extra   space, <span class="cl3">[cl3] except in the       second half</span>.
+</p>
+
+<p class="cl4">
+[cl4] This paragraph should     show extra space  where there    would ordinarily         not be any.  It should also wrap lines in any situation where they exceed the width of the containing element, such as with this sentence.
+
+     There should also be preservation of returns
+as this sentence
+     very clearly demonstrates.
+</p>
+
+<p class="cl5">
+[cl5] This paragraph should    not show extra spaces  where there    would ordinarily         not be any; in other words, whitespace is collapsed.  It should also wrap lines in any situation where they exceed the width of the containing element, such as with this sentence.
+
+     However, there should be preservation of returns
+as this sentence
+     very clearly demonstrates.
+</p>
+
+</body>
+</html>

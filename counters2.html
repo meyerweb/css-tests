@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Untitled</title>
+<style type="text/css">
+ol {counter-reset: list 0; list-style-type: none;
+	margin: 0; padding: 1.5em 2.5em;
+	border-bottom: 1px dotted gray;}
+ol ol {margin: 0.25em 0 0.5em; padding: 0 2.5em; border-bottom: 0;}
+ol li:before {counter-increment: list; content: counters(list, ".") " ";
+	font-weight: bold; margin-right: 0.5em;}
+</style>
+</head>
+
+<body>
+
+<h1>Testing <code>counters()</code></h1>
+
+<p>CSS relevant to counting:</p>
+<pre><code>
+</code></pre>
+
+<ol>
+	<li>"1" is expected
+		<ol>
+			<li>"1.1" is expected</li>
+			<li>"1.2" is expected</li>
+		</ol>
+	</li>
+	<li>"2" is expected</li>
+	<li>"3" is expected
+		<ol>
+			<li>"3.1" is expected</li>
+			<li>"3.2" is expected</li>
+		</ol>
+	</li>
+	<li>"4" is expected</li>
+	<li>"5" is expected
+		<ol>
+			<li>"5.1" is expected</li>
+			<li>"5.2" is expected</li>
+		</ol>
+	</li>
+</ol>
+
+<ol>
+	<li>"1" is expected</li>
+	<li>"2" is expected
+		<ol>
+			<li>"2.1" is expected
+				<ol>
+					<li>"2.1.1" is expected</li>
+					<li>"2.1.2" is expected</li>
+				</ol>
+			</li>
+			<li>"2.2" is expected
+				<ol>
+					<li>"2.2.1" is expected</li>
+					<li>"2.2.2" is expected</li>
+					<li>"2.2.3" is expected</li>
+				</ol>
+			</li>
+		</ol>
+	</li>
+	<li>"3" is expected</li>
+</ol>
+
+<ol>
+	<li>"1" is expected
+		<ol>
+			<li>"1.1" is expected
+				<ol>
+					<li>"1.1.1" is expected
+						<ol>
+							<li>"1.1.1.1" is expected
+								<ol>
+									<li>"1.1.1.1.1" is expected</li>
+								</ol>
+							</li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+		</ol>
+	</li>
+	<li>"2" is expected
+		<ol>
+			<li>"2.1" is expected
+				<ol>
+					<li>"2.1.1" is expected
+						<ol>
+							<li>"2.1.1.1" is expected
+								<ol>
+									<li>"2.1.1.1.1" is expected</li>
+								</ol>
+							</li>
+							<li>"2.1.1.2" is expected
+								<ol>
+									<li>"2.1.1.2.1" is expected</li>
+									<li>"2.1.1.2.2" is expected</li>
+								</ol>
+							</li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+		</ol>
+	</li>
+</ol>
+
+</body>
+</html>

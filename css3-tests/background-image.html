@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: background-image</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.arena div {margin: 10px; padding: 1em; border: 5px double;
+	background-image: url(i/box-red.gif);
+	background-repeat: no-repeat;
+	background-position: top left, top right, bottom right, bottom left;
+	background-size: auto 25%;}
+
+#d01 {background-image: url(i/box-red.gif), url(i/box-red.gif), url(i/box-red.gif), url(i/box-red.gif);}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-background/#the-background-image">http://www.w3.org/TR/css3-background/#the-background-image</a></p>
+
+<section class="arena">
+
+<div id="d00">[#d00]</div>
+
+<div id="d01">[#d01]</div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>rotate3d() vs. rotateX() etc.</title>
+<style>
+body {margin: 0 5em;}
+head, #editme {display: block;}
+#editme {white-space: pre; font: 90% Anadale Mono, monospace; padding: 0.5em 1em 1em; background: #DDD; border-bottom: 1px solid;}
+body > p:first-child {color: #444; font-style: italic; margin: 0.25em 0 2em;}
+section + p {clear: left; padding-top: 2em;}
+
+	section {position: relative; float: left; border: 1px solid gray; height: 500px; width: 500px; margin: 25px;}
+	div {border: 1px solid red; height: 150px; width: 150px;
+		background: url(img/frame-sq.png); background-size: 100% 100%; background-origin: border-box;
+		transform-style: preserve-3d; perspective: 800000px;}
+	section > div {position: absolute; top: 0; left: 0;}
+	div.center, div.left, div.right {top: 175px;}
+	div.center, div.top, div.bottom {left: 175px;}
+	div.right {left: 350px;}
+	div.bottom {top: 350px;}
+	section > div > div {border: 1px solid gray; margin: 0; box-sizing: border-box; height: 150px; width: 150px;
+		text-align: center; font: bold medium sans-serif; line-height: 2.5;
+		background: linear-gradient(0deg,rgba(255,255,255,0.6),rgba(165,175,255,0.6));}
+	.top {transform: rotateX(-80deg);}
+	.bottom {transform: rotateX(80deg);}
+	.right {transform: rotateY(-80deg);}
+	.left {transform: rotateY(80deg);}
+
+/*
+/*
+</style>
+<style type="text/css" id="editme" contenteditable="true">
+	div[class^="r3d"] div {transform: rotate3d(1,1,0,45deg);}
+	div[class^="tch"] div {transform: rotateX(45deg) rotateY(45deg) rotateZ(0deg);}
+</style>
+</head>
+<body>
+<p>editable CSS</p>
+
+<section>
+
+<div class="r3d center"><div>ABC</div></div>
+<div class="r3d04 left"><div>ABC</div></div>
+<div class="r3d01 top"><div>ABC</div></div>
+<div class="r3d02 bottom"><div>ABC</div></div>
+<div class="r3d03 right"><div>ABC</div></div>
+
+</section>
+
+<section>
+
+<div class="tch center"><div>ABC</div></div>
+<div class="tch04 left"><div>ABC</div></div>
+<div class="tch01 top"><div>ABC</div></div>
+<div class="tch02 bottom"><div>ABC</div></div>
+<div class="tch03 right"><div>ABC</div></div>
+
+</section>
+
+
+<p>
+Both boxes show the top-right-bottom-left views of the transform in the middle.  Each view is rotated 80 degrees away from face-on, not 90 degrees.  If you change the selectors in the editable CSS, things will break.  Don’t say I didn’t warn you.
+</p>
+
+</body>
+</html>

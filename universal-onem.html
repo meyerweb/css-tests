@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+			"http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>Universal One-em</title>
+<style type="text/css">
+<!--
+* {font-size: 1em;}
+h1 {font-size: 200%; font-weight: bold;}
+.instructions {color: red;}
+-->
+</style>
+</head>
+<body>
+
+<h1>If this page is unreadable, set text size to 'medium'!</h1>
+<div class="instructions">
+<p>
+All right, assuming you can read this, here's how to trigger the problem this page demonstrates:
+</p>
+<ol>
+<li>Fire up IE6/Win.</li>
+<li>Open up the "View" menu.</li>
+<li>Go to the "Text Size" menu entry.</li>
+<li>Set the text size to "Medium."</li>
+<li>Load up this page.</li>
+<li>Using the same basic process as before, set the text size to "Smaller."</li>
+<li>Wince.</li>
+</ol>
+</div>
+<p>
+For extra fun, try the other non-"Medium" text size values.  The degree to which the text size is modified for each is truly impressive.
+</p>
+<p>
+The triggering rule for this bug is, of all things, the following:
+</p>
+<pre>
+* {font-size: 1em;}
+</pre>
+<p>
+If the rule is modified to use the value <code>100%</code>, the bug isn't tripped.  In other words, the flagship browser of Microsoft's primary platform still can't handle simple font sizing.
+</p>
+<p>
+Thanks to Felix Miata for pointing out the solution of using <code>100%</code>.
+</p>
+<p>
+Following is some filler text just to make the page longer.
+</p>
+<p>
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.  Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+</p>
+<p>
+Lorem ipsum, dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+</p>
+
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+Added things
+
+Fixed positioning
+min-width, max-width
+min-height, max-height
+Attribute selectors
+Child selector
+Adjacent sibling selector
+:first-child
+Chained classes and pseudo-classes
+Arbitrary-element :hover
+Full background-attachment: fixed
+Alpha channel in PNG images
+ABBR tag
+
+
+--
+
+They fixed fixed!
+
+div#footer {
+	position: fixed;
+	bottom: 0;
+	left: 0; right: 0;
+	padding: 0.5em 1em;
+	background: white;
+	border-top: 1px solid gray;
+}
+body {
+	padding-bottom: 5em;
+}
+
+--
+
+body > div {
+	border: 1px solid red;
+}
+body > div > div {
+	border: 1px dotted red;
+}
+
+--
+
+#ericmeyer > *:first-child {
+	cuteness: 100;
+}
+
+#ericmeyer:first-child {
+	pedantics: xx-large;
+}
+
+td:first-child {
+	background: yellow;
+}
+
+--
+
+Attribute selectors
+
+CSS2.1
+
+[attr]
+[attr="val"]
+[attr~="val"]
+[attr|="val"]
+
+CSS3
+
+[attr*="val"]
+[attr^="val"]
+[attr$="val"]
+
+--
+
+img[src$=".gif"] {
+	border: 3px solid red;
+}
+img[src$=".jpg"] {
+	border: 3px solid lime;
+}
+
+
+div[id] {
+	border: 1px dotted red;
+	margin: 1px;
+}
+
+
+img {
+	border: 5px solid red;
+}
+img[alt] {
+	border-style: none !important;
+}
+
+
+--
+
+a[href$=".pdf"] {
+	padding-right: 18px;
+	background: url(/pix/pdf-icon.gif) 
+	  100% 50% no-repeat;
+}
+
+a[title*="(PDF"] {
+	padding-right: 18px;
+	background: url(/pix/pdf-icon.gif) 
+	  100% 50% no-repeat;
+}
+
+*[href*="aneventapart.com"] {
+	font-weight: bold;
+	color: maroon;
+	background: #AEA571;
+}
+
+th[scope="col"] {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+th[scope="row"] {
+	border-right: 1px solid black;
+}
+th[scope="row"] + td {
+	padding-left: 0.75em;
+}
+
+
+--
+
+What about Number 6?
+
+Dean Edwards has your fix
+
+--
+
+Dead bugs
+
+Peekaboo bug
+Guillotine bug
+Duplicate character bug
+Duplicate indent
+3-pixel text jog
+Creeping text bug
+Double float margin bug
+Bottom margin bug on hover
+IE/Win line-height bug
+Quirky percentages in IE
+List item whitespace bug
+Moving viewport scrollbar outside HTML borders
+Border chaos
+Text highlighting under a top border
+No Scroll bug
+Disappearing list background
+width:auto
+Dotted border style
+XML prolog triggering quirks mode
+
+--
+
+Dead parsing bugs
+
+* html
+html>body
+head+body
+_height
+overriding !important
+
+--
+
+New and surviving parsing bugs!
+
+*+html
+html*
+html>/**/body
+@import media
+
+--
+
+What the Hack...?
+
+Conditional comments are reliable and reduce the kabbalistic quotient in your CSS
+
+* html #example {height: 0;}
+*+html #example {min-height: 0;}
+
+
+
+div#footer {
+	position: fixed;
+	bottom: 0;
+	left: 0; right: 0;
+	padding: 0.5em 1em;
+	background: white;
+	border-top: 1px solid gray;
+}
+* html div#footer {
+	position: absolute;
+}
+body {
+	padding-bottom: 5em;
+	position: relative;
+}
+
+--
+
+Layout-wise, it's pretty much like any other current browser (FF, Safari, Opera, etc.) with the inevitable weird quirks here and there
+

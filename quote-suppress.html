@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Suppressing Marks on Quotes and Blockquotes</title>
+<style type="text/css" media="all">
+body {background: white; color: black; font: 1em Times, serif;}
+
+.group {border: 1px solid; padding: 1em; margin: 1em; background: #DDD;}
+.group p {margin: 0.25em 0;}
+.group blockquote {margin: 0.5em 2em;}
+.group q {background: #FFA; padding: 0 0.1em; margin: 0 0.1em;}
+
+#g1 {quotes: none;}
+#g2 {quotes: '' '';}
+#g3 q:before, #g3 q:after {content: none;}
+#g4 q:before, #g4 q:after {content: normal;}
+#g5 q:before, #g5 q:after {content: '';}
+</style>
+</head>
+<body>
+
+<div class="group" id="g0">
+<p>Baseline: no alterations to quotation styles.</p>
+
+<p>
+Here there is <q>quoted text</q> <strong>without</strong> quotation characters in the content.</p>
+<p>Here there is "<q>quoted text</q>" with quotation characters <strong>outside</strong> the <code>q</code> element.</p>
+<p>Here there is <q>"quoted text"</q> with quotation characters <strong>inside</strong> the <code>q</code> element.
+</p>
+
+<blockquote>
+<p>
+And then there's this <code>blockquote</code>.</p>
+<p>Here there is <q>quoted text</q> <strong>without</strong> quotation characters in the content.</p>
+<p>Here there is "<q>quoted text</q>" with quotation characters <strong>outside</strong> the <code>q</code> element.</p>
+<p>Here there is <q>"quoted text"</q> with quotation characters <strong>inside</strong> the <code>q</code> element.
+</p>
+</blockquote>
+
+</div>
+
+<div class="group" id="g1">
+<p><code>#g1 {quotes: none;}</code></p>
+
+<p>
+Here there is <q>quoted text</q> <strong>without</strong> quotation characters in the content.</p>
+<p>Here there is "<q>quoted text</q>" with quotation characters <strong>outside</strong> the <code>q</code> element.</p>
+<p>Here there is <q>"quoted text"</q> with quotation characters <strong>inside</strong> the <code>q</code> element.
+</p>
+
+<blockquote>
+<p>
+And then there's this <code>blockquote</code>.</p>
+<p>Here there is <q>quoted text</q> <strong>without</strong> quotation characters in the content.</p>
+<p>Here there is "<q>quoted text</q>" with quotation characters <strong>outside</strong> the <code>q</code> element.</p>
+<p>Here there is <q>"quoted text"</q> with quotation characters <strong>inside</strong> the <code>q</code> element.
+</p>
+</blockquote>
+
+</div>
+
+<div class="group" id="g2">
+<p><code>#g2 {quotes: '' '';}</code></p>
+
+<p>
+Here there is <q>quoted text</q> <strong>without</strong> quotation characters in the content.</p>
+<p>Here there is "<q>quoted text</q>" with quotation characters <strong>outside</strong> the <code>q</code> element.</p>
+<p>Here there is <q>"quoted text"</q> with quotation characters <strong>inside</strong> the <code>q</code> element.
+</p>
+
+<blockquote>
+<p>
+And then there's this <code>blockquote</code>.</p>
+<p>Here there is <q>quoted text</q> <strong>without</strong> quotation characters in the content.</p>
+<p>Here there is "<q>quoted text</q>" with quotation characters <strong>outside</strong> the <code>q</code> element.</p>
+<p>Here there is <q>"quoted text"</q> with quotation characters <strong>inside</strong> the <code>q</code> element.
+</p>
+</blockquote>
+
+</div>
+
+<div class="group" id="g3">
+<p><code>q:before, q:after {content: none;}</code></p>
+
+<p>Here there is <q>quoted text</q> <strong>without</strong> quotation characters in the content.</p>
+<p>Here there is "<q>quoted text</q>" with quotation characters <strong>outside</strong> the <code>q</code> element.</p>
+<p>Here there is <q>"quoted text"</q> with quotation characters <strong>inside</strong> the <code>q</code> element.</p>
+
+<blockquote>
+<p>
+And then there's this <code>blockquote</code>.</p>
+<p>Here there is <q>quoted text</q> <strong>without</strong> quotation characters in the content.</p>
+<p>Here there is "<q>quoted text</q>" with quotation characters <strong>outside</strong> the <code>q</code> element.</p>
+<p>Here there is <q>"quoted text"</q> with quotation characters <strong>inside</strong> the <code>q</code> element.
+</p>
+</blockquote>
+
+</div>
+
+<div class="group" id="g4">
+<p><code>q:before, q:after {content: normal;}</code></p>
+
+<p>Here there is <q>quoted text</q> <strong>without</strong> quotation characters in the content.</p>
+<p>Here there is "<q>quoted text</q>" with quotation characters <strong>outside</strong> the <code>q</code> element.</p>
+<p>Here there is <q>"quoted text"</q> with quotation characters <strong>inside</strong> the <code>q</code> element.</p>
+
+<blockquote>
+<p>
+And then there's this <code>blockquote</code>.</p>
+<p>Here there is <q>quoted text</q> <strong>without</strong> quotation characters in the content.</p>
+<p>Here there is "<q>quoted text</q>" with quotation characters <strong>outside</strong> the <code>q</code> element.</p>
+<p>Here there is <q>"quoted text"</q> with quotation characters <strong>inside</strong> the <code>q</code> element.
+</p>
+</blockquote>
+
+</div>
+
+<div class="group" id="g5">
+<p><code>q:before, q:after {content: '';}</code></p>
+
+<p>Here there is <q>quoted text</q> <strong>without</strong> quotation characters in the content.</p>
+<p>Here there is "<q>quoted text</q>" with quotation characters <strong>outside</strong> the <code>q</code> element.</p>
+<p>Here there is <q>"quoted text"</q> with quotation characters <strong>inside</strong> the <code>q</code> element.</p>
+
+<blockquote>
+<p>
+And then there's this <code>blockquote</code>.</p>
+<p>Here there is <q>quoted text</q> <strong>without</strong> quotation characters in the content.</p>
+<p>Here there is "<q>quoted text</q>" with quotation characters <strong>outside</strong> the <code>q</code> element.</p>
+<p>Here there is <q>"quoted text"</q> with quotation characters <strong>inside</strong> the <code>q</code> element.
+</p>
+</blockquote>
+
+</div>
+
+</body>
+</html>

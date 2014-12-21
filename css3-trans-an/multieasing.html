@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bouncy</title>
+<style type="text/css" media="all">
+#ball {
+	height: 1em; width: 5em;
+	padding: 3em 1em;
+	background: red;
+	text-align: center;
+
+	-webkit-border-radius: 1000px;
+	-webkit-box-shadow: 50px 50px 40px -20px rgba(0,0,0,0.25);
+	
+	-webkit-animation:
+		bouncer 1s cubic-bezier(0,0.95,0.15,1) infinite alternate,
+		mover 4s linear infinite alternate;
+
+	-moz-border-radius: 1000px;
+	-moz-box-shadow: 50px 50px 40px -20px rgba(0,0,0,0.25);
+	
+	-moz-animation:
+		bouncer 1s cubic-bezier(0,0.95,0.15,1) infinite alternate,
+		mover 4s linear infinite alternate;
+}
+
+@-webkit-keyframes mover {
+	0% {
+		margin-left: 0;
+	}
+	100% {
+		margin-left: 90%;
+	}
+}
+@-webkit-keyframes bouncer {
+	0% {
+		-webkit-transform: scale(1);
+		-webkit-box-shadow: 50px 50px 40px -10px rgba(0,0,0,0.25);
+	}
+	100% {
+		-webkit-transform: scale(0.66);
+		-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+	}
+}
+
+@-moz-keyframes mover {
+	0% {
+		margin-left: 0;
+	}
+	100% {
+		margin-left: 90%;
+	}
+}
+@-moz-keyframes bouncer {
+	0% {
+		-moz-transform: scale(1);
+		-moz-box-shadow: 50px 50px 40px -10px rgba(0,0,0,0.25);
+	}
+	100% {
+		-moz-transform: scale(0.66);
+		-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+	}
+}
+</style>
+</head>
+<body>
+
+<div id="ball">bouncy</div>
+
+</body>
+</html>

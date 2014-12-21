@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: hanging-punctuation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.arena p {border: 1px dotted gray; width: 50%;}
+#p01 {hanging-punctuation: first;}
+#p02 {hanging-punctuation: last;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-text/#hanging-punctuation">http://www.w3.org/TR/css3-text/#hanging-punctuation</a></p>
+
+<div class="arena">
+<p id="p01">“This is a paragraph ([#p01]) with a leading quotation mark.  It should hang off the beginning of the first line of text such that the non-quotation characters line up with each other vertically.”</p>
+<p id="p02">“This is a paragraph ([#p02]) with a trailing quotation mark. It should hang off the end of the last line in order to avoid forced line-wrapping.”</p>
+</div>
+
+</body>
+</html>

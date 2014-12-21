@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: text-rendering</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests" contenteditable>
+.arena p {font-size: 2em;}
+.arena .p01 {text-rendering: optimizeSpeed;}
+.arena .p02 {text-rendering: optimizeLegibility;}
+.arena .p03 {text-rendering: geometricPrecision;}
+.arena .p04 {text-rendering: auto;}
+</style>
+<style type="text/css" id="tests">
+</style>
+</head>
+<body class="www-meyerweb-com" class="css test suite">
+<p class="specref"></p>
+
+<div class="arena">
+
+<p>
+OX ox OC oc Te te FF ff Fi fi FL fl
+</p>
+<p class="p01">
+OX ox OC oc Te te FF ff Fi fi FL fl 
+</p>
+<p class="p02">
+OX ox OC oc Te te FF ff Fi fi FL fl
+</p>
+<p class="p03">
+OX ox OC oc Te te FF ff Fi fi FL fl
+</p>
+<p class="p04">
+OX ox OC oc Te te FF ff Fi fi FL fl
+</p>
+
+<hr>
+
+<p>
+Vestibulum id ligua porta felis eusimod semper.
+</p>
+<p class="p01">
+Vestibulum id ligua porta felis eusimod semper.
+</p>
+<p class="p02">
+Vestibulum id ligua porta felis eusimod semper.
+</p>
+<p class="p03">
+Vestibulum id ligua porta felis eusimod semper.
+</p>
+<p class="p04">
+Vestibulum id ligua porta felis eusimod semper.
+</p>
+
+
+</div>
+
+</body>
+</html>

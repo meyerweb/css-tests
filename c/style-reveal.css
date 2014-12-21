@@ -1,0 +1,4 @@
+/* reveal styles in modern browsers */
+head {display: block; padding-bottom: 1px; margin-bottom: 2em; border-bottom: 3px double #AAA;}
+style {display: block; font: small monospace; white-space: pre; padding: 0 1em 1em;
+  border-bottom: 1px solid #AAA; background: #F1F1F1; color: #666;}

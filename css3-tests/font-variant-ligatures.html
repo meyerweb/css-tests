@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: font-variant-ligatures</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css">
+.arena table {border-collapse: separate; border-spacing: 0; margin-bottom: 2em;}
+.arena tr > * {vertical-align: middle; padding: 0.25em; border-right: 1px dotted; border-bottom: 1px dotted;}
+@font-face {
+	font-family: testFont;
+	src: url(f/Anivers-Regular.otf);
+}
+@font-face {
+	font-family: NSL;
+	src: url("f/Nadyezhda SL One.ttf");
+}
+</style>
+<style type="text/css" id="tests">
+.arena td {font: 200% testFont, Times, serif;}
+.arena table + table td, pre {font-family: NSL, Times, serif;}
+pre {font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures contextual;}
+.t01 .on  {font-variant-ligatures: common-ligatures;}
+.t01 .off {font-variant-ligatures: no-common-ligatures;}
+.t02 .on  {font-variant-ligatures: discretionary-ligatures;}
+.t02 .off {font-variant-ligatures: no-discretionary-ligatures;}
+.t03 .on  {font-variant-ligatures: historical-ligatures;}
+.t03 .off {font-variant-ligatures: no-historical-ligatures;}
+.t04 .on  {font-variant-ligatures: contextual;}
+.t04 .off {font-variant-ligatures: no-contextual;}
+</style>
+</head>
+<body class="www-meyerweb-com" class="css test suite">
+<p class="specref"><a href="http://www.w3.org/TR/css3-fonts/.font-variant-ligatures-prop">http://www.w3.org/TR/css3-fonts/.font-variant-ligatures-prop</a></p>
+
+<div class="arena">
+
+<table>
+<thead>
+<tr><th>Row ID</th><th>.on</th><th>.off</th></tr>
+</thead>
+<tbody>
+<tr class="t01">
+<th>[.t01]</th>
+<td class="on">if fi ff tf ft jf fj</td>
+<td class="off">if fi ff tf ft jf fj</td>
+</tr>
+<tr class="t02">
+<th>[.t02]</th>
+<td class="on">most Jesuit effects</td>
+<td class="off">most Jesuit effects</td>
+</tr>
+<tr class="t03">
+<th>[.t03]</th>
+<td class="on">most Jesuit effects</td>
+<td class="off">most Jesuit effects</td>
+</tr>
+<tr class="t04">
+<th>[.t04]</th>
+<td class="on">this &amp; that</td>
+<td class="off">this &amp; that</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr><th>Row ID</th><th>.on</th><th>.off</th></tr>
+</thead>
+<tbody>
+<tr class="t01">
+<th>[.t01]</th>
+<td class="on">ao bx</td>
+<td class="off">ao bx</td>
+</tr>
+<tr class="t02">
+<th>[.t02]</th>
+<td class="on">av</td>
+<td class="off">av</td>
+</tr>
+<tr class="t03">
+<th>[.t03]</th>
+<td class="on">bj</td>
+<td class="off">bj</td>
+</tr>
+<tr class="t04">
+<th>[.t04]</th>
+<td class="on">al</td>
+<td class="off">al</td>
+</tr>
+</tbody>
+</table>
+
+<pre>
+aa ab ac ad ae af ag ah ai aj ak al am 
+an ao ap aq ar as at au av aw ax ay az
+ba bb bc bd be bf bg bh bi bj bk bl bm 
+bn bo bp bq br bs bt bu bv bw bx by bz
+ca cb cc cd ce cf cg ch ci cj ck cl cm 
+cn co cp cq cr cs ct cu cv cw cx cy cz
+da db dc dd de df dg dh di dj dk dl dm 
+dn do dp dq dr ds dt du dv dw dx dy dz
+ea eb ec ed ee ef eg eh ei ej ek el em 
+en eo ep eq er es et eu ev ew ex ey ez
+</pre>
+
+</div>
+
+</body>
+</html>

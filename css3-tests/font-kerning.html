@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: font-kerning</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" media="all">
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('f/Ubuntu-R.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Myriad';
+  src: url('f/MyriadPro-Regular.otf') format('opentype');
+}
+</style>
+<style type="text/css" id="tests">
+.arena p {font-size: 128%;}
+.t1 {font-family: Myriad, serif;}
+.t2 {font-family: Ubuntu, serif;}
+
+.c1 {font-kerning: auto;}
+.c2 {font-kerning: normal;}
+.c3 {font-kerning: none;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://w3.org/TR/css3-fonts/#font-kerning-prop">http://w3.org/TR/css3-fonts/#font-kerning-prop</a></p>
+
+<div class="arena">
+
+<p class="t1 c1">[.t1.c1] A paragraph of text.</p>
+<p class="t1 c2">[.t1.c2] A paragraph of text.</p>
+<p class="t1 c3">[.t1.c3] A paragraph of text.</p>
+
+<p class="t2 c1">[.t2.c1] A paragraph of text.</p>
+<p class="t2 c2">[.t2.c2] A paragraph of text.</p>
+<p class="t2 c3">[.t2.c3] A paragraph of text.</p>
+
+</div>
+
+</body>
+</html>

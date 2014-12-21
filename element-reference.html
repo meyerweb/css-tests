@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Element-reference images</title>
+<link rel="stylesheet" href="c/style-insert-tests.css" type="text/css" />
+<style type="text/css" id="tests" contenteditable>
+div {margin: 1em 0;}
+div#bg {background: red; border: 2px solid green; width: 200px; height: 50px;}
+div#bg:hover {background: green; border-color: red;}
+div#show {height: 150px; border: 1px dotted gray; padding: 20px;
+	background-image: -webkit-element(#bg);
+	background-image: -moz-element(#bg);
+	background-image: -o-element(#bg);
+	background-image: element(#bg);
+	}
+div#show span {padding: 0.5em 2em; background: rgba(255,255,255,0.85);}
+</style>
+</head>
+<body>
+
+<div id="bg">bg</div>
+
+<div id="show"><span>SHOW</span></div>
+
+</body>
+</html>

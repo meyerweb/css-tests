@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Line-height Testing</title>
+<style type="text/css" media="all">
+
+form {
+	position: relative;
+	z-index: 2;
+	}
+form table {
+	border-bottom: 1px solid #DDD;
+	}
+form table th, form table td {
+	text-align: left; padding: 0.1em 0.5em;
+	}
+form table tr.odd {
+	background: #DDD;
+	}
+form table tr.even {
+	background: #EEE;
+	}
+
+#chamber {
+	font-family: Webdings;
+	font-size: 10px;
+	line-height: normal;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	}
+#chamber .wrap {
+	border: 1px solid #AAA;
+	background: #EEE url(ruler.gif) 0 0 no-repeat;
+	padding: 20px;
+	margin: 10px;
+	width: 40em;
+	white-space: nowrap;
+	}
+#chamber .wrap .test {
+	background: url(stripes.gif) 0 0 repeat;
+	padding-top: 1px;
+	overflow: hidden;
+	border-left: 0;
+	}
+#chamber #t10 div {
+	font-size: 10px;
+	}
+#chamber #t25 div {
+	font-size: 25px;
+	}
+#chamber #t50 div {
+	font-size: 50px;
+	}
+#chamber #t100 div {
+	font-size: 100px;
+	}
+#chamber #t1000 div {
+	font-size: 1000px;
+	}
+#chamber #t10000 div {
+	font-size: 10000px;
+	}
+</style>
+<script type="text/javascript">
+
+function getElementsByClassName(oElm, strTagName, strClassName){
+/*
+	Written by Jonathan Snook, http://www.snook.ca/jonathan
+	Add-ons by Robert Nyman, http://www.robertnyman.com
+*/
+	var arrElements = (strTagName == "*" && oElm.all)? oElm.all : oElm.getElementsByTagName(strTagName);
+	var arrReturnElements = new Array();
+	strClassName = strClassName.replace(/\-/g, "\\-");
+	var oRegExp = new RegExp("(^|\\s)" + strClassName + "(\\s|$)");
+	var oElement;
+	for(var i=0; i<arrElements.length; i++){
+		oElement = arrElements[i];		
+		if(oRegExp.test(oElement.className)){
+			arrReturnElements.push(oElement);
+		}	
+	}
+	return (arrReturnElements)
+}
+
+function setFamily(name) {
+	var chamber = document.getElementById("chamber");
+	if (!name) {
+		var menu = document.getElementById("menu");
+		name = menu.options[menu.selectedIndex].text;
+	}
+	var tests = getElementsByClassName(chamber, "div", "test");
+	for (test in tests) {
+		tests[test].style.fontFamily = name + ", Webdings";
+	}
+	inform();
+}
+
+function inform() {
+	var ids = new Array("10","25","50","100","1000","10000");
+	for (id in ids) {
+		var wrap = document.getElementById("t"+ids[id]);
+		var test = getElementsByClassName(wrap, "div", "test");
+		var height = test[0].offsetHeight - 1;
+
+		var readout = document.getElementById("r"+ids[id]);
+		var lh = getElementsByClassName(readout, "td", "lh");
+		var ne = getElementsByClassName(readout, "td", "ne");
+		lh[0].innerHTML = height;
+		ne[0].innerHTML = height/ids[id];
+	}
+}
+</script>
+</head>
+<body onload = "inform();">
+
+<form action="#" method="">
+
+<table cellspacing="0" id="readout">
+<tr class="odd">
+<th scope="row">Font face</th>
+<td colspan="2">
+
+<select onchange="setFamily(''); return false;" id="menu">
+<option>Webdings</option>
+<option>Times New Roman</option>
+<option>Times</option>
+<option>Georgia</option>
+<option>Arial</option>
+<option>Trebuchet MS</option>
+<option>Verdana</option>
+<option>Andale Mono</option>
+<option>Courier New</option>
+<option>Courier</option>
+<option>Comic Sans MS</option>
+</select>
+
+</td>
+</tr>
+<tr class="even">
+<th></th>
+<th scope="col">Height of line box</th>
+<th scope="col"><code>normal</code> equivalent</th>
+</tr>
+<tr class="odd" id="r10">
+<th scope="row">10px</th>
+<td class="lh">-</td>
+<td class="ne">-</td>
+</tr>
+<tr class="even" id="r25">
+<th scope="row">25px</th>
+<td class="lh">-</td>
+<td class="ne">-</td>
+</tr>
+<tr class="odd" id="r50">
+<th scope="row">50px</th>
+<td class="lh">-</td>
+<td class="ne">-</td>
+</tr>
+<tr class="even" id="r100">
+<th scope="row">100px</th>
+<td class="lh">-</td>
+<td class="ne">-</td>
+</tr>
+<tr class="odd" id="r1000">
+<th scope="row">1000px</th>
+<td class="lh">-</td>
+<td class="ne">-</td>
+</tr>
+<tr class="odd" id="r10000">
+<th scope="row">10000px</th>
+<td class="lh">-</td>
+<td class="ne">-</td>
+</tr>
+</table>
+
+</form>
+
+
+<div id="chamber">
+<div id="t10" class="wrap"><div class="test">Oy!</div></div>
+<div id="t25" class="wrap"><div class="test">Oy!</div></div>
+<div id="t50" class="wrap"><div class="test">Oy!</div></div>
+<div id="t100" class="wrap"><div class="test">Oy!</div></div>
+<div id="t1000" class="wrap"><div class="test">Oy!</div></div>
+<div id="t10000" class="wrap"><div class="test">Oy!</div></div>
+</div>
+
+
+</body>
+</html>

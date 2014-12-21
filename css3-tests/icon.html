@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: icon</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+#p01 img.test {content: icon; icon: url(i/target.gif);}
+#p02 span {border: 1px dotted gray;}
+#p02 span.test {content: icon; icon: url(i/target.gif);}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-ui/#icon">http://www.w3.org/TR/css3-ui/#icon</a></p>
+
+<div class="arena">
+
+<p id="p01">
+[#p01] Consider an image (<img src="i/one-two.gif" alt="">) and an icon (<img src="i/target.gif" alt="">).  Then replace the image with the icon: <img src="i/one-two.gif" alt="" class="test">.
+</p>
+<p id="p02">
+[#p02] Consider <span>a span</span>.  Then replace one with an icon: <span class="test">am I an icon yet?</span>
+</p>
+
+</div>
+
+</body>
+</html>

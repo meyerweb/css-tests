@@ -1,0 +1,1 @@
+/*Import Test File*/@import url(linkimport.css);@import url(linkimportmediascreen.css) screen;@import url(linkimportmediatty.css) tty;/* This line rests any browsers that got confused by the @import lines */  .ignored { color: black; }.folderlink { font-weight: bold; color: green; background: silver none; }

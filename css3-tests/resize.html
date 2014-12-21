@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: resize</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.arena p {width: 15em; height: 2em; border: 1px dotted gray; margin: 5em 0; overflow: auto;}
+#p01 {resize: horizontal;}
+#p02 {resize: vertical;}
+#p03 {resize: both;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-ui/#resize0">http://www.w3.org/TR/css3-ui/#resize0</a></p>
+
+<div class="arena">
+<p id="p01">
+[#p01] This is a paragraph of text.  It should have an x-axis overflow effect where it overflows its parent element.
+</p>
+<p id="p02">
+[#p02] This is a paragraph of text.  It should have an x-axis overflow effect where it overflows its parent element.
+</p>
+<p id="p03">
+[#p03] This is a paragraph of text.  It should have an x-axis overflow effect where it overflows its parent element.
+</p>
+</div>
+
+</body>
+</html>

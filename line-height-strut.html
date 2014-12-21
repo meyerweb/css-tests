@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Line-height struts(?)</title>
+<style type="text/css" media="all">
+div {line-height: 50pt; border: thin dotted gray;}
+div img {width: 5pt; height: 5pt;}
+span.strut {line-height: 50pt;}
+</style>
+</head>
+<body>
+
+<div>
+	<img src="http://meyerweb.com/eric/css/tests/css2/pix/oransqr.gif">
+</div>
+
+<div>
+	<span class="strut"></span>
+	<img src="http://meyerweb.com/eric/css/tests/css2/pix/oransqr.gif">
+</div>
+
+<div>
+	<span class="strut"> </span>
+	<img src="http://meyerweb.com/eric/css/tests/css2/pix/oransqr.gif">
+</div>
+
+<div>
+	<span class="strut">&nbsp;</span>
+	<img src="http://meyerweb.com/eric/css/tests/css2/pix/oransqr.gif">
+</div>
+
+<div>
+	<span class="strut">.</span>
+	<img src="http://meyerweb.com/eric/css/tests/css2/pix/oransqr.gif">
+</div>
+
+</body>
+</html>

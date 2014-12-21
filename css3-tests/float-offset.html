@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: float-offset</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.arena p {border: 1px dotted gray; height: 50px;}
+.arena p img {float: left;}
+#p01 img {float-offset: 10px;}
+#p02 img {float-offset: 10px 0;}
+#p03 img {float-offset: 10px 10px;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-gcpm/#float-offset">http://www.w3.org/TR/css3-gcpm/#float-offset</a></p>
+
+<div class="arena">
+
+<p id="p01">[#p01] <img src="i/target.gif" alt=""> A paragraph containing a floated image.</p>
+<p id="p02">[#p02] <img src="i/target.gif" alt=""> A paragraph containing a floated image.</p>
+<p id="p03">[#p03] <img src="i/target.gif" alt=""> A paragraph containing a floated image.</p>
+
+</div>
+
+</body>
+</html>

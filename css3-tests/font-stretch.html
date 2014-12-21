@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: font-stretch</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css">
+</style>
+<style type="text/css" id="tests">
+@font-face {font-family: 'SwitzeraADF'; src: url('f/SwitzeraADF-LightCond.otf') format('opentype'); font-stretch: ultra-condensed;}
+@font-face {font-family: 'SwitzeraADF'; src: url('f/SwitzeraADF-Cond.otf') format('opentype');      font-stretch: condensed;}
+@font-face {font-family: 'SwitzeraADF'; src: url('f/SwitzeraADF-Regular.otf') format('opentype');   font-stretch: normal;}
+@font-face {font-family: 'SwitzeraADF'; src: url('f/SwitzeraADF-Ext.otf') format('opentype');       font-stretch: expanded;}
+@font-face {font-family: 'SwitzeraADF'; src: url('f/SwitzeraADF-BoldExt.otf') format('opentype');   font-stretch: ultra-expanded;}
+.arena p {font-family: SwitzeraADF, serif;}
+#p01 {font-stretch: ultra-condensed;}
+#p02 {font-stretch: extra-condensed;}
+#p03 {font-stretch: condensed;}
+#p04 {font-stretch: semi-condensed;}
+#p05 {font-stretch: normal;}
+#p06 {font-stretch: semi-expanded;}
+#p07 {font-stretch: expanded;}
+#p08 {font-stretch: extra-expanded;}
+#p09 {font-stretch: ultra-expanded;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://w3.org/TR/css3-fonts/#font-stretch-prop">http://w3.org/TR/css3-fonts/#font-stretch-prop</a></p>
+
+<p class="warning">
+<strong>WARNING:</strong> this test will only pass if the font family in use has width-variant faces.  Therefore, a user agent can support <code>font-stretch</code> and still appear to fail this test.
+</p>
+<p class="note"><strong>NOTE:</strong> this test uses faces of <a href="http://arkandis.tuxfamily.org/openfonts.html">SwitzeraADF</a>, assigning various individual faces to various stretch levels (and cheating by using a light condensed face to substitue for “ultra-condensed” and a bold extended face for “ultra-expanded”).  If the following paragraphs are in a serif font, then the font has failed to load.  If they are sans-serif, then the font has most likely loaded and the test should be valid.</p>
+
+<div class="arena">
+
+<p id="p01">[#p01] A paragraph of text.</p>
+<p id="p02">[#p02] A paragraph of text.</p>
+<p id="p03">[#p03] A paragraph of text.</p>
+<p id="p04">[#p04] A paragraph of text.</p>
+<p id="p05">[#p05] A paragraph of text.</p>
+<p id="p06">[#p06] A paragraph of text.</p>
+<p id="p07">[#p07] A paragraph of text.</p>
+<p id="p08">[#p08] A paragraph of text.</p>
+<p id="p09">[#p09] A paragraph of text.</p>
+
+</div>
+
+</body>
+</html>

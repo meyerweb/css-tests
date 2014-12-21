@@ -1,0 +1,32 @@
+head {display: block;}
+style#tests {display: block;
+	max-height: 20.33em;
+	overflow: auto;
+	white-space: pre;
+	font: small/1 monospace, serif;
+	padding: 0 1em 0.75em;
+	border-bottom: 3px double #999;
+	background: #DDD; color: #333;}
+style[contenteditable]#tests {background: #DED;}
+body {margin-top: 0; padding: 0 0 2em;}
+p#specref {margin: 0 -8px; padding: 0.5em;
+	background: #DDD;
+	border-bottom: 1px solid;
+	font-style: italic;}
+ul#nav {position: fixed; bottom: 0; right: 0; left: 0;
+	text-align: center;
+	padding: 0.25em 1em 0.33em; margin: 0;
+	border-top: 3px double #888;
+	background: #E8E8E8;}
+ul#nav li {display: inline; list-style: none; margin: 0 0.75em;}
+ul#nav a:hover {color: rgb(216,0,0);}
+ul#nav #i {position: absolute; right: 0; top: 0.33em;}
+ul#nav #r {position: absolute; left: 0; top: 0.33em;}
+vhr.clr {clear: both; visibility: hidden;}
+
+.warning {color: maroon; background: #FFC;}
+.note {color: #222; background: #EEE; font-style: italic;}
+.warning, .note {padding: 0.42em 0.67em 0.23em; margin: 0.5em -0.5em;}
+.warning + .note {margin-top: -0.25em;}
+
+.arena {margin-top: 1.5em;}

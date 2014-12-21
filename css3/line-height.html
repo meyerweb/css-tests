@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: line-height</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+#d01 {line-height: 1.5; font-size: 16px; width: 50%;}
+#d01 p {line-height: 0.8; line-height: none; font-size: 12px; border: 1px dotted gray;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-linebox/#line-height">http://www.w3.org/TR/css3-linebox/#line-height</a></p>
+
+<div class="arena">
+
+<div id="d01">
+[#d01] This is a div in which resides a paragraph.  The line-height of the div has been increased to one-and-one-half times the font size of the div.
+<p>
+This is the paragrph.  It should use the same line-height as the div even though its font size is much smaller and it starts out with an even smaller line-height.  The latter should be overridden by 'none'.
+</p>
+
+</div>
+
+</div>
+
+</body>
+</html>

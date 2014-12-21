@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: the 'rem' unit</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+p span {background: #FAA;}
+#p01 {font-size: 67%;}
+#p01 span {font-size: 1rem;}
+#p02 {font-size: 100%;}
+#p02 span {font-size: 0.67rem;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-values/#relative0">http://www.w3.org/TR/css3-values/#relative0</a></p>
+
+<div class="arena">
+
+<p>
+This is a paragraph without any children.  It exists as a control to show the basic font size in use.
+</p>
+<p id="p01">
+[#p01] This is a paragraph with <span>a <code>span</code> element embedded within it</span>.  The <code>span</code> should be larger than the text that surrounds it and match the size of the previous paragraph.
+</p>
+<p id="p02">
+[#p02] This is a paragraph with <span>a <code>span</code> element embedded within it</span>.  The <code>span</code> should be smaller than the text that surrounds it and match the size of text outisde the <tt>span</tt> in the <em>previous</em> paragraph.
+</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Monospace Font Sizing</title>
+<style type="text/css">
+
+html, body {font: 1em serif;}
+
+div {border-top: 1px solid #666; margin: 2em 0;}
+div span {margin: 0 0.25em;}
+div span:before {content: attr(style); border-bottom: 1px solid #AAA; color: #575; margin-right: 0.5em;}
+div p {margin: 0.5em;}
+body div > p:first-child {background: #9B9; color: #FFF; border-bottom: 1px solid #898;
+	margin: 0; padding: 0.2em 0.5em 0.1em; font-size: smaller; font-style: italic;}
+div p:nth-child(3n+1) {margin-bottom: 1em;}
+
+</style>
+</head>
+<body>
+
+<div>
+<p>(inline tests)</p>
+<p>This a 'p' element with a <span style="font-family: monospace;">'span' element</span> contained within.</p>
+<p>This a 'p' element with a <span style="font-family: monospace; font-size: 1em;">'span' element</span> contained within.</p>
+<p>This a 'p' element with a <span style="font: 1em monospace;">'span' element</span> contained within.</p>
+<p>This a 'p' element with a <span style="font-family: 'Courier New', monospace;">'span' element</span> contained within.</p>
+<p>This a 'p' element with a <span style="font-family: 'Courier New', monospace; font-size: 1em;">'span' element</span> contained within.</p>
+<p>This a 'p' element with a <span style="font: 1em 'Courier New', monospace;">'span' element</span> contained within.</p>
+<p>This a 'p' element with a <span style="font-family: 'Courier New';">'span' element</span> contained within.</p>
+<p>This a 'p' element with a <span style="font-family: 'Courier New'; font-size: 1em;">'span' element</span> contained within.</p>
+<p>This a 'p' element with a <span style="font: 1em 'Courier New';">'span' element</span> contained within.</p>
+<p>This a 'p' element with a <span style="font-family: 'Courier New', monospace, serif;">'span' element</span> contained within.</p>
+<p>This a 'p' element with a <span style="font-family: 'Courier New', monospace, serif; font-size: 1em;">'span' element</span> contained within.</p>
+<p>This a 'p' element with a <span style="font: 1em 'Courier New', monospace, serif;">'span' element</span> contained within.</p>
+<p>This a 'p' element with a <span style="font-family: 'Corier Neu', monospace, serif;">'span' element</span> contained within.</p>
+<p>This a 'p' element with a <span style="font-family: 'Corier Neu', monospace, serif; font-size: 1em;">'span' element</span> contained within.</p>
+<p>This a 'p' element with a <span style="font: 1em 'Corier Neu', monospace, serif;">'span' element</span> contained within.</p>
+</div>
+
+<div>
+<p>(inline tests — alternate ordering, no 'serif' tests)</p>
+<p>This a 'p' element with a <span style="font-family: monospace;">'span' element</span> contained within.</p>
+<p>This a 'p' element with a <span style="font-family: 'Courier New', monospace;">'span' element</span> contained within.</p>
+<p>This a 'p' element with a <span style="font-family: 'Courier New';">'span' element</span> contained within.</p>
+<p>This a 'p' element with a <span style="font-family: monospace; font-size: 1em;">'span' element</span> contained within.</p>
+<p>This a 'p' element with a <span style="font-family: 'Courier New', monospace; font-size: 1em;">'span' element</span> contained within.</p>
+<p>This a 'p' element with a <span style="font-family: 'Courier New'; font-size: 1em;">'span' element</span> contained within.</p>
+<p>This a 'p' element with a <span style="font: 1em monospace;">'span' element</span> contained within.</p>
+<p>This a 'p' element with a <span style="font: 1em 'Courier New', monospace;">'span' element</span> contained within.</p>
+<p>This a 'p' element with a <span style="font: 1em 'Courier New';">'span' element</span> contained within.</p>
+</div>
+
+</body>
+</html>

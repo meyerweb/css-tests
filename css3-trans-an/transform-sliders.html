@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rotational Sliders</title>
+<style type="text/css" media="all">
+div.frame {
+	border: 1px solid gray;
+	outline: 1px solid silver;
+	background: url(frame-sq.png) 0 0 no-repeat;
+	height: 400px; width: 400px;
+	float: left; margin: 10px;}
+div.d01 {
+	background-image: url(frame-sq.png), url(focus.png);
+	background-position: 0 0, 76% 76%;
+}
+div.d02 {
+	background-image: url(frame-sq.png), url(focus.png);
+	background-position: 0 0, 101% 101%;
+}
+div.d03 {
+	background-image: url(frame-sq.png), url(focus.png);
+	background-position: 0 0, center;
+}
+div img {
+	display: block;
+	-webkit-transition: 1s all;
+	-moz-transition: 1s all;
+	-ms-transition: 1s all;
+	-o-transition: 1s all;
+	}
+div.d01:hover img {
+	-webkit-transform-origin: 75% 75%;
+	-moz-transform-origin: 75% 75%;
+	-ms-transform-origin: 75% 75%;
+	-o-transform-origin: 75% 75%;
+}
+div.d02:hover img {
+	-webkit-transform-origin: bottom right;
+	-moz-transform-origin: bottom right;
+	-ms-transform-origin: bottom right;
+	-o-transform-origin: bottom right;
+}
+div.rotate:hover img {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	}
+div.skew:hover img {
+	-webkit-transform: skewY(-45deg);
+	-moz-transform: skewY(-45deg);
+	-ms-transform: skewY(-45deg);
+	-o-transform: skewY(-45deg);
+	}
+</style>
+</head>
+<body>
+
+<p>
+In the following cases, the animated transforms slide around a bit with non-centered transform origins.  This is because <strong>all</strong> properties are being transformed, <strong>including transform-origin</strong>.  Over the second-long transition, the transform's origin point transforms from 50% 50% (the default) to the new value.  That's why the centered case looks fine: it's transitioning from 50% 50% to 50% 50%.  Fixes: either set the transform-origin on the unhovered state <em>or</em> only transition the transform property instead of all properties.  (Thanks to Richard Herrera for helping me figure this out!)
+</p>
+
+<div class="frame d01 rotate">
+<img src="grid-sq.png" alt="">
+</div>
+<div class="frame d02 rotate">
+<img src="grid-sq.png" alt="">
+</div>
+<div class="frame d03 rotate">
+<img src="grid-sq.png" alt="">
+</div>
+<div class="frame d01 skew">
+<img src="grid-sq.png" alt="">
+</div>
+<div class="frame d02 skew">
+<img src="grid-sq.png" alt="">
+</div>
+<div class="frame d03 skew">
+<img src="grid-sq.png" alt="">
+</div>
+
+</body>
+</html>

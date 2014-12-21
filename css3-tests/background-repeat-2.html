@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: background-repeat</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.arena div {height: 250px; width: 250px; float: left;
+	margin: 10px; padding: 0; border: none;
+	background: green url(i/hatchgrid-150.png) center;}
+.arena div:nth-child(4n+1) {clear: left;}
+#d01 {background-repeat: round;}
+#d02 {background-repeat: space;}
+#d03 {background-repeat: round space;}
+#d04 {background-repeat: space round;}
+#d05 {background-repeat: round no-repeat;}
+#d06 {background-repeat: no-repeat round;}
+#d07 {background-repeat: space no-repeat;}
+#d08 {background-repeat: no-repeat space;}
+#d09 {background-repeat: space; height: 290px; width: 290px;}
+#d10 {background-repeat: space; height: 310px; width: 310px;}
+#d11 {background-repeat: space; height: 440px; width: 440px;}
+#d12 {background-repeat: space; height: 460px; width: 460px;}
+#d13 {background-repeat: round; height: 290px; width: 290px;}
+#d14 {background-repeat: round; height: 310px; width: 310px;}
+#d15 {background-repeat: round; height: 440px; width: 440px;}
+#d16 {background-repeat: round; height: 460px; width: 460px;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-background/#the-background-repeat">http://www.w3.org/TR/css3-background/#the-background-repeat</a></p>
+
+<section class="arena">
+
+<div id="d01">[#d01]</div>
+<div id="d02">[#d02]</div>
+<div id="d03">[#d03]</div>
+<div id="d04">[#d04]</div>
+
+<div id="d05">[#d05]</div>
+<div id="d06">[#d06]</div>
+<div id="d07">[#d07]</div>
+<div id="d08">[#d08]</div>
+
+<div id="d09">[#d09]</div>
+<div id="d10">[#d10]</div>
+<div id="d11">[#d11]</div>
+<div id="d12">[#d12]</div>
+
+<div id="d13">[#d13]</div>
+<div id="d14">[#d14]</div>
+<div id="d15">[#d15]</div>
+<div id="d16">[#d16]</div>
+
+</section>
+
+</body>
+</html>

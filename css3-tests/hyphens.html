@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS3 test: hyphens</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.arena p {text-align: justify;}
+#p03 {hyphens: auto;}
+#p04 {hyphens: manual;}
+#p05 {hyphens: none;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-gcpm/#hyphens">http://www.w3.org/TR/css3-gcpm/#hyphens</a></p>
+
+<div class="arena">
+<p class="note">It is most likely necessary to resize the viewport to properly evaluate this test.</p>
+
+<p id="p01">[#p01] This is a paragraph with no embedded hyphenation hints and no hyphen-related CSS applied.  Corporate gibberish follows.  Think visionary. If you generate proactively, you may have to e-enable interactively. We apply the proverb "Grass doesn't grow on a racetrack" not only to our re-purposing but our power to matrix. If all of this comes off as dumbfounding to you, that's because it is! Our feature set is unparalleled in the industry, but our reality-based systems and simple use is usually considered a remarkable achievement. The power to brand robustly leads to the aptitude to embrace seamlessly. What do we streamline? Anything and everything, regardless of reconditeness!</p>
+
+<p id="p02">[#p02] This is a paragraph with embedded hyphenation hints but no hyphen-related CSS applied.  Corp&shy;orate gibb&#x00AD;erish fol&shy;lows.  Think vision&#x00AD;ary. If you gener&shy;ate pro&#x00AD;actively, you may have to e-enable inter&shy;actively. We apply the pro&#x00AD;verb "Grass doesn't grow on a race&shy;track" not only to our re-pur&shy;posing but our pow&#x00AD;er to mat&shy;rix. If all of this comes off as dumb&#x00AD;founding to you, that's be&shy;cause it is! Our feat&#x00AD;ure set is un&#x00AD;paral&shy;leled in the in&shy;dus&shy;try, but our reality-based sys&shy;tems and sim&#x00AD;ple use is usu&shy;ally con&#x00AD;sid&shy;ered a re&shy;mark&shy;able achieve&#x00AD;ment. The power to brand ro&shy;bustly leads to the apti&shy;tude to em&shy;brace seam&shy;lessly. What do we stream&shy;line? Any&shy;thing and every&shy;thing, re&shy;gard&shy;less of re&shy;con&shy;diteness!</p>
+
+<p id="p03">[#p03] This is a paragraph with no embedded hyphenation hints but hyphen-related CSS applied.  Corporate gibberish follows.  Think visionary. If you generate proactively, you may have to e-enable interactively. We apply the proverb "Grass doesn't grow on a racetrack" not only to our re-purposing but our power to matrix. If all of this comes off as dumbfounding to you, that's because it is! Our feature set is unparalleled in the industry, but our reality-based systems and simple use is usually considered a remarkable achievement. The power to brand robustly leads to the aptitude to embrace seamlessly. What do we streamline? Anything and everything, regardless of reconditeness!</p>
+
+<p id="p04">[#p04] This is a paragraph with embedded hyphenation hints and hyphen-related CSS applied.  Corp&shy;orate gibb&#x00AD;erish fol&shy;lows.  Think vision&#x00AD;ary. If you gener&shy;ate pro&#x00AD;actively, you may have to e-enable inter&shy;actively. We apply the pro&#x00AD;verb "Grass doesn't grow on a race&shy;track" not only to our re-pur&shy;posing but our pow&#x00AD;er to mat&shy;rix. If all of this comes off as dumb&#x00AD;founding to you, that's be&shy;cause it is! Our feat&#x00AD;ure set is un&#x00AD;paral&shy;leled in the in&shy;dus&shy;try, but our reality-based sys&shy;tems and sim&#x00AD;ple use is usu&shy;ally con&#x00AD;sid&shy;ered a re&shy;mark&shy;able achieve&#x00AD;ment. The power to brand ro&shy;bustly leads to the apti&shy;tude to em&shy;brace seam&shy;lessly. What do we stream&shy;line? Any&shy;thing and every&shy;thing, re&shy;gard&shy;less of re&shy;con&shy;diteness!</p>
+
+<p id="p05">[#p05] This is a paragraph with embedded hyphenation hints and hyphen-related CSS applied.  Corp&shy;orate gibb&#x00AD;erish fol&shy;lows.  Think vision&#x00AD;ary. If you gener&shy;ate pro&#x00AD;actively, you may have to e-enable inter&shy;actively. We apply the pro&#x00AD;verb "Grass doesn't grow on a race&shy;track" not only to our re-pur&shy;posing but our pow&#x00AD;er to mat&shy;rix. If all of this comes off as dumb&#x00AD;founding to you, that's be&shy;cause it is! Our feat&#x00AD;ure set is un&#x00AD;paral&shy;leled in the in&shy;dus&shy;try, but our reality-based sys&shy;tems and sim&#x00AD;ple use is usu&shy;ally con&#x00AD;sid&shy;ered a re&shy;mark&shy;able achieve&#x00AD;ment. The power to brand ro&shy;bustly leads to the apti&shy;tude to em&shy;brace seam&shy;lessly. What do we stream&shy;line? Any&shy;thing and every&shy;thing, re&shy;gard&shy;less of re&shy;con&shy;diteness!  (NOTE:  in this case, the CSS requires hyphenation hints to be ignored.)</p>
+</div>
+
+<p class="credit">Corporate gibberish courtesy the <a href="http://www.andrewdavidson.com/gibberish/?companyname=ConHugeCo">Corporate Gibberish Generator on AndrewDavidson.com</a></p>
+
+</body>
+</html>

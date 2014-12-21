@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Line-height Testing</title>
+<style type="text/css" media="all">
+
+body {
+	font-size: 10px;
+	font-family: Helvetica;
+	line-height: 1;}
+.test {
+	border: 1px solid #BBB;
+	background: #EEE url(ruler.gif) 0 0 no-repeat;
+	padding: 20px;
+	margin-bottom: 40px;}
+.test div {
+	background: url(stripes.gif) 0 0 repeat;
+	padding-top: 1px;}
+.test span {
+	border-top: 1px solid green;
+	border-bottom: 1px solid red;
+	line-height: 1;}
+
+#t1 {
+	font-size: 1000%;
+	line-height: 1;}
+#t2 {
+	font-size: 1000%;
+	line-height: 1.2;}
+#t3 {
+	font-size: 2000%;
+	line-height: 1.2;}
+
+</style>
+</head>
+<body>
+
+<div class="test" id="t1">
+<div>
+<span>Super Big Text Is Testy Of Height</span>
+</div>
+</div>
+
+<div class="test" id="t2">
+<div>
+<span>Super Big Text Is Testy Of Height</span>
+</div>
+</div>
+
+<div class="test" id="t3">
+<div>
+<span>Super Big Text Is Testy Of Height</span>
+</div>
+</div>
+
+
+</body>
+</html>

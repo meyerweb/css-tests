@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: tab-size</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.arena p {white-space: pre-wrap; border: 1px dotted orange;}
+#p01 {tab-size: 8;}
+#p02 {tab-size: 4;}
+#p03 {tab-size: 0;}
+#p04 {tab-size: 10px;}
+#p05 {tab-size: 5px;}
+#p06 {white-space: normal;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-text/#tab-size">http://www.w3.org/TR/css3-text/#tab-size</a></p>
+
+<div class="arena">
+
+<p>
+                        There are twenty-four spaces before this text. (no ID)
+</p>
+<p>
+			There are three tabs before this text. (no ID)
+</p>
+<p id="p01">
+			[#p01] There are three tabs before this text.
+</p>
+<p id="p02">
+			[#p02] There are three tabs before this text.
+</p>
+<p id="p03">
+			[#p03] There are three tabs before this text.
+</p>
+<p id="p04">
+			[#p04] There are three tabs before this text.
+</p>
+<p id="p05">
+			[#p05] There are three tabs before this text.
+</p>
+<p id="p06">
+			[#p06] There are three tabs before this text.
+</p>
+
+</div>
+
+</body>
+</html>

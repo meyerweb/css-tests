@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Valueless Media Queries</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" >
+<style type="text/css" media="all">
+body {line-height: 1;}
+li {margin-top: 2px; padding: 0.33em; background: #FAA; color: #000;}
+@media (width) { #li01 {background: green;} }
+@media (height) { #li02 {background: green;} }
+@media (device-width) { #li03 {background: green;} }
+@media (device-height) { #li04 {background: green;} }
+@media (orientation) { #li05 {background: green;} }
+@media (aspect-ratio) { #li06 {background: green;} }
+@media (device-aspect-ratio) { #li07 {background: green;} }
+@media (color) { #li08 {background: green;} }
+@media (color-index) { #li09 {background: green;} }
+@media (monochrome) { #li10 {background: green;} }
+@media (resolution) { #li11 {background: green;} }
+@media (scan) { #li12 {background: green;} }
+@media (grid) { #li13 {background: green;} }
+
+li span {border: 1px solid black; padding: 0.25em 0.5em; background: #FCC;}
+@media (orientation: landscape) {
+	#li05 span#sp1 {background: lime;}
+}
+@media (orientation: portrait) {
+	#li05 span#sp2 {background: lime;}	
+}
+@media (min-resolution: 100dpi) {
+	#li11 #sp1 {background: lime;}
+}
+@media (resolution: 326dpi) {
+	#li11 #sp2 {background: lime;}
+}
+@media (max-resolution: 1000dpi) {
+	#li11 #sp3 {background: lime;}
+}
+</style>
+</head>
+<body>
+
+<ol>
+<li id="li01">(width)</li>
+<li id="li02">(height)</li>
+<li id="li03">(device-width)</li>
+<li id="li04">(device-height)</li>
+<li id="li05">(orientation) <span id="sp1">[span1]</span> <span id="sp2">[span2]</span></li>
+<li id="li06">(aspect-ratio)</li>
+<li id="li07">(device-aspect-ratio)</li>
+<li id="li08">(color)</li>
+<li id="li09">(color-index)</li>
+<li id="li10">(monochrome)</li>
+<li id="li11">(resolution) <span id="sp1">[span1 &gt;100dpi]</span> <span id="sp2">[span2 326dpi]</span> <span id="sp1">[span3 &lt;1000dpi]</span></li>
+<li id="li12">(scan)</li>
+<li id="li13">(grid)</li>
+</ol>
+
+</body>
+</html>

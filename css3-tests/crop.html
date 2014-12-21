@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: crop</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+#p02 img {crop: rect(17px,64px,45px,17px);}
+#p03 img {crop: inset-rect(17px,36px,55px,17px);}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-content/#the-crop">http://www.w3.org/TR/css3-content/#the-crop</a></p>
+
+<div class="arena">
+<p id="p01"><img src="i/one-two.gif" alt=""> This paragraph contains an uncropped image.</p>
+<p id="p02"><img src="i/one-two.gif" alt=""> This paragraph contains an image cropped to only show "ONE" with the surrounding white area and a pixel of blue to each side byeond that.</p>
+<p id="p03"><img src="i/one-two.gif" alt=""> This paragraph contains an image cropped to only show "ONE" with the surrounding white area and a pixel of blue to each side byeond that.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: overflow</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.arena div {border-top: 1px dashed gray; margin-top: 1em; padding-top: 1em;}
+.arena p {width: 5em; height: 5em; border: 1px dotted gray; background: #FFA;}
+#d01 p {overflow: visible;}
+#d02 p {overflow: hidden;}
+#d03 p {overflow: scroll;}
+#d04 p {overflow: auto;}
+#d05 p {overflow: no-display;}
+#d05 p {overflow: no-content;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-marquee/#overflow">http://www.w3.org/TR/css3-marquee/#overflow</a></p>
+
+<div class="arena">
+<div id="d01">
+[#d01] visible
+<p>
+This is a paragraph of text.  Its content should overflow the element box.
+</p>
+</div>
+<div id="d02">
+[#d02] hidden
+<p>
+This is a paragraph of text.  Its content should overflow the element box.
+</p>
+</div>
+<div id="d03">
+[#d03] scroll
+<p>
+This is a paragraph of text.  Its content should overflow the element box.
+</p>
+</div>
+<div id="d04">
+[#d04] auto
+<p>
+This is a paragraph of text.  Its content should overflow the element box.
+</p>
+</div>
+<div id="d05">
+[#d05] no-display
+<p>
+This is a paragraph of text.  Its content should overflow the element box.
+</p>
+</div>
+<div id="d06">
+[#d06] no-content
+<p>
+This is a paragraph of text.  Its content should overflow the element box.
+</p>
+</div>
+</div>
+
+</body>
+</html>

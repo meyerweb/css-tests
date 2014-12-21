@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"
+			"http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+<head>
+<title>Floats and Inline Boxes</title>
+<style type="text/css">
+<!--
+h1 {clear: both; border: 2px solid; margin: 2em 0 0.5em;
+  background: #DDD;}
+h3, h4 {margin: 0.25em;}
+h3 {background: #DED;}
+h3.inline {display: inline;}
+h3.inline-block {display: inline-block;}
+h4 {background: #DDE;}
+h4.float {width: 25%;}
+h4.right {float: right;}
+h4.left {float: left;}
+hr {clear: both;}
+-->
+</style>
+</head>
+<body>
+
+<h1>Normal Flow</h1>
+
+<h3>This is an H3</h3>
+<h4>This is an h4</h4>
+
+<hr>
+
+<h3 class="inline">This is an inline H3</h3>
+<h4>This is an h4</h4>
+
+<hr>
+
+<h3 class="inline-block">This is an inline-block H3</h3>
+<h4>This is an h4</h4>
+
+
+
+<h1>Float Right</h1>
+
+<h3>This is an H3</h3>
+<h4 class="float right">This is a floated h4</h4>
+
+<hr>
+
+<h3 class="inline">This is an inline H3</h3>
+<h4 class="float right">This is a floated h4</h4>
+
+<hr>
+
+<h3 class="inline-block">This is an inline-block H3</h3>
+<h4 class="float right">This is a floated h4</h4>
+
+
+
+<h1>Float Left</h1>
+
+<h3>This is an H3</h3>
+<h4 class="float left">This is a floated h4</h4>
+
+<hr>
+
+<h3 class="inline">This is an inline H3</h3>
+<h4 class="float left">This is a floated h4</h4>
+
+<hr>
+
+<h3 class="inline-block">This is an inline-block H3</h3>
+<h4 class="float left">This is a floated h4</h4>
+
+</body>
+</html>

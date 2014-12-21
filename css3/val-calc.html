@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: the 'calc' unit</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+#p01 img {height: 10px;}
+#img01 {width: 500px;}
+#img02 {width: 50px; width: calc((666px / 3) + (44px * 7) - 30px));}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-values/#calc">http://www.w3.org/TR/css3-values/#calc</a></p>
+
+<div class="arena">
+
+<p id="p01">
+[#p01] This is a paragraph that contains <tt>img</tt> elements, each of which refers to the same image ( <img src="i/box-red.gif"> ).  They are separated by <tt>br</tt> elements.
+<br/>
+<img src="i/box-red.gif" alt="" id="img01">
+<br/>
+<img src="i/box-red.gif" alt="" id="img02">
+<br/>
+If they are not of equal width, then the browser likely does not support the <tt>calc</tt> unit.
+</p>
+
+</div>
+
+</body>
+</html>

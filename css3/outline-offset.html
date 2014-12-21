@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: outline-offset</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.arena p span {outline: 1px dotted red;}
+#p01 span {outline-offset: 5px;}
+#p02 span {outline-offset: -5px;}
+#p03 span {outline: 2px dashed orange -5px;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-ui/#outline-offset0">http://www.w3.org/TR/css3-ui/#outline-offset0</a></p>
+
+<div class="arena">
+
+<p id="p01">
+[#p01] This is a paragraph containing <span>a span whose outline has been offset</span>.
+</p>
+<p id="p02">
+[#p02] This is a paragraph containing <span>a span whose outline has been offset</span>.
+</p>
+<p id="p03">
+[#p03] This is a paragraph containing <span>a span whose outline may have been offset</span> even though the specification forbids it.  If it is two pixels, orange, dashed, or offset inward, then the browser has gone beyond the specification.
+</p>
+
+</div>
+
+</body>
+</html>

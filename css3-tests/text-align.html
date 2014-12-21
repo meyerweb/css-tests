@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: text-align</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" media="all">
+.arena p {width: 20em; border: 1px dotted red;}
+.arena p[class^="p0"] {float: left;}
+.arena p[dir="rtl"] {margin-left: 3em;}
+hr {clear: both;}
+</style>
+<style type="text/css" id="tests">
+.p01 {text-align: start;}
+.p02 {text-align: end;}
+.p03 {text-align: left;}
+.p04 {text-align: right;}
+.p05 {text-align: center;}
+.p06 {text-align: start end;}
+div.d01 {text-align: center;}
+div.d01 p {text-align: right;}
+div.d01 p + p {text-align: match-parent;}
+.t01 td {text-align: "D"; border-bottom: 1px dotted gray;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-text/#text-align">http://www.w3.org/TR/css3-text/#text-align</a></p>
+
+<div class="arena">
+
+<p class="p01">
+[.p01] At ConHugeCo, we understand how to exploit vertically.  Do you have a scheme to become B2C2B?
+</p>
+<p class="p01" dir="rtl">
+[.p01] في ConHugeCo، ونحن نفهم كيفية استغلال عموديا. هل لديك خطة لتصبح B2C2B؟
+</p>
+
+<hr>
+
+<p class="p02">
+[.p02] At ConHugeCo, we understand how to exploit vertically.  Do you have a scheme to become B2C2B?
+</p>
+<p class="p02" dir="rtl">
+[.p02] فבConHugeCo, אנחנו מבינים איך לנצל בצורה אנכית. האם יש לך תכנית להפוך B2C2B?
+</p>
+
+<hr>
+
+<p class="p03">
+[.p03] At ConHugeCo, we understand how to exploit vertically.  Do you have a scheme to become B2C2B?
+</p>
+<p class="p03" dir="rtl">
+[.p03] في ConHugeCo، ونحن نفهم كيفية استغلال عموديا. هل لديك خطة لتصبح B2C2B؟
+</p>
+
+<hr>
+
+<p class="p04">
+[.p04] At ConHugeCo, we understand how to exploit vertically.  Do you have a scheme to become B2C2B?
+</p>
+<p class="p04" dir="rtl">
+[.p04] فבConHugeCo, אנחנו מבינים איך לנצל בצורה אנכית. האם יש לך תכנית להפוך B2C2B?
+</p>
+
+<hr>
+
+<p class="p05">
+[.p05] At ConHugeCo, we understand how to exploit vertically.  Do you have a scheme to become B2C2B?
+</p>
+<p class="p05" dir="rtl">
+[.p05] في ConHugeCo، ونحن نفهم كيفية استغلال عموديا. هل لديك خطة لتصبح B2C2B؟
+</p>
+
+<hr>
+
+<p class="p06">
+[.p06] At ConHugeCo, we understand how to exploit vertically.  Do you have a scheme to become B2C2B? <br> At ConHugeCo, we understand how to exploit vertically.  Do you have a scheme to become B2C2B?
+</p>
+<p class="p06" dir="rtl">
+[.p06] فבConHugeCo, אנחנו מבינים איך לנצל בצורה אנכית. האם יש לך תכנית להפוך B2C2B? <br> في ConHugeCo، ونحن نفهم كيفية استغلال عموديا. هل لديك خطة لتصبح B2C2B؟
+</p>
+
+<hr>
+
+<div class="d01">
+<p>[.d01 p] This is a paragraph, and it should be right-justified.</p>
+<p>[.d01 p + p] This is a paragraph, and it should be centered.</p>
+</div>
+
+<table class="t01">
+<tr><th>Row 1</th><td>ABCDEFG</td></tr>
+<tr><th>Row 2</th><td>GABCDEF</td></tr>
+<tr><th>Row 3</th><td>FGABCDE</td></tr>
+<tr><th>Row 4</th><td>EFGABCD</td></tr>
+<tr><th>Row 5</th><td>DEFGABC</td></tr>
+<tr><th>Row 6</th><td>CDEFGAB</td></tr>
+<tr><th>Row 7</th><td>BCDEFGA</td></tr>
+<tr><th>Row 8</th><td>1234567</td></tr>
+</table>
+
+</div>
+<p class="credit">Corporate gibberish courtesy the <a href="http://www.andrewdavidson.com/gibberish/?companyname=ConHugeCo">Corporate Gibberish Generator on AndrewDavidson.com</a>.  Arabic and Hebrew translations courtesy <a href="http://translate.google.com/">Google Translate</a>.</p>
+
+</body>
+</html>

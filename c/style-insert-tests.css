@@ -1,0 +1,9 @@
+head {display: block;}
+style#tests {display: block;
+	max-height: 20.33em;
+	overflow: auto;
+	white-space: pre;
+	font: small/1 monospace, serif;
+	padding: 0 1em 0.75em;
+	border-bottom: 3px double #999;
+	background: #DDD; color: #333;}

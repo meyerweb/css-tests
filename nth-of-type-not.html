@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>:nth-of-type() and :not()</title>
+<link rel="stylesheet" href="c/style-insert-tests.css" type="text/css" />
+<style type="text/css" id="tests" contenteditable>
+ol li.skip {display: none;}
+ol:hover li.skip {display: list-item;}
+li::after {content: " " attr(class);}
+
+li:not(.skip):nth-of-type(odd) {font-style: italic; color: red;}
+li:nth-of-type(odd):not(.skip) {background: silver;}
+</style>
+</head>
+<body>
+
+<ol>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+<li class="skip this one">List item</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+<li class="skip this one">List item</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+</ol>
+
+<p>
+Note that you must hover over the ordered list to reveal its fullness.  (Yes, I’m sorry if you’re on a mobie device.  This is a simple testcase.)
+</p>
+<p>
+The <code>:nth-of-type()</code> portion refers <strong>only</strong> to that element type within the document structure; in this case, <code>li</code>.  It does <strong>not</strong> take the class negation into account when counting.  Thus only the odd-numbered <code>li</code> elements (within the set of elements of that type) can be selected, regardless of whether they are displayed or not.  Structural selectors care about document structure, not rendering.  Otherwise, list items 6, 8, 10, and 12 (in the hovered state; 5, 7, 9, and 11 unhovered) would be red-on-silver.
+</p>
+<p>
+Furthermore, only those odd-numbered <code>li</code> elements without a <code>class</code> containing <code>skip</code> are selected.  Thus, the “skipped” list items do not get red italic text or silver backgrounds, even when they are odd-numbered members of the <code>li</code> type set.
+</p>
+
+</body>
+</html>

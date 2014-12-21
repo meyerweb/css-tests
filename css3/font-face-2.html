@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: @font-face</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" media="all">
+</style>
+<style type="text/css" id="tests">
+@font-face {
+	font-family: 'A';
+	src: local('Arial');
+	}
+@font-face {
+	font-family: 'Ari';
+	src: local(Arial);
+	}
+.arena p {font-family: Georgia, serif;}
+.arena p span {border-bottom: 1px dotted #BBF;}
+.arena #p01 span {font-family: A, fantasy;}
+.arena #p02 span {font-family: Ari, fantasy;}
+.arena #p03 span {font-family: Arial, fantasy;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://w3.org/TR/css3-fonts/">http://w3.org/TR/css3-fonts/</a></p>
+
+<div class="arena">
+
+<p id="p01">[#p01] A paragraph containing <span>text inside a span</span> as well as text without.</p>
+<p id="p02">[#p02] A paragraph containing <span>text inside a span</span> as well as text without.</p>
+<p id="p03">[#p03] A paragraph containing <span>text inside a span</span> as well as text without.</p>
+
+</div>
+
+</body>
+</html>

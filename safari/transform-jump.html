@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Skynet</title>
+<style type="text/css">
+
+html {background: #FAA;}
+body {background: #AAF; padding: 0 1em 5em; margin: 0 3em;}
+
+div {padding: 1em 2em; border: 1px solid green;
+   background: rgba(255,255,255,0.9);}
+#position {position: absolute; top: 3em; right: 0; width: 15em; }
+#normalflow {margin: 5em 20em 0 0;}
+
+body:hover {
+	background: #FFA;
+	-webkit-transform: rotate(0deg);
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform: rotate(0deg);
+	-moz-transform-origin: 50% 50%;
+	-o-transform: rotate(0deg);
+	-o-transform-origin: 50% 50%;
+	transform: rotate(0deg);
+	transform-origin: 50% 50%;
+}
+
+</style>
+</head>
+<body>
+
+<div id="position">
+This is an absolutely positioned element.  It containing block defaults to the root element but switches to the <code>body</code> when it is transformed by hovering.
+</div>
+
+<div id="normalflow">
+This is a normal-flow element.  It has a top margin which collapses with the <code>body</code> element's top element (which is zero).  Hover the mouse pointer over the <code>body</code> (the bluish box surrounding this one) to see the absolutely positioned element shift.
+</div>
+
+</body>
+</html>

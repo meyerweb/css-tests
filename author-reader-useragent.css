@@ -1,0 +1,3 @@
+#meyerweb-eric-css-tests li.reader {background: red;
+	background: repeating-linear-gradient(-45deg,red,red 1em,yellow 1em,yellow 2em);}
+#meyerweb-eric-css-tests li.reader.important {background: green !important;}

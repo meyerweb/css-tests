@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Class+ID test</title>
+<style type="text/css" media="all">
+/* reveal styles in modern browsers */
+head {display: block; padding-bottom: 1px; margin-bottom: 2em; border-bottom: 3px double #AAA;}
+style {display: block; font: small monospace; white-space: pre; padding: 0 1em 1em;
+  border-bottom: 1px solid #AAA; background: #F1F1F1; color: #666;}
+
+/* testing styles follow... */
+
+p {width: 500px;}
+.test {border: 1px solid; padding: 2px;}
+
+.test.one {font-weight: bold;}
+.test.one#ex1 {color: olive;}
+.test#ex3 {color: green;}
+
+#ex2.one.test {border-width: 8px;}
+#ex1.one {border-width: 6px;}
+.test#ex4.two {border-width: 4px;}
+.test#ex3 {border-width: 2px;}
+
+/* the following should not have any effect because no selector matches any of the test elements */
+#ex5.two, .two#ex2 {color: red !important;}
+.one#ex3, #ex4.one {border-width: 20px !important;}
+#ex4.one.test, #ex3.text.two {border-width: 20px !important;}
+</style>
+</head>
+<body>
+
+
+<p class="test one" id="ex1">
+What's my color, weight, and border?
+[test one][#ex1]
+</p>
+<p class="test one" id="ex2">
+What's my color, weight, and border?
+[test one][#ex2]
+</p>
+<p class="test two" id="ex3">
+What's my color, weight, and border?
+[test two][#ex3]
+</p>
+<p class="test two" id="ex4">
+What's my color, weight, and border?
+[test two][#ex4]
+</p>
+<p class="test" id="ex5">
+What's my color, weight, and border?
+[test][#ex5]
+</p>
+
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: background-size</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.arena div {height: 100px; width: 150px; float: left;
+	margin: 10px; padding: 1em;
+	background: green url(i/hatchgrid.png) center no-repeat;}
+.arena div:nth-child(4n+1) {clear: left;}
+#d01 {background-size: 100px 100px;}
+#d02 {background-size: 100% 100%;}
+#d03 {background-size: 100px 100%;}
+#d04 {background-size: 100% 100px;}
+#d05 {background-size: 100px;}
+#d06 {background-size: 100px auto;}
+#d07 {background-size: auto 100px;}
+#d08 {background-size: auto 100%;}
+#d09 {background-size: cover;}
+#d10 {background-size: cover; background-position: 0% 100%;}
+#d11 {background-size: contain;}
+#d12 {background-size: contain; background-position: 0% 100%;}
+#d13 {background-size: cover; background-origin: content-box; background-clip: padding-box; border: 1px solid red;}
+#d14 {background-size: cover; background-origin: padding-box; background-clip: content-box; border: 1px solid red;}
+#d15 {background-size: contain; background-origin: content-box; background-clip: padding-box; border: 1px solid red;}
+#d16 {background-size: contain; background-origin: padding-box; background-clip: content-box; border: 1px solid red;}
+
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-background/#the-background-size">http://www.w3.org/TR/css3-background/#the-background-size</a></p>
+
+<section class="arena">
+
+<div id="d01">[#d01]</div>
+<div id="d02">[#d02]</div>
+<div id="d03">[#d03]</div>
+<div id="d04">[#d04]</div>
+
+<div id="d05">[#d05]</div>
+<div id="d06">[#d06]</div>
+<div id="d07">[#d07]</div>
+<div id="d08">[#d08]</div>
+
+<div id="d09">[#d09]</div>
+<div id="d10">[#d10]</div>
+<div id="d11">[#d11]</div>
+<div id="d12">[#d12]</div>
+
+<div id="d13">[#d13]</div>
+<div id="d14">[#d14]</div>
+<div id="d15">[#d15]</div>
+<div id="d16">[#d16]</div>
+
+</section>
+
+</body>
+</html>

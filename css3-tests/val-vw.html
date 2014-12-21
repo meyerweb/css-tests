@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: the 'vw' unit</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+img[id] {height: 5px;}
+#img01 {width: 20vw;}
+#img02 {width: 30vw;}
+#img03 {width: 40vw;}
+#img04 {width: 50vw;}
+#img05 {width: 100vw;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-values/#relative0">http://www.w3.org/TR/css3-values/#relative0</a></p>
+
+<div class="arena">
+
+<p id="p01">
+[#p01] This is a paragraph that contains <tt>img</tt> elements, each of which refers to the same image ( <img src="i/box-red.gif"> ).  They are separated by <tt>br</tt> elements.
+<br/>
+<img src="i/box-red.gif" alt="" id="img01">
+<br/>
+<img src="i/box-red.gif" alt="" id="img02">
+<br/>
+<img src="i/box-red.gif" alt="" id="img03">
+<br/>
+<img src="i/box-red.gif" alt="" id="img04">
+<br/>
+<img src="i/box-red.gif" alt="" id="img05">
+<br/>
+If they all appear the same, then the browser likely does not support the <tt>vw</tt> unit.  Note that if supported, the images should change width as the viewport width changes.
+</p>
+
+</div>
+
+</body>
+</html>

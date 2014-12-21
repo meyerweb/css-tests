@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>IE/Win float test</title>
+<style type="text/css" media="all">
+html, body {border: 1px solid orange; padding: 0.5em; margin: 0;}
+div {border: 1px dotted red; margin-top: 1em;}
+#contain {min-width: 675px; border-style: solid; background: #FEE;
+  margin: 1em; padding: 0.5em 0;}
+#topper {width: 675px; background: #EEF;}
+.column {background: #EEE; text-align: center;}
+#main {float: left; width: 63%;}
+#sidebar {float: right; width: 34%;}
+#footer {clear: both; background: #FEE;}
+</style>
+</head>
+<body>
+
+<div id="contain">
+
+<div id="topper">topper (675px)</div>
+
+<div id="main" class="column">main (63%)</div>
+
+<div id="sidebar" class="column">sidebar (34%)</div>
+
+<div id="footer">footer (auto)</div>
+
+</div>
+
+</body>
+</html>

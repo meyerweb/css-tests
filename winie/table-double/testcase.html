@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Test case</title>
+<style type="text/css" media="all">
+
+table {padding-left: 0.25em; width: 50%;
+  border: 1px solid gray; margin-bottom: 1em;}
+table th {text-align: right; border: 1px dotted purple;}
+table td {border: 1px dotted fuchsia;}
+table p {border: 1px dotted red; height: 1em; margin: 0;}
+
+
+table.chart.combo tbody th, table.chart.combo tbody td {padding: 0.15em 0.25em;}
+table.chart.combo tbody td p {padding: 0.33em 0;}
+table.chart.combo tbody td p span {font-size: 93%; padding: 0 0.5em;}
+
+/* duos */
+
+table.chart.combo.double tbody td {width: 50%;}
+table.chart.combo.double tbody td div {background: #5CB9DC; border: 1px dotted gray;}
+table.chart.combo.double tbody td.p1 div {width: 200%;}
+table.chart.combo.double tbody td.p1 p {text-align: left;
+	background-color: #B2D43A; position: relative; z-index: 1;}
+
+table.chart.combo.double tbody td.p2 {text-align: right;}
+table.chart.combo.double tbody td.p2 p {width: auto !important; position: relative; z-index: 2;}
+
+
+.test01 {width: 75%;}
+#t02 tr {height: 3em;}
+#t03 td {padding: 0.5em 0;}
+
+</style>
+</head>
+<body>
+
+<table class="chart combo double" id="t01">
+<tr>
+<th>A heading</th>
+<td class="p1"><div><p style="width: 75%;">75%</p></div></td>
+<td class="p2"><div><p>2nd</p></div></td>
+</tr>
+<tr>
+<th>A heading<br/>with a line break</th>
+<td class="p1"><div><p style="width: 75%;">75%</p></div></td>
+<td class="p2"><div><p>2nd</p></div></td>
+</tr>
+<tr>
+<th style="white-space: pre;">A heading
+with a CR and pre</th>
+<td class="p1"><div><p style="width: 75%;">75%</p></div></td>
+<td class="p2"><div><p>2nd</p></div></td>
+</tr>
+<tr>
+<th style="white-space: pre;">A heading
+with a CR and pre</th>
+<td class="p1"><div><p class="test01">75%</p></div></td>
+<td class="p2"><div><p>2nd</p></div></td>
+</tr>
+</table>
+
+<table class="chart combo double" id="t02">
+<tr>
+<th>A heading</th>
+<td class="p1"><div><p style="width: 75%;">75%</p></div></td>
+<td class="p2"><div><p>2nd</p></div></td>
+</tr>
+<tr>
+<th>A heading<br/>with a line break</th>
+<td class="p1"><div><p style="width: 75%;">75%</p></div></td>
+<td class="p2"><div><p>2nd</p></div></td>
+</tr>
+<tr>
+<th style="white-space: pre;">A heading
+with a CR and pre</th>
+<td class="p1"><div><p style="width: 75%;">75%</p></div></td>
+<td class="p2"><div><p>2nd</p></div></td>
+</tr>
+<tr>
+<th style="white-space: pre;">A heading
+with a CR and pre</th>
+<td class="p1"><div><p class="test01">75%</p></div></td>
+<td class="p2"><div><p>2nd</p></div></td>
+</tr>
+</table>
+
+<table class="chart combo double" id="t03">
+<tr>
+<th>A heading</th>
+<td class="p1"><div><p style="width: 75%;">75%</p></div></td>
+<td class="p2"><div><p>2nd</p></div></td>
+</tr>
+<tr>
+<th>A heading<br/>with a line break</th>
+<td class="p1"><div><p style="width: 75%;">75%</p></div></td>
+<td class="p2"><div><p>2nd</p></div></td>
+</tr>
+<tr>
+<th style="white-space: pre;">A heading
+with a CR and pre</th>
+<td class="p1"><div><p style="width: 75%;">75%</p></div></td>
+<td class="p2"><div><p>2nd</p></div></td>
+</tr>
+<tr>
+<th style="white-space: pre;">A heading
+with a CR and pre</th>
+<td class="p1"><div><p class="test01">75%</p></div></td>
+<td class="p2"><div><p>2nd</p></div></td>
+</tr>
+</table>
+
+</body>
+</html>

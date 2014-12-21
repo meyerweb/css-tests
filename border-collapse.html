@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>border-collapse</title>
+<style type="text/css" media="all">
+head {display: block;}
+style.test {display: block; float: right;
+  padding: 0 1em 1em; border: 1px solid gray; border-width: 0 0 1px 1px;
+  color: gray; background: #EEE;
+  white-space: pre; font-family: monospace;}
+</style>
+<style type="text/css" media="all" class="test">
+table {margin: 2.5em;}
+th {border: 1px solid red;}
+td {border: 1px solid gray;}
+#one {border-collapse: collapse;}
+#two {border-collapse: separate;}
+#one, #two {border-spacing: 10px;}
+</style>
+</head>
+<body>
+
+<table id="zero">
+<caption>#zero</caption>
+<thead>
+<tr>
+<th scope="col">th-c1</th>
+<th scope="col">th-c2</th>
+<th scope="col">th-c3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r1-c1</td>
+<td>r1-c2</td>
+<td>r1-c3</td>
+</tr>
+<tr>
+<th scope="row">r2-c1</th>
+<td>r2-c2</td>
+<td>r2-c3</td>
+</tr>
+<tr>
+<td>r3-c1</td>
+<td>r3-c2</td>
+<td>r3-c3</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td>tf-c1</td>
+<td>tf-c2</td>
+<th scope="col">tf-c3</th>
+</tr>
+</tfoot>
+</table>
+
+<table id="one" cellspacing="10">
+<caption>#one</caption>
+<thead>
+<tr>
+<th scope="col">th-c1</th>
+<th scope="col">th-c2</th>
+<th scope="col">th-c3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r1-c1</td>
+<td>r1-c2</td>
+<td>r1-c3</td>
+</tr>
+<tr>
+<th scope="row">r2-c1</th>
+<td>r2-c2</td>
+<td>r2-c3</td>
+</tr>
+<tr>
+<td>r3-c1</td>
+<td>r3-c2</td>
+<td>r3-c3</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td>tf-c1</td>
+<td>tf-c2</td>
+<th scope="col">tf-c3</th>
+</tr>
+</tfoot>
+</table>
+
+<table id="two">
+<caption>#two</caption>
+<thead>
+<tr>
+<th scope="col">th-c1</th>
+<th scope="col">th-c2</th>
+<th scope="col">th-c3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r1-c1</td>
+<td>r1-c2</td>
+<td>r1-c3</td>
+</tr>
+<tr>
+<th scope="row">r2-c1</th>
+<td>r2-c2</td>
+<td>r2-c3</td>
+</tr>
+<tr>
+<td>r3-c1</td>
+<td>r3-c2</td>
+<td>r3-c3</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td>tf-c1</td>
+<td>tf-c2</td>
+<th scope="col">tf-c3</th>
+</tr>
+</tfoot>
+</table>
+
+
+</body>
+</html>

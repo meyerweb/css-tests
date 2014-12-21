@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Inherit</title>
+<style type="text/css">
+body {padding: 5em 1em; margin: 0 3em;}
+div#d01 {border: 1px solid purple; font-family: Verdana, sans-serif;}
+p#p01 {border: inherit; font-family: inherit;}
+p {border: none; font-family: Georgia, serif;}
+</style>
+</head>
+<body>
+
+<div id="d01">
+This is a <code>div</code> with an <code>id</code> of <code>d01</code>.  It should have a one-pixel solid purple border and its text should use Verdana or a fallback sans-serif font.
+
+<p id="p01">
+This is a <code>p</code> with an <code>id</code> of <code>p01</code>.  Its border and font family should be the same as its parent element, overriding other values defined by lower-specificity rules.
+</p>
+
+</div>
+
+<a href="http://www.w3.org/TR/css3-values">Specification</a>
+
+</body>
+</html>

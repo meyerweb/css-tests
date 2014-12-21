@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flexible Box Accessibility Testing</title>
+<style type="text/css" media="all">
+
+div {border: 1px dotted gray;}
+div p {margin: 0.25em 0.5em;}
+
+div {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-box;
+	display: -o-box;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	-ms-box-orient: vertical;
+	-o-box-orient: vertical;
+	}
+#p1 {
+	-webkit-box-ordinal-group: 1;
+	-moz-box-ordinal-group: 1;
+	-ms-box-ordinal-group: 1;
+	-o-box-ordinal-group: 1;
+	}
+#p2 {
+	-webkit-box-ordinal-group: 4;
+	-moz-box-ordinal-group: 4;
+	-ms-box-ordinal-group: 4;
+	-o-box-ordinal-group: 4;
+	}
+#p3 {
+	-webkit-box-ordinal-group: 3;
+	-moz-box-ordinal-group: 3;
+	-ms-box-ordinal-group: 3;
+	-o-box-ordinal-group: 3;
+	}
+#p4 {
+	-webkit-box-ordinal-group: 2;
+	-moz-box-ordinal-group: 2;
+	-ms-box-ordinal-group: 2;
+	-o-box-ordinal-group: 2;
+	}
+</style>
+</head>
+<body>
+
+<p>This is an accessibility test.  Its results can only be evaluated in a screen reader, speaking browser, or similar audio medium.
+</p>
+<p><strong>Whatever you <em>see</em> cannot be taken as either true or false.</strong></p>
+
+<div>
+
+<p id="p1">What comes next is false.</p>
+<p id="p2">The content is heard in layout order, not source order.</p>
+<p id="p3">What comes next is true.</p>
+<p id="p4">The content is heard in source order, not layout order.</p>
+
+</div>
+
+<p>The test is now concluded.</p>
+
+</body>
+</html>

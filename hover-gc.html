@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Safari :hover/GC test</title>
+<style type="text/css">
+a:link {color: rgb(0,0,255);}
+.one a:hover:before {content: "# ";}
+.two a:hover:after {content: " #";}
+.beta a:hover {color: rgb(0,0,254);}
+</style>
+</head>
+<body>
+
+<p class="one">
+[one] <a href="erewhon">test link</a>
+</p>
+<p class="two">
+[two] <a href="erewhon">test link</a>
+</p>
+<p class="one beta">
+[one] <a href="erewhon">test link</a>
+</p>
+<p class="two beta">
+[two] <a href="erewhon">test link</a>
+</p>
+
+</body>
+</html>

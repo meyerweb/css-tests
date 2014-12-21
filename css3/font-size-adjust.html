@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: font-size-adjust</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.arena p {font-family: Helvetica; font-size: 100px;}
+.arena span {border: solid 1px red;}
+.arena .adjust {font-size-adjust: 1;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-fonts/#font-size-adjust">http://www.w3.org/TR/css3-fonts/#font-size-adjust</a></p>
+
+<p class="note"><strong>NOTE:</strong> if the two characters following are the same size, the user agent has <strong>failed</strong> this test.  A passing result shows the second character almost twice the size of the first—specifically [100px × (1 ÷ 0.52) = 192.3px].</p>
+
+<div class="arena">
+
+<p><span>b</span><span class="adjust">b</span></p>
+
+</div>
+
+</body>
+</html>

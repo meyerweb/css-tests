@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: overflow-style</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.arena p {width: 15em; height: 1em; border: 1px dotted gray;}
+#p01 {overflow-style: marquee-line;}
+#p02 {overflow-style: marquee-block;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-marquee/#overflow-style">http://www.w3.org/TR/css3-marquee/#overflow-style</a></p>
+
+<div class="arena">
+<p id="p01">
+[#p01] This is a paragraph of text.  It should marquee horizontally in cases where it overflows its parent element.
+</p>
+<p id="p02">
+[#p02] This is a paragraph of text.  It should marquee vertically in cases where it overflows its parent element.
+</p>
+</div>
+
+</body>
+</html>

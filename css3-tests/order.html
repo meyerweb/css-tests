@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: order</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.arena ol {display: flex;
+   width: 90%; margin: 2em 0; padding: 0; border: 3px solid green;}
+.arena ol li {list-style: none; border: 2px dotted gray; min-width: 5%; margin: 0.5em;}
+.arena ol li img {width: 200px; height: 50px;}
+
+#l01 .c3 {order: -1;}
+
+#l02 .c1, #l02 .c2, #l02 .c3 {order: 13;}
+#l02 .c4 {order: 3;}
+#l02 .c5 {order: 0;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-flexbox/#order-property">http://www.w3.org/TR/css3-flexbox/#order-property</a></p>
+
+<div class="arena">
+
+[#l01]
+<ol id="l01">
+<li class="c1">List item 1</li>
+<li class="c2">List item 2</li>
+<li class="c3">List item 3</li>
+<li class="c4">List item 4</li>
+<li class="c5">List item 5</li>
+</ol>
+
+[#l02] 
+<ol id="l02">
+<li class="c1">List item 1</li>
+<li class="c2">List item 2</li>
+<li class="c3">List item 3</li>
+<li class="c4">List item 4</li>
+<li class="c5">List item 5</li>
+</ol>
+
+</div>
+
+</body>
+</html>

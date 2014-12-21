@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Transforms, Transitions, and Containing blocks and Viewports</title>
+<style type="text/css">
+
+body {padding: 5em 1em; margin: 0 3em;}
+div {padding: 1em 2em; border: 1px solid green;
+   background: rgba(255,255,255,0.9);}
+
+.contain {margin: 3em 0;}
+.contain div {border-style: dotted;}
+
+.abs {position: absolute; top: 1em; right: 0; width: 15em; background: #EEF;}
+.abs + .normalflow {margin: 0 20em 0 0;}
+
+.fix {position: fixed; top: 1em; left: 0; width: 15em; background: #FEE;}
+.fix + .normalflow {margin: 0 0 0 20em;}
+
+.extend {height: 100em;}
+
+div.contain:hover {
+	background: #FFA;
+	-webkit-transform: skewX(-13deg);
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform: skewX(-13deg);
+	-moz-transform-origin: 50% 50%;
+	-o-transform: skewX(-13deg);
+	-o-transform-origin: 50% 50%;
+	transform: skewX(-13deg);
+	transform-origin: 50% 50%;
+}
+
+</style>
+</head>
+<body>
+
+<div class="contain">
+
+<div class="fix">
+This is a fixed-positioned element.  Its containing block defaults to the root element but switches to its containing <code>div</code> when that element is transformed by hovering.
+</div>
+
+<div class="normalflow">
+This is a normal-flow element.  Hover the mouse pointer over the containing <code>div</code> (the green-bordered box surrounding this one) to see the fixed-positioned element shift.
+</div>
+
+</div>
+
+<div class="contain">
+
+<div class="abs">
+This is an absolutely positioned element.  Its containing block defaults to the root element but switches to its containing <code>div</code> when that element is transformed by hovering.
+</div>
+
+<div class="normalflow">
+This is a normal-flow element.  Hover the mouse pointer over the containing <code>div</code> (the green-bordered box surrounding this one) to see the absolutely positioned element shift.
+</div>
+
+</div>
+
+<div class="extend">
+This <code>div</code> exists to make the page tall enough to force scrolling.  That's it.
+</div>
+
+</body>
+</html>

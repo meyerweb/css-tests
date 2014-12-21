@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: @font-face</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" media="all">
+@font-face {
+	font-family: "SwitzeraADF WOFF";
+	src: url("f/SwitzeraADF-Regular.woff") format("woff");
+}
+@font-face {
+	font-family: "SwitzeraADF SVG";
+	src: url("f/SwitzeraADF-Regular.svg#switzera_adfregular") format("svg");
+}
+@font-face {
+	font-family: "SwitzeraADF TTF";
+	src: url("f/SwitzeraADF-Regular.ttf") format("truetype");
+}
+@font-face {
+	font-family: "SwitzeraADF OTF";
+	src: url("f/SwitzeraADF-Regular.otf") format("opentype");
+}
+@font-face {
+	font-family: "SwitzeraADF EOT";
+	src: url("f/SwitzeraADF-Regular.eot");
+	src: url("f/SwitzeraADF-Regular.eot?#iefix") format("embedded-opentype");
+}
+</style>
+<style type="text/css" id="tests">
+#p01 {font-family: "SwitzeraADF WOFF", serif;}
+#p02 {font-family: "SwitzeraADF SVG", serif;}
+#p03 {font-family: "SwitzeraADF TTF", serif;}
+#p04 {font-family: "SwitzeraADF OTF", serif;}
+#p05 {font-family: "SwitzeraADF EOT", serif;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://w3.org/TR/css3-fonts/">http://w3.org/TR/css3-fonts/</a></p>
+
+<div class="arena">
+
+<p id="p01">[#p01] A paragraph of text.</p>
+<p id="p02">[#p02] A paragraph of text.</p>
+<p id="p03">[#p03] A paragraph of text.</p>
+<p id="p04">[#p04] A paragraph of text.</p>
+<p id="p05">[#p05] A paragraph of text.</p>
+
+</div>
+
+</body>
+</html>

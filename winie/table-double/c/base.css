@@ -1,0 +1,72 @@
+@import url(reset.css);
+
+html {border-top: 5px solid #1E769B;}
+body {font: 90%/1.67 Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+	color: #333; background: #FFF;
+	counter-reset: subhead;
+	border-top: 68px solid #FBFAF4;}
+h1, h2, h3, h4, table {font: 1em Arial, "Helvetica Neue", Helvetica, sans-serif;}
+h1, h2, h3, h4 {font-weight: bold;}
+a:link {color: #1E769B;}
+a:visited {color: #666;}
+
+.ludacris {width: 968px; margin: 0 auto;
+	position: relative;}
+
+.header {position: absolute; top: -65px; left: 0; width: 100%;}
+.header .logo {position: absolute; top: 5px; left: 17px;}
+.header .tag {position: absolute; top: 18px; left: 270px;}
+
+.main h1 {font-size: 280%; margin-bottom: 0.2em;}
+.main h2 {font-size: 210%; font-weight: normal; color: #666;
+	margin-top: 1.25em; margin-bottom: 0.33em;}
+.main p.tagline {margin: -0.25em 0 0.75em;
+	font-size: 125%;
+	color: #7B7960;}
+.main h3 {margin: 2.25em 0 0.25em; font-size: 125%;}
+.main h3 b {font-size: 75%; text-transform: uppercase;
+	color: #666; padding-right: 0.25em;}
+.main h4 {margin: 2.5em 0 0.75em;
+	text-transform: uppercase; font-size: 125%;
+	color: #928F59;}
+
+.main p {margin: 0 0 1em;}
+.main ul, .main ol {padding-left: 1.75em; margin: 1em 0;}
+.main ul li, .main ol li {list-style: disc; margin: 0.5em 0;}
+.main ol li {list-style: decimal;}
+
+.main {margin: 0 10px 0 270px; padding-top: 2.5em;}
+.nav {positIon: absolute; top: 3em; left: 15px; width: 15em;
+	margin: 0 0.75em 2.5em 0;
+	border-bottom: 1px solid #CCC;}
+.nav li a {display: block; padding: 0.3em 0;
+	font-size: 90%; text-decoration: none;
+	color: #7B7960;
+	border-top: 1px solid #CCC;}
+.nav li a b {font-weight: normal;}
+.nav li.current a, .nav li a:hover {color: #000;}
+.nav li.current ol {background: #FBFAF4; border-top: 1px solid #000;}
+.nav li.current li {padding-left: 0.75em;
+	font: 93% Arial, "Helvetica Neue", Helvetica, sans-serif;}
+.nav li.current ol li:first-child a {border-top: 0;}
+.nav li.current li a {padding: 0.45em 1em 0.45em 1.75em; text-indent: -2em;
+	color: #1E769B;}
+.nav li.current li a:hover {color: #B00;}
+.nav li.current li a b {padding-right: 0.25em; text-transform: uppercase;
+	color: #7B7960;}
+
+.jump {margin: 2em 0 2em 19em; overflow: auto;}
+.jump li {border: 1px solid #D7D7D8;
+	background: #FDFCF8 no-repeat;}
+.jump li a {display: block; padding: 23px 0.75em 0.5em; 
+	font: bold 115% Arial, "Helvetica Neue", Helvetica, sans-serif;
+	text-decoration: none;
+	color: #1E769B;}
+.jump li a:hover {color: #000;}
+.jump .prev {float: left; background-image: url(prev.gif); background-position: 0.75em 9px;}
+.jump .next {float: right; background-image: url(next.gif); background-position: 95% 9px;}
+
+.footer {margin: 0 0 3em 19em; padding: 0.75em;
+	border-top: 1px solid #CCC;
+	clear: both;}
+.footer p {font-size: smaller;}

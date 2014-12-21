@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: the element selector</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+span {outline: 2px dotted gray;}
+::selection {outline: 1px solid red; background: cyan;}
+p::selection {color: green; background: yellow;
+	font-weight: bold;}
+span::selection {color: yellow; background: green url(i/dot-red.gif) repeat-x;
+	cursor: help; outline: 2px dotted red;
+	font-style: italic;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref">
+</p>
+
+<div class="arena">
+Here's some div text.
+
+<p>
+This is a paragraph.  Inside it we find <span>a span element</span> which should style differently.
+</p>
+
+More div text.
+</div>
+
+</body>
+</html>

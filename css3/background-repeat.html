@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: background-repeat</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.arena div {height: 50px; width: 100px; float: left;
+	margin: 10px; padding: 1em;
+	background: green url(i/hatchgrid.png) center;}
+.arena div:nth-child(4n-2) {clear: left;}
+#d01 {background-repeat: repeat;}
+#d02 {background-repeat: no-repeat;}
+#d03 {background-repeat: repeat no-repeat;}
+#d04 {background-repeat: no-repeat repeat;}
+#d05 {background-repeat: round;}
+#d06 {background-repeat: space;}
+#d07 {background-repeat: round space;}
+#d08 {background-repeat: space round;}
+#d09 {background-repeat: round repeat;}
+#d10 {background-repeat: repeat round;}
+#d11 {background-repeat: space repeat;}
+#d12 {background-repeat: repeat space;}
+#d13 {background-repeat: round no-repeat;}
+#d14 {background-repeat: no-repeat round;}
+#d15 {background-repeat: space no-repeat;}
+#d16 {background-repeat: no-repeat space;}
+#d17 {background-repeat: round; background-position: content-box;}
+#d18 {background-repeat: space; background-clip: content-box;}
+#d19 {background-repeat: round space; background-clip: content-box;}
+#d20 {background-repeat: space round; background-clip: content-box;}
+#d21 {background-repeat: space; background-image: url(i/grid-100.png);}
+#d22 {background-repeat: round; background-image: url(i/grid-100.png);}
+#d23 {background-repeat: space; background-image: url(i/grid-100.png); background-position: top left;}
+#d24 {background-repeat: round; background-image: url(i/grid-100.png); background-position: top left;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-background/#the-background-repeat">http://www.w3.org/TR/css3-background/#the-background-repeat</a></p>
+
+<section class="arena">
+
+<div id="d00">[#d00]</div>
+
+<div id="d01">[#d01]</div>
+<div id="d02">[#d02]</div>
+<div id="d03">[#d03]</div>
+<div id="d04">[#d04]</div>
+
+<div id="d05">[#d05]</div>
+<div id="d06">[#d06]</div>
+<div id="d07">[#d07]</div>
+<div id="d08">[#d08]</div>
+
+<div id="d09">[#d09]</div>
+<div id="d10">[#d10]</div>
+<div id="d11">[#d11]</div>
+<div id="d12">[#d12]</div>
+
+<div id="d13">[#d13]</div>
+<div id="d14">[#d14]</div>
+<div id="d15">[#d15]</div>
+<div id="d16">[#d16]</div>
+
+<div id="d17">[#d17]</div>
+<div id="d18">[#d18]</div>
+<div id="d19">[#d19]</div>
+<div id="d20">[#d20]</div>
+
+<div id="d21">[#d21]</div>
+<div id="d22">[#d22]</div>
+<div id="d23">[#d23]</div>
+<div id="d24">[#d24]</div>
+
+</section>
+
+</body>
+</html>

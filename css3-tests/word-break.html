@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>CSS3 test: word-break</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests" contenteditable>
+.arena p {border: 1px dotted orange; -moz-hyphens: auto; -webkit-hyphens: auto; hyphens: auto;}
+#p01 {word-break: normal;}
+#p02 {word-break: break-all;}
+#p03 {word-break: keep-all;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-text/#word-break">http://www.w3.org/TR/css3-text/#word-break</a></p>
+<p class="note">
+The following tests use slightly modified text taken from the <a href="http://www.w3.org/TR/2012/WD-css3-text-20121113/">13 November 2012 draft of “CSS Text Module Level 3”</a>.  It mixes a variety of languages and writing systems.
+</p>
+
+<div class="arena">
+
+<p>
+[noID] 这是一些汉字, and a short testing-specific and an apprehensively extensive sequence of Latin text, و کمی نوشتنن عربی, และตัวอย่างการเขียนภาษาไทย.
+</p>
+<p id="p01">
+[#p01] 这是一些汉字, and a short testing-specific and an apprehensively extensive sequence of Latin text, و کمی نوشتنن عربی, และตัวอย่างการเขียนภาษาไทย.
+</p>
+<p id="p02">
+[#p02] 这是一些汉字, and a short testing-specific and an apprehensively extensive sequence of Latin text, و کمی نوشتنن عربی, และตัวอย่างการเขียนภาษาไทย.
+</p>
+<p id="p03">
+[#p03] 这是一些汉字, and a short testing-specific and an apprehensively extensive sequence of Latin text, و کمی نوشتنن عربی, และตัวอย่างการเขียนภาษาไทย.
+</p>
+
+
+</body>
+</html>

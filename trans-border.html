@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+			"http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>Transparent Borders</title>
+<style type="text/css">
+<!--
+body {background: white; color: gray;}
+#outer {border: 1px solid black; background: red;}
+#outer div {border: 10px solid transparent; background: white;
+  color: black;}
+-->
+</style>
+</head>
+<body>
+
+<div id="outer">
+<div>
+These <code>div</code>s should have ten-pixel transparent borders.  This will have an effect similar to margins, which the <code>div</code>s do not have.
+</div>
+<div>
+Thus, there should be 10 pixels of white space around the <code>div</code>s, and 20 pixels between them.  There should be no red, gray, or black space at all except for the one-pixel solid black border surrounding the two <code>div</code>s.
+</div>
+</div>
+
+</body>
+</html>

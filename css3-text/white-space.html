@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Preserve Spaces</title>
+<style type="text/css">
+
+body {padding: 5em 1em; margin: 0 3em;}
+p {border: 1px dotted green;}
+p {white-space: pre-wrap;}
+
+</style>
+</head>
+<body>
+
+<p id="id01">This is a paragraph (<code>p</code> element) that contains ordinary text.  It is formatted such that the opening and closing tags are at the beginning and end of the single line of source text, with the content text between them.  It features two spaces between each sentence, just as God intended.  It has had <code>white-space: pre-wrap</code> applied to it, as with all the other <code>p</code> elements in this test.</p>
+<p id="id02">
+This is a paragraph (<code>p</code> element) that contains ordinary text.  It is formatted such that the opening and closing tags are on lines of their own, with the content text between them.  It features two spaces between each sentence, just as God intended.  It has had <code>white-space: pre-wrap</code> applied to it, as with all the other <code>p</code> elements in this test.
+</p>
+<p id="id03">
+This is a paragraph (<code>p</code> element) that contains ordinary text.
+It is formatted such that the opening and closing tags are on lines of their own, with the content text between them.
+It features a newline between each sentence, which is a bit odd but one can see why it might become a habit.
+It has had <code>white-space: pre-wrap</code> applied to it, as with all the other <code>p</code> elements in this test.
+</p>
+
+<a href="http://www.w3.org/TR/css3-text">Specification</a>
+
+</body>
+</html>
