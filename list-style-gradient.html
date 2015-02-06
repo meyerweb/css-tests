@@ -15,6 +15,9 @@ ol li {list-style: linear-gradient(45deg, red, red 50%, orange 50%, orange);}
 li:first-child {font-size: 200%;}
 li {font-size: 150%;}
 li:last-child {font-size: 100%;}
+
+ol.rainbow li {list-style: radial-gradient(farthest-side at bottom right,
+	transparent, transparent 50%, red, orange, yellow, green, blue, indigo, violet, transparent);}
 </style>
 </head>
 <body>
@@ -29,6 +32,13 @@ li:last-child {font-size: 100%;}
 
 
 <ol>
+<li>This is a list item.</li>
+<li>So is this.</li>
+<li>The list is ordered.</li>
+</ol>
+
+
+<ol class="rainbow">
 <li>This is a list item.</li>
 <li>So is this.</li>
 <li>The list is ordered.</li>
