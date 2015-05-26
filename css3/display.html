@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: cursor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css">
+section {border-top: 1px solid silver; padding: 2em 0;}
+section:first-of-type {border-top: 0;}
+</style>
+<style type="text/css" id="tests">
+#i00 span {display: none;}
+#i01 p {display: inline;}
+#i02 span {display: block;}
+#i03 p {display: inline-block;}
+#i04 span {display: list-item;}
+#i05 strong {display: run-in;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-box/#display">http://www.w3.org/TR/css3-box/#display</a></p>
+
+<div class="arena">
+
+<section id="i00">
+<p>
+This paragraph contains several 'span' elements that should not be seen.  [<span>Like this one.</span>]  Each is enclosed by square brackets [<span>(like this!)</span>] to help note where they are located.  [<span>If you can read this, you should be viewing source.</span>]
+</p>
+</section>
+
+<section id="i01">
+<p>This is one of three paragraph elements.</p>
+<p>They should run together as inline content.</p>
+<p>If they look like normal paragraphs, there is a problem.</p>
+</section>
+
+<section id="i02">
+<p>This is one of three span elements.</p>
+<p>They should generate block boxes.</p>
+<p>If they look like normal spans, running together as inline content, there is a problem.</p>
+</section>
+
+<section id="i03">
+<p>This is one of three paragraph elements.</p>
+<p>They should sit next to each other as inline boxes.</p>
+<p>If they look like normal paragraphs, there may be a problem.</p>
+</section>
+
+<section id="i04">
+<p>This is one of three span elements.</p>
+<p>They should appear to be list items in a list, either ordered or unordered.</p>
+<p>If they look like normal spans, running together as inline content, there is a problem.</p>
+</section>
+
+<section id="i05">
+<strong>A run-in.</strong>
+<p>This is a paragraph element preceded by a 'strong' element.  The 'strong' should be inserted into the beginning of the paragraph as a run-in element.  If it is above the paragraph, there is a problem.</p>
+
+<strong>A run-in element which is much longer than the previous example of a run-in element, included to distinguish its behavior from a floated element.  As discussed, it should be inserted into the following block element.</strong>
+<p>This is a paragraph element preceded by a 'strong' element.  The 'strong' should be inserted into the beginning of the paragraph as a run-in element.  If it is above the paragraph, there is a problem.</p>
+</section>
+
+</div>
+
+
+
+</body>
+</html>
