@@ -5,56 +5,45 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="c/base.css" type="text/css">
 <style type="text/css" id="tests">
-.arena p {border: 1px dotted gray; clear: left; width: 42em; margin: 1em auto;}
-img[src*="stripes"] {float: left; height: 120px; shape-outside: url(i/stripes-diagonal-fading.png);}
+.arena form {border: 1px dotted gray; clear: left; width: 42em; margin: 1em auto; text-align: center;}
+.arena label {padding: 0.25em 1.5em 0.33em 0.33em; line-height: 2;}
 
-#p01 img {shape-image-threshold: 0.0;}
-#p02 img {shape-image-threshold: 0.2;}
-#p03 img {shape-image-threshold: 0.4;}
-#p04 img {shape-image-threshold: 0.6;}
-#p05 img {shape-image-threshold: 0.8;}
-#p06 img {shape-image-threshold: 1.0;}
+img[src*="stripes"] {float: left; height: 120px; shape-outside: url(i/stripes-diagonal-fading.png);}
+.arena p {text-align: left;}
+
+.arena p img {background: #EED;}
+#op00:checked ~ #p01 img {shape-image-threshold: 0.0;}
+#op02:checked ~ #p01 img {shape-image-threshold: 0.2;}
+#op04:checked ~ #p01 img {shape-image-threshold: 0.4;}
+#op06:checked ~ #p01 img {shape-image-threshold: 0.6;}
+#op08:checked ~ #p01 img {shape-image-threshold: 0.8;}
+#op10:checked ~ #p01 img {shape-image-threshold: 1.0;}
 </style>
 </head>
 <body id="www-meyerweb-com" class="css test suite">
 <p id="specref"><a href="http://www.w3.org/TR/css-shapes-1/#shape-image-threshold-property">http://www.w3.org/TR/css-shapes-1/#shape-image-threshold-property</a></p>
 
 <div class="arena">
+<form>
+<code>shape-image-threshold</code> value<br>
+<input type="radio" id="op00" name="oppick"><label for="op00">0.0</label>
+<input type="radio" id="op02" name="oppick"><label for="op02">0.2</label>
+<input type="radio" id="op04" name="oppick" checked><label for="op04">0.4</label>
+<input type="radio" id="op06" name="oppick"><label for="op06">0.6</label>
+<input type="radio" id="op08" name="oppick"><label for="op08">0.8</label>
+<input type="radio" id="op10" name="oppick"><label for="op10">1.0</label>
 
 <p id="p01">
 [#p01]
 <img src="i/stripes-diagonal-fading.png">
 Bedford non langston hughes nulla, in lake erie glenwillow nam. Ea parum accumsan, mark price. Nunc highland heights bob golic olmsted township te vulputate saepius, william g. mather modo vel et putamus. Et nostrud university heights ut. Claram lius soluta odio molestie quinta claritatem tempor mutationem praesent. Urban meyer eros et dolore severance hall ii id sed ut fairview park. At lectores legunt videntur. Dynamicus ut ut lectorum burgess meredith paul newman autem seacula lobortis amet. Amet quod frank yankovic nobis michael ruhlman, typi qui eu possim nibh iis nam.
 </p>
-<p id="p02">
-[#p02]
-<img src="i/stripes-diagonal-fading.png">
-Bedford non langston hughes nulla, in lake erie glenwillow nam. Ea parum accumsan, mark price. Nunc highland heights bob golic olmsted township te vulputate saepius, william g. mather modo vel et putamus. Et nostrud university heights ut. Claram lius soluta odio molestie quinta claritatem tempor mutationem praesent. Urban meyer eros et dolore severance hall ii id sed ut fairview park. At lectores legunt videntur. Dynamicus ut ut lectorum burgess meredith paul newman autem seacula lobortis amet. Amet quod frank yankovic nobis michael ruhlman, typi qui eu possim nibh iis nam.
-</p>
-<p id="p03">
-[#p03]
-<img src="i/stripes-diagonal-fading.png">
-Bedford non langston hughes nulla, in lake erie glenwillow nam. Ea parum accumsan, mark price. Nunc highland heights bob golic olmsted township te vulputate saepius, william g. mather modo vel et putamus. Et nostrud university heights ut. Claram lius soluta odio molestie quinta claritatem tempor mutationem praesent. Urban meyer eros et dolore severance hall ii id sed ut fairview park. At lectores legunt videntur. Dynamicus ut ut lectorum burgess meredith paul newman autem seacula lobortis amet. Amet quod frank yankovic nobis michael ruhlman, typi qui eu possim nibh iis nam.
-</p>
-<p id="p04">
-[#p04]
-<img src="i/stripes-diagonal-fading.png">
-Bedford non langston hughes nulla, in lake erie glenwillow nam. Ea parum accumsan, mark price. Nunc highland heights bob golic olmsted township te vulputate saepius, william g. mather modo vel et putamus. Et nostrud university heights ut. Claram lius soluta odio molestie quinta claritatem tempor mutationem praesent. Urban meyer eros et dolore severance hall ii id sed ut fairview park. At lectores legunt videntur. Dynamicus ut ut lectorum burgess meredith paul newman autem seacula lobortis amet. Amet quod frank yankovic nobis michael ruhlman, typi qui eu possim nibh iis nam.
-</p>
-<p id="p05">
-[#p05]
-<img src="i/stripes-diagonal-fading.png">
-Bedford non langston hughes nulla, in lake erie glenwillow nam. Ea parum accumsan, mark price. Nunc highland heights bob golic olmsted township te vulputate saepius, william g. mather modo vel et putamus. Et nostrud university heights ut. Claram lius soluta odio molestie quinta claritatem tempor mutationem praesent. Urban meyer eros et dolore severance hall ii id sed ut fairview park. At lectores legunt videntur. Dynamicus ut ut lectorum burgess meredith paul newman autem seacula lobortis amet. Amet quod frank yankovic nobis michael ruhlman, typi qui eu possim nibh iis nam.
-</p>
-<p id="p06">
-[#p06]
-<img src="i/stripes-diagonal-fading.png">
-Bedford non langston hughes nulla, in lake erie glenwillow nam. Ea parum accumsan, mark price. Nunc highland heights bob golic olmsted township te vulputate saepius, william g. mather modo vel et putamus. Et nostrud university heights ut. Claram lius soluta odio molestie quinta claritatem tempor mutationem praesent. Urban meyer eros et dolore severance hall ii id sed ut fairview park. At lectores legunt videntur. Dynamicus ut ut lectorum burgess meredith paul newman autem seacula lobortis amet. Amet quod frank yankovic nobis michael ruhlman, typi qui eu possim nibh iis nam.
-</p>
+
+</form>
 
 </div>
 
-<p>Filler text courtesy <a href="http://localipsum.meyerweb.com/">Local Ipsum</a>.</p>
+<p class="note">Filler text courtesy <a href="http://localipsum.meyerweb.com/">Local Ipsum</a>.</p>
 
 </body>
 </html>
