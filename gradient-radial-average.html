@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Average Radial Gradients</title>
+<title>Average-Color Gradients</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="c/style-insert-tests.css">
+<style type="text/css" media="all">
+span.average-example {display: inline-block; width: 50px; height: 50px;}
+#ex01 {background: rgba(25%,25%,25%,1);}
+
+section div {height: 200px; width: 200px; float: left; margin: 10px; border: 1px dotted red;}
+section div:nth-child(5n+1) {clear: left;}
+section div::before {content: '[.' attr(class) ']'; color: white;}
+</style>
 <style type="text/css" media="all" id="tests">
-div {height: 200px; width: 200px; float: left; margin: 10px; border: 1px dotted red;}
-div:nth-child(5n+1) {clear: left;}
 
 .d01 {background-image: repeating-radial-gradient(0px 0px at center, red 0%, green 25%, blue 100%);}
 .d02 {background-image: repeating-radial-gradient(0px 0px at center, red 0%, green 33%, blue 100%);}
-.d03 {background-image: repeating-radial-gradient(0px 0px at center, red 0%, green 50%, blue 100%);}
-.d04 {background-image: repeating-radial-gradient(0px 0px at center, red 0%, green 67%, blue 100%);}
-.d05 {background-image: repeating-radial-gradient(0px 0px at center, red 0%, green 75%, blue 100%);}
+.d03 {background-image: repeating-radial-gradient(1px 1px at center, red 0%, green 50%, blue 100%);}
+.d04 {background-image: repeating-radial-gradient(2px 2px at center, red 0%, green 67%, blue 100%);}
+.d05 {background-image: repeating-radial-gradient(3px 3px at center, red 0%, green 75%, blue 100%);}
 .d06 {background-image: repeating-linear-gradient(90deg, red 0px, green 0px, blue 0px);}
 .d07 {background-image: repeating-linear-gradient(90deg, red 0px, green 0.05px, blue 0.1px);}
-.d08 {background-image: repeating-linear-gradient(90deg, red 0px, green 1px, blue 2px);}
-.d09 {background-image: repeating-linear-gradient(90deg, red 0px, white 0px, blue 0px);}
-.d10 {background-image: repeating-linear-gradient(90deg, red 0px, white 0.1px, blue 0.2px);}
+.d08 {background-image: repeating-linear-gradient(90deg, red 0px, green 0.5px, blue 1px);}
+.d09 {background-image: repeating-linear-gradient(90deg, red 0px, green 1px, blue 2px);}
+.d10 {background-image: repeating-linear-gradient(90deg, red 0px, green 2px, blue 4px);}
 </style>
 </head>
 <body>
 
+<p>The following gradients should render as a solid color equivalent to <tt>rgba(25%,25%,25%,1)</tt> (<span class="average-example" id="ex01"></span>) in cases where they cannot properly create the repeating pattern. See <a href="http://www.w3.org/TR/css3-images/#repeating-gradients">http://www.w3.org/TR/css3-images/#repeating-gradients</a> for details.</p>
+
+<section>
 <div class="d01"><p></p></div>
 <div class="d02"><p></p></div>
 <div class="d03"><p></p></div>
@@ -32,6 +41,7 @@ div:nth-child(5n+1) {clear: left;}
 <div class="d08"><p></p></div>
 <div class="d09"><p></p></div>
 <div class="d10"><p></p></div>
+</section>
 
 </body>
 </html>

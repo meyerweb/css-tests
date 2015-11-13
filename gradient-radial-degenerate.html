@@ -5,8 +5,9 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="c/style-insert-tests.css">
 <style type="text/css" media="all" id="tests">
-div {height: 200px; width: 200px; float: left; margin: 10px; border: 1px dotted red;}
+section div {height: 200px; width: 200px; float: left; margin: 10px; border: 1px dotted red;}
 section div:nth-child(5n+1) {clear: left;}
+section div::before {content: '[.' attr(class) ']';}
 
 .d01 {background-image: radial-gradient(100px,      purple,   gold);}
 .d02 {background-image: radial-gradient(25px 100px, purple,   gold);}
@@ -19,6 +20,12 @@ section div:nth-child(5n+1) {clear: left;}
 .d08 {background-image: radial-gradient(100px 1px,  purple,   gold);}
 .d09 {background-image: radial-gradient(100px 0,    purple,   gold);}
 .d10 {background-image: radial-gradient(100px 0,    purple 0, gold 100px);}
+
+.d11 {background-image: radial-gradient(50%,    purple,   gold 100px);}
+.d12 {background-image: radial-gradient(1% 50%, purple,   gold 100px);}
+.d13 {background-image: radial-gradient(0 50%,  purple,   gold 100px);}
+.d14 {background-image: radial-gradient(50% 1%, purple,   gold 100px);}
+.d15 {background-image: radial-gradient(50% 0,  purple 0, gold 100px);}
 </style>
 </head>
 <body>
@@ -38,6 +45,11 @@ section div:nth-child(5n+1) {clear: left;}
 <div class="d08"><p></p></div>
 <div class="d09"><p></p></div>
 <div class="d10"><p></p></div>
+<div class="d11"><p></p></div>
+<div class="d12"><p></p></div>
+<div class="d13"><p></p></div>
+<div class="d14"><p></p></div>
+<div class="d15"><p></p></div>
 
 </section>
 
