@@ -4,11 +4,12 @@
 <title>Degenerate Radial Gradients</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="c/style-insert-tests.css">
-<style type="text/css" media="all" id="tests">
+<style type="text/css" media="all">
 section div {height: 200px; width: 200px; float: left; margin: 10px; border: 1px dotted red;}
 section div:nth-child(5n+1) {clear: left;}
 section div::before {content: '[.' attr(class) ']';}
-
+</style>
+<style type="text/css" media="all" id="tests">
 .d01 {background-image: radial-gradient(100px,      purple,   gold);}
 .d02 {background-image: radial-gradient(25px 100px, purple,   gold);}
 .d03 {background-image: radial-gradient(1px 100px,  purple,   gold);}
