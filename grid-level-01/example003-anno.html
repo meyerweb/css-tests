@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Grid Example 3 (20151104 ED)</title>
+<link type="text/css" rel="stylesheet" href="_baseline.css">
+<style type="text/css">
+#grid {border: 2px solid gray; padding: 2em; height: auto; width: 50%;}
+
+#track, #thumb {border: 0.25em solid rgba(60,96,140,1); padding: 0.25em; border-radius: 0.33em;}
+#thumb {background: rgba(60,96,140,0.33);}
+
+#lower-fill {background: maroon;}
+#upper-fill {background: olive;}
+
+/*
+#grid div[id]::before {content: "[#" attr(id) "] ";}
+*/
+</style>
+<style type="text/css" class="show">
+#grid {
+  display: grid;
+  grid-template-columns:
+    [start]        auto
+    [track-start]  0.5fr
+    [thumb-start]  auto
+    [fill-split]   auto
+    [thumb-end]    0.5fr
+    [track-end]    auto
+    [end];
+  grid-template-rows: 2em;
+}
+#lower-label { grid-column-start: start }
+#upper-label { grid-column-end: end; }
+
+#track       { grid-column: track-start / track-end; /* justify-self: center */
+               z-index: 11}
+#lower-fill  { grid-column: track-start / fill-split; /* justify-self: end; */
+               z-index: 5 }
+#upper-fill  { grid-column: fill-split / track-end; /* justify-self: start; */
+               z-index: 5 }
+#thumb       { grid-column: thumb-start / thumb-end;
+               z-index: 10 }
+
+#grid div:not(.annotate) {grid-row: 1;}
+#thumb {margin: -1em 0;}
+
+div.annotate {grid-row: 100; border: 1px dotted red; height: 1em;}
+div.annotate:hover::before {content: attr(id);}
+div#start {grid-column: start;}
+div#track-start {grid-column: track-start;}
+div#thumb-start {grid-column: thumb-start;}
+div#fill-split {grid-column: fill-split;}
+div#thumb-end {grid-column: thumb-end;}
+div#track-end {grid-column: track-end;}
+</style>
+</head>
+<body>
+
+
+<div id="grid">
+  <div id="lower-label">0</div>
+  <div id="upper-label">50</div>
+  <div id="track"></div>
+  <div id="lower-fill"></div>
+  <div id="upper-fill"></div>
+  <div id="thumb"></div>
+
+<div class="annotate" id="start"></div>
+<div class="annotate" id="track-start"></div>
+<div class="annotate" id="thumb-start"></div>
+<div class="annotate" id="fill-split"></div>
+<div class="annotate" id="thumb-end"></div>
+<div class="annotate" id="track-end"></div>
+</div>
+
+
+<section id="reference">
+
+<p>Reference rendering:</p>
+<img src="refrends/example003.png" alt="">
+
+</section>
+
+</body>
+</html>
