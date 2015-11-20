@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Grid Example 31 (20151104 ED)</title>
+<link type="text/css" rel="stylesheet" href="_baseline.css">
+<style type="text/css">
+.grid div[class] {border: 1px dotted red;}
+.grid div[class]::before {content: "[." attr(class) "] ";}
+.grid div[class]:hover {background: yellow; z-index: 100;}
+</style>
+<style type="text/css" class="show">
+.grid {width: 50%; margin-bottom: 2em; border: 1px solid;
+       display: grid; grid: column 1fr / auto;}
+.grid .d02 {grid-column: 4 / span 1;}
+
+#g01 .d05 {grid-area: auto;}
+
+#g02 {grid: column 25% / auto;}
+#g02 .d05 {grid-area: auto;}
+
+#g03 {grid: column 25% / auto;}
+#g03 .d03 {grid-area: auto;}
+</style>
+</head>
+<body>
+
+<div class="grid" id="g01">
+	<div class="d01"></div>
+	<div class="d02"></div>
+	<div class="d03"></div>
+	<div class="d04"></div>
+	<div class="d05"></div>
+</div>
+
+<div class="grid" id="g02">
+	<div class="d01"></div>
+	<div class="d02"></div>
+	<div class="d03"></div>
+	<div class="d04"></div>
+	<div class="d05"></div>
+</div>
+
+<div class="grid" id="g03">
+	<div class="d01"></div>
+	<div class="d02"></div>
+	<div class="d03"></div>
+</div>
+
+</body>
+</html>
