@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Grid Example 22 (20151104 ED)</title>
+<link type="text/css" rel="stylesheet" href="_baseline.css">
+<style type="text/css">
+form {border: 2px solid; width: 50%;}
+form > label, #department-block, #buttons {border: 1px dashed;}
+</style>
+<style type="text/css" class="show">
+form {
+  display: grid;
+  grid-template-columns: [labels] auto [controls] auto [oversized] auto;
+  grid-auto-flow: row dense;
+}
+form > label {
+  grid-column: labels;
+  grid-row: auto;
+}
+form > input, form > select {
+  grid-column: controls;
+  grid-row: auto;
+}
+#department-block {
+  grid-column: oversized;
+  grid-row: span 3;
+}
+#buttons {
+  grid-row: auto;
+  grid-column: 1 / -1;
+  text-align: end;
+}
+</style>
+</head>
+<body>
+
+<form>
+  <label for="firstname">First name:</label>
+  <input type="text" id="firstname" name="firstname" />
+  <label for="lastname">Last name:</label>
+  <input type="text" id="lastname" name="lastname" />
+  <label for="address">Address:</label>
+  <input type="text" id="address" name="address" />
+  <label for="address2">Address 2:</label>
+  <input type="text" id="address2" name="address2" />
+  <label for="city">City:</label>
+  <input type="text" id="city" name="city" />
+  <label for="state">State:</label>
+  <select type="text" id="state" name="state">
+    <option value="WA">Washington</option>
+  </select>
+  <label for="zip">Zip:</label>
+  <input type="text" id="zip" name="zip" />
+
+  <div id="department-block">
+    <label for="department">Department:</label>
+    <select id="department" name="department" multiple>
+      <option value="finance">Finance</option>
+      <option value="humanresources">Human Resources</option>
+      <option value="marketing">Marketing</option>
+    </select>
+  </div>
+
+  <div id="buttons">
+    <button id="cancel">Cancel</button>
+    <button id="back">Back</button>
+    <button id="next">Next</button>
+  </div>
+</form>
+
+<section id="reference">
+<p>Reference rendering (minus dashed lines):</p>
+<img src="refrends/example022.png" alt="">
+</section>
+
+</body>
+</html>

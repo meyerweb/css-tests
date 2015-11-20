@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Grid Example 36 (20151104 ED)</title>
+<link type="text/css" rel="stylesheet" href="_baseline.css">
+<style type="text/css">
+#grid {width: 50rem; height: 28.625rem; margin-bottom: 2em; border: 3px solid silver; padding: 0.5em 0;}
+#grid div[id] {text-align: center;}
+#grid div[id]::before {content: "[#" attr(id) "] ";}
+#abspos {border: 3px solid rgb(91,135,242); background: rgb(209,220,251);}
+</style>
+<style type="text/css" class="show">
+#grid {
+  display: grid;
+  grid: 10rem 10rem 10rem 10rem / 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  position: relative;
+}
+#abspos {
+  grid-row-start: 1;     /* 1st grid row line = top of grid container */
+  grid-row-end: span 2;  /* 3rd grid row line */
+  grid-column-start: 3;  /* 3rd grid col line */
+  grid-column-end: auto; /* right padding edge */
+  position: absolute;
+  top: 70px;
+  bottom: 40px;
+  left: 100px;
+  right: 30px;
+}</style>
+</head>
+<body>
+
+<div id="grid">
+	<div id="abspos"></div>
+</div>
+
+
+
+<section id="reference">
+
+<p>Reference rendering (minus dashed lines, arrows, and labels):</p>
+<img src="refrends/example036.svg" alt="" style="width: 50rem;">
+
+</section>
+
+</body>
+</html>

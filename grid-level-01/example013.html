@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Grid Example 13 (20151104 ED)</title>
+<link type="text/css" rel="stylesheet" href="_baseline.css">
+<style type="text/css">
+div[id*="grid"] {height: 13em; width: 50%; margin-bottom: 2em;}
+div[id*="grid"] div[class] {border: 1px dotted red;}
+div[id*="grid"] div[class]::before {content: "[." attr(class) "] ";}
+div[id*="grid"] div[class]:hover {background: yellow; z-index: 100;}
+</style>
+<style type="text/css" class="show">
+ul {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: auto 1fr;
+}
+li {
+  display: grid;
+  grid: subgrid;
+  margin: 0.5em;
+  border: solid;
+  padding: 0.5em;
+}
+label {
+  grid-column: 1;
+}
+input {
+  grid-column: 2;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><label>Name:</label> <input name=fn>
+  <li><label>Address:</label> <input name=address>
+  <li><label>Phone:</label> <input name=phone>
+</ul>
+</body>
+</html>

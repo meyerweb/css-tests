@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Grid Example 7 (20151104 ED)</title>
+<link type="text/css" rel="stylesheet" href="_baseline.css">
+<style type="text/css">
+body > div {height: 13em; width: 50%; margin-bottom: 2em;}
+div div[id] {border: 1px dotted red;}
+</style>
+<style type="text/css" class="show">
+</style>
+</head>
+<body>
+
+<div style="display:grid">
+
+  <!-- grid item: block child -->
+  <div id="item1">block</div>
+
+  <!-- grid item: floated element; floating is ignored -->
+  <div id="item2" style="float: left;">float</div>
+
+  <!-- grid item: anonymous block box around inline content -->
+  anonymous item 3
+
+  <!-- grid item: inline child -->
+  <span>
+    item 4
+    <!-- grid items do not split around blocks -->
+    <div id=not-an-item>item 4</div>
+    item 4
+  </span>
+</div>
+
+</body>
+</html>

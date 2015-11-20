@@ -1,0 +1,21 @@
+head {display: block;}
+.show {
+	display: block;
+	white-space: pre;
+	font: small/1 monospace, serif;
+	padding: 0 1em 0.75em;
+	border-bottom: 3px double #999;
+	background: #DDD;
+	background: linear-gradient(to top, #DDD, #EEE);
+	color: #333;
+}
+body {
+	padding-top: 3em;
+}
+#reference {
+	border-top: 3px double #999;
+	background: #EEE;
+	background: linear-gradient(to bottom, #EEE, #EEE 1em, transparent);
+	padding: 0 1em;
+	margin-top: 5em;
+}

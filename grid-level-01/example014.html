@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Grid Example 14 (20151104 ED)</title>
+<link type="text/css" rel="stylesheet" href="_baseline.css">
+<style type="text/css">
+#grid {margin-bottom: 2em; border: 1px solid;}
+#grid div[id] {border: 1px dotted red;}
+#grid div[id]::before {content: "[#" attr(id) "] ";}
+#grid div[id]:hover {background: yellow; z-index: 100;}
+</style>
+<style type="text/css" class="show">
+#grid {
+	display: grid;
+	grid-template-columns: 300px auto 300px;
+	}
+#subgrid {
+	display: grid;
+	grid: subgrid;
+	grid-column: 2 / span 2;
+	} /* cover parent’s 2nd and 3rd tracks */
+#subgrid :first-child {
+	grid-column: 1;
+	} /* subgrid’s 1st track, parent grid’s 2nd track */
+#subgrid {
+	padding: 100px;
+	}
+</style>
+</head>
+<body>
+
+<div id="grid">
+	<div id="A"></div>
+	<div id="B"></div>
+	<div id="C"></div>
+	<div id="subgrid">
+		<div id="sa"></div>
+		<div id="sb"></div>
+		<div id="sc"></div>
+		<div id="sd"></div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Grid Example 35 (20151104 ED)</title>
+<link type="text/css" rel="stylesheet" href="_baseline.css">
+<style type="text/css">
+#grid {height: auto; width: 401px; margin-bottom: 2em; border: 1px solid; padding: 0.5em 0;}
+#grid div[id] {border: 1px dotted red; background: rgba(255,255,255,0.75); text-align: center;}
+#grid div[id]::before {content: "[#" attr(id) "] ";}
+#grid div[id]:hover {background: yellow; z-index: 100;}
+
+#grid {
+	background: linear-gradient(to right, rgba(255,128,0,1) 1px, transparent 1px, transparent);
+	background-size: 100px 100%;
+	background-repeat: repeat-x;}
+#lines {display: grid;
+	grid-template-columns: repeat(7, 100px);
+	list-style: none;
+	margin: 0 0 0 -0.25em; padding: 0;}
+#lines li {width: 1em;}
+</style>
+<style type="text/css" class="show">
+#grid {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  grid-auto-flow: row;
+}
+#grid-item {
+  grid-column: 4 / span 3;
+}</style>
+</head>
+<body>
+
+<ol id="lines">
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+<li>5</li>
+<li>6</li>
+<li>7</li>
+</ol>
+<div id="grid">
+	<div id="grid-item"></div>
+</div>
+
+</body>
+</html>

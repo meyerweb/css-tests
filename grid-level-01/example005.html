@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Grid Example 5 (20151104 ED)</title>
+<link type="text/css" rel="stylesheet" href="_baseline.css">
+<style type="text/css">
+body > div {height: 13em; width: 50%; margin-bottom: 2em;}
+div div[class] {border: 1px dotted red;}
+div[class]::before {content: "[." attr(class) "] ";}
+</style>
+<style type="text/css" class="show">
+#grid1 {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 50px 1fr 50px
+}
+.item1 { grid-column: 2;
+         grid-row-start: 1; grid-row-end: 4; }
+
+#grid2 {
+  display: grid;
+  grid-template-columns: 150px [item1-start] 1fr [item1-end];
+  grid-template-rows: [item1-start] 50px 1fr 50px [item1-end];
+}
+.item1 {
+  grid-column: item1-start / item1-end;
+  grid-row: item1-start / item1-end
+}
+</style>
+</head>
+<body>
+
+
+<div id="grid1">
+	<div class="d01"></div>
+	<div class="d02"></div>
+	<div class="d03"></div>
+	<div class="d04"></div>
+	<div class="d05"></div>
+	<div class="d06"></div>
+</div>
+
+<div id="grid2">
+	<div class="d01"></div>
+	<div class="d02"></div>
+	<div class="d03"></div>
+	<div class="d04"></div>
+	<div class="d05"></div>
+	<div class="d06"></div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Grid Example 8 (20151104 ED)</title>
+<link type="text/css" rel="stylesheet" href="_baseline.css">
+<style type="text/css">
+#grid {height: 13em; width: 13em;}
+#grid div[id] {text-align: center; color: white; font: 2em sans-serif; padding: 0.5em;}
+#A {background-color: rgb(79,130,189);}
+#B {background-color: rgb(128,100,162);}
+#C {background-color: rgb(246,150,71);}
+#D {background-color: rgb(155,187,89);}
+#E {background-color: rgb(192,80,77);}
+</style>
+<style type="text/css" class="show">
+#grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr
+}
+#A { grid-column: 1 / span 2; grid-row: 2; align-self: end; }
+#B { grid-column: 1; grid-row: 1; z-index: 10; }
+#C { grid-column: 2; grid-row: 1; align-self: start; margin-left: -20px; }
+#D { grid-column: 2; grid-row: 2; justify-self: end; align-self: start; }
+#E { grid-column: 1 / span 2; grid-row: 1 / span 2;
+     z-index: 5; justify-self: center; align-self: center; }
+</style>
+</head>
+<body>
+
+<div id="grid">
+  <div id="A">A</div>
+  <div id="B">B</div>
+  <div id="C">C</div>
+  <div id="D">D</div>
+  <div id="E">E</div>
+</div>
+
+
+<section id="reference">
+
+<p>Reference rendering (minus dashed lines):</p>
+<img src="refrends/example008.png" alt="">
+
+</section>
+
+</body>
+</html>

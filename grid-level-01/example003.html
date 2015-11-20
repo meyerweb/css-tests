@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Grid Example 3 (20151104 ED)</title>
+<link type="text/css" rel="stylesheet" href="_baseline.css">
+<style type="text/css">
+#grid {border: 2px solid gray; padding: 1px; height: 10em; width: 50%;}
+
+#track, #thumb {border: 0.25em solid rgba(60,96,140,1); padding: 0.25em; border-radius: 0.33em;}
+#thumb {background: rgba(60,96,140,0.33);}
+
+#lower-fill {background: maroon;}
+#upper-fill {background: olive;}
+
+/*
+#grid div[id]::before {content: "[#" attr(id) "] ";}
+*/
+</style>
+<style type="text/css" class="show">
+#grid {
+  display: grid;
+  grid-template-columns:
+    [start]        auto
+    [track-start]  0.5fr
+    [thumb-start]  auto
+    [fill-split]   auto
+    [thumb-end]    0.5fr
+    [track-end]    auto
+    [end];
+}
+#lower-label { grid-column-start: start }
+#track       { grid-column: track-start / track-end; justify-self: center }
+#upper-label { grid-column-end: end; }
+#lower-fill  { grid-column: track-start / fill-split;
+               justify-self: end;
+               z-index: 5 }
+#upper-fill  { grid-column: fill-split / track-end;
+               justify-self: start;
+               z-index: 5 }
+#thumb       { grid-column: thumb-start / thumb-end; z-index: 10 }
+</style>
+</head>
+<body>
+
+
+<div id="grid">
+  <div id="lower-label">Lower Label (0)</div>
+  <div id="upper-label">Upper Label (50)</div>
+  <div id="track">Track</div>
+  <div id="lower-fill">Lower Fill</div>
+  <div id="upper-fill">Upper Fill</div>
+  <div id="thumb">Thumb</div>
+</div>
+
+
+<section id="reference">
+
+<p>Reference rendering:</p>
+<img src="refrends/example003.png" alt="">
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Grid Example 21 (20151104 ED)</title>
+<link type="text/css" rel="stylesheet" href="_baseline.css">
+<style type="text/css">
+#grid {border: 1px solid;}
+#grid div[id] {text-align: center; color: white; font: 1em sans-serif; padding: 0.25em;}
+#A {background-color: rgb(128,100,162);}
+#B {background-color: rgb(246,150,71);}
+#C {background-color: rgb(79,130,189);}
+</style>
+<style type="text/css" class="show">
+  #grid {
+    display: grid;
+    grid-template-columns: 20px;
+    grid-template-rows: 20px }
+  #A { grid-column: 1;          grid-row: 1; }
+  #B { grid-column: 5;          grid-row: 1 / span 2; }
+  #C { grid-column: 1 / span 2; grid-row: 2; }
+</style>
+</head>
+<body>
+
+<div id="grid">
+  <div id="A">A</div>
+  <div id="B">B</div>
+  <div id="C">C</div>
+</div>
+
+<section id="reference">
+
+<p>Reference rendering (minus dashed lines):</p>
+<img src="refrends/example021.png" alt="">
+
+</section>
+
+</body>
+</html>

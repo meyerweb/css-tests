@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Grid Example 34 (20151104 ED)</title>
+<link type="text/css" rel="stylesheet" href="_baseline.css">
+<style type="text/css">
+body {padding-left: 3em;}
+#grid {height: auto; width: 401px; margin-bottom: 2em; border: 1px solid;}
+#grid div[class] {border: 2px dotted red; background: rgba(255,216,128,0.75); text-align: center;}
+#grid div[class]::before {content: "[." attr(class) "] ";}
+#grid div[class]:hover {background: yellow; z-index: 100;}
+
+#grid {
+	background: linear-gradient(to right, rgba(0,0,0,0.25) 1px, transparent 1px, transparent);
+	background-size: 50px 100%;
+	background-repeat: repeat-x;}
+#lines {display: grid;
+	grid-template-columns: repeat(9, 50px);
+	list-style: none;
+	margin: 0 0 0 -0.25em; padding: 0;}
+#lines li {width: 1em;}
+</style>
+<style type="text/css" class="show">
+#grid {
+	display: grid;
+	grid-template-columns: repeat(3, [A] 50px [B] 50px [C] 50px);
+	grid-template-rows: repeat(10, 1.5em);
+}
+.d01 {grid-row: 1; grid-column-start: 4; grid-column-end: auto;} /* Line 4 to line 5 */
+.d02 {grid-row: 2; grid-column-start: auto; grid-column-end: 6;} /* Line 5 to line 6 */
+.d03 {grid-row: 3; grid-column-start: C; grid-column-end: C -1;} /* Line 3 to line 9 */
+.d04 {grid-row: 4; grid-column-start: C; grid-column-end: span C;} /* Line 3 to line 6 */
+.d05 {grid-row: 5; grid-column-start: span C; grid-column-end: C -1;} /* Line 6 to line 9 */
+.d06 {grid-row: 6; grid-column-start: span C; grid-column-end: span C;} /* Equivalent to grid-column: span 1;. */
+.d07 {grid-row: 7; grid-column-start: 5; grid-column-end: C -1;} /* Line 5 to line 9 */
+.d08 {grid-row: 8; grid-column-start: 5; grid-column-end: span C;} /* Line 5 to line 6 */
+.d09 {grid-row: 9; grid-column-start: 8; grid-column-end: 8;} /* Error: line 8 to line 9 */
+.d10 {grid-row: 10; grid-column-start: B 2; grid-column-end: span 1;} /* Line 5 to line 6 */
+</style>
+</head>
+<body>
+
+<ol id="lines">
+<li>1 A</li>
+<li>2 B</li>
+<li>3 C</li>
+<li>4 A</li>
+<li>5 B</li>
+<li>6 C</li>
+<li>7 A</li>
+<li>8 B</li>
+<li>9 C</li>
+</ol>
+<div id="grid">
+	<div class="d01"></div>
+	<div class="d02"></div>
+	<div class="d03"></div>
+	<div class="d04"></div>
+	<div class="d05"></div>
+	<div class="d06"></div>
+	<div class="d07"></div>
+	<div class="d08"></div>
+	<div class="d09"></div>
+	<div class="d10"></div>
+</div>
+
+</body>
+</html>

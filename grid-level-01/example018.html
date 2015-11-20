@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Grid Example 18 (20151104 ED)</title>
+<link type="text/css" rel="stylesheet" href="_baseline.css">
+<style type="text/css">
+#grid {height: 13em; width: 50%; margin-bottom: 2em;}
+#grid [id] {border: 1px dotted red;}
+#grid [id]::before {content: "<" attr(id) "> ";}
+#grid [id]:hover {background: yellow; z-index: 100;}
+</style>
+<style type="text/css" class="show">
+#grid {
+  display: grid;
+  grid-template-areas: "head head"
+                       "nav  main"
+                       "foot ...."
+}
+#grid > header { grid-area: head; }
+#grid > nav    { grid-area: nav; }
+#grid > main   { grid-area: main; }
+#grid > footer { grid-area: foot; }
+</style>
+</head>
+<body>
+
+<div id="grid">
+	<header id="header"></header>
+	<main id="main"></main>
+	<nav id="nav"></nav>
+	<footer id="footer"></footer>
+</div>
+
+</body>
+</html>

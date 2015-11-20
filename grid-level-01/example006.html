@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Grid Example 6 (20151104 ED)</title>
+<link type="text/css" rel="stylesheet" href="_baseline.css">
+<style type="text/css">
+body > div {height: 13em; width: 50%; margin-bottom: 2em;}
+div div[id] {border: 1px dotted red;}
+div div[id]::before {content: "[#" attr(id) "] ";}
+</style>
+<style type="text/css" class="show">
+/* using the template syntax */
+#grid  {
+	display: grid;
+	grid-template-areas: ". a"
+                          "b a"
+                          ". a";
+	grid-template-columns: 150px 1fr;
+	grid-template-rows: 50px 1fr 50px
+}
+
+#item1 { grid-area: a }
+#item2 { grid-area: b }
+#item3 { grid-area: b }
+
+#item2 { align-self: start }
+#item3 { justify-self: end; align-self: end }
+</style>
+</head>
+<body>
+
+
+<div id="grid">
+	<div id="item1"></div>
+	<div id="item2"></div>
+	<div id="item3"></div>
+</div>
+
+
+</body>
+</html>
