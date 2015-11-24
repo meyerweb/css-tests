@@ -13,15 +13,16 @@
 }
 .grid div[class] {border: 1px dotted red;}
 .grid div[class]::before {content: "[." attr(class) "] ";}
-.grid div[class]:hover {background: yellow; z-index: 100;}
 </style>
 <style type="text/css" class="show">
 .grid {width: 250px; height: 200px;
        display: grid;
-       grid-template-columns: [initial] 50px [first] 50px [second] 50px [middle] 50px [end] 50 [last];
+       grid-template-columns: [start] 50px [first] 50px [second] 50px [middle] 50px [last] 50 [end];
        grid-template-rows: 50px;}
 .d01 {grid-column: first / middle;
-      grid-row: 2 / 4;}
+      grid-row: 2 / 4;
+      justify-self: stretch;
+      align-self: stretch;}
 </style>
 </head>
 <body>
