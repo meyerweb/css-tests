@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Grid Example 27 (20151104 ED)</title>
+<link type="text/css" rel="stylesheet" href="_baseline.css">
+<style type="text/css">
+.grid {background:
+	linear-gradient(to right, transparent 49px, cyan 49px),
+	linear-gradient(to bottom, transparent 49px, cyan 49px);
+	background-size: 50px 100%, 100% 50px;
+	margin-bottom: 2em; border: 1px solid;
+}
+.grid div[class] {border: 1px dotted red;}
+.grid div[class]::before {content: "[." attr(class) "] ";}
+.grid div[class]:hover {background: yellow; z-index: 100;}
+</style>
+<style type="text/css" class="show">
+.grid {width: 250px; height: 150px;
+       display: grid; grid: 50px / 50px;}
+.d01 {grid-row: 2; grid-column: 3;}
+.d02 {grid-area: 2 / 3;}
+</style>
+</head>
+<body>
+
+<div class="grid" id="g01">
+	<div class="d01"></div>
+</div>
+
+<div class="grid" id="g02">
+	<div class="d02"></div>
+</div>
+
+</body>
+</html>
