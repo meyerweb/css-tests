@@ -19,16 +19,19 @@
        display: grid;
        grid-template-columns: [start] 50px [first] 50px [second] 50px [middle] 50px [last] 50 [end];
        grid-template-rows: 50px;}
-.d01 {grid-column: first / middle;
-      grid-row: 2 / 4;
-      justify-self: stretch;
-      align-self: stretch;}
+.grid div {justify-self: stretch; align-self: stretch;}
+.d01 {grid-column: first / middle; grid-row: 2 / 4;}
+.d02 {grid-column: 2 / 4;          grid-row: 2 / 4;}
 </style>
 </head>
 <body>
 
 <div class="grid" id="g01">
 	<div class="d01"></div>
+</div>
+
+<div class="grid" id="g02">
+	<div class="d02"></div>
 </div>
 
 </body>
