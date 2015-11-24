@@ -18,10 +18,11 @@
 .grid {width: 250px; height: 200px;
        display: grid;
        grid-template-columns: [start] 50px [first] 50px [second] 50px [middle] 50px [last] 50 [end];
-       grid-template-rows: 50px;}
-.grid div {justify-self: stretch; align-self: stretch;}
+       grid-template-rows: repeat(5, 50px);}
 .d01 {grid-column: first / middle; grid-row: 2 / 4;}
 .d02 {grid-column: 2 / 4;          grid-row: 2 / 4;}
+.d03 {grid-column-start: 2; grid-column-end: 4;
+	grid-row-start: 2; grid-row-end: 4;}
 </style>
 </head>
 <body>
@@ -32,6 +33,10 @@
 
 <div class="grid" id="g02">
 	<div class="d02"></div>
+</div>
+
+<div class="grid" id="g03">
+	<div class="d03"></div>
 </div>
 
 </body>
