@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: grid-row-start</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.grid {display: grid; width: 500px; height: 200px;
+	grid-template-columns: repeat(10,50px);
+	grid-template-rows: [start] 50px [middle] 50px [middle] 50px [middle] 50px [end];
+	border: 1px solid; margin: 0 1em 2em 0;}
+.grid span {border: 1px dotted red; grid-column: span 1;}
+#g01 span {grid-row-end: 5;}
+.grid span.A {grid-row-start: 1;}
+.grid span.B {grid-row-start: 2;}
+.grid span.C {grid-row-start: -1;}
+.grid span.D {grid-row-start: span 2;}
+.grid span.E {grid-row-start: span 4;}
+.grid span.F {grid-row-start: span 8;}
+.grid span.G {grid-row-start: span end;}
+.grid span.H {grid-row-start: middle;}
+.grid span.I {grid-row-start: middle 3;}
+.grid span.J {grid-row-start: auto;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css-grid-1/#line-placement">http://www.w3.org/TR/css-grid-1/#line-placement</a></p>
+
+<div class="arena">
+
+<div class="grid" id="g01">
+	<span class="A">A</span>
+	<span class="B">B</span>
+	<span class="C">C</span>
+	<span class="D">D</span>
+	<span class="E">E</span>
+	<span class="F">F</span>
+	<span class="G">G</span>
+	<span class="H">H</span>
+	<span class="I">I</span>
+	<span class="J">J</span>
+</div>
+
+<div class="grid" id="g02">
+	<span class="A">A</span>
+	<span class="B">B</span>
+	<span class="C">C</span>
+	<span class="D">D</span>
+	<span class="E">E</span>
+	<span class="F">F</span>
+	<span class="G">G</span>
+	<span class="H">H</span>
+	<span class="I">I</span>
+	<span class="J">J</span>
+</div>
+
+</div>
+
+</body>
+</html>
