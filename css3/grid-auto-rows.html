@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: grid-auto-rows</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.grid {display: grid; height: 500px; width: 50px; grid-template-columns: 50px;
+	border: 1px solid; margin: 0 1em 5em 0; float: left;}
+.grid span {border: 1px dotted red; grid-column: 1 / 2;}
+#g01 {grid-auto-rows: auto;}
+#g02 {grid-auto-rows: 50px;}
+#g03 {grid-auto-rows: 20%;}
+#g04 {grid-auto-rows: 0.2fr;}
+#g05 {grid-auto-rows: min-content;}
+#g06 {grid-auto-rows: max-content;}
+#g07 {grid-auto-rows: minmax(50px, 0.2fr);}
+#g08 {grid-auto-rows: minmax(50px, 0.01fr);}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css-grid-1/#auto-tracks">http://www.w3.org/TR/css-grid-1/#auto-tracks</a></p>
+
+<div class="arena">
+
+<div class="grid" id="g01">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+</div>
+
+<div class="grid" id="g02">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+</div>
+
+<div class="grid" id="g03">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+</div>
+
+<div class="grid" id="g04">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+</div>
+
+<div class="grid" id="g05">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+</div>
+
+<div class="grid" id="g06">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+</div>
+
+<div class="grid" id="g07">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+</div>
+
+<div class="grid" id="g08">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+</div>
+
+</div>
+
+</body>
+</html>
