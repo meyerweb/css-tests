@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: grid-column</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.grid {display: grid; width: 200px; height: 500px;
+	grid-template-rows: repeat(10,50px);
+	grid-template-columns: [start] 50px [middle] 50px [middle] 50px [middle] 50px [end];
+	border: 1px solid; margin: 0 1em 2em 0; float: left;}
+#g02 {direction: rtl;}
+.grid span {border: 1px dotted red; grid-column: span 1;}
+.grid span.A {grid-column: 1;}
+.grid span.B {grid-column: 2;}
+.grid span.C {grid-column: -1;}
+.grid span.D {grid-column: 2 / 4;}
+.grid span.E {grid-column: 1 / 3;}
+.grid span.F {grid-column: 1 / 5;}
+.grid span.G {grid-column: 1 / -1;}
+.grid span.H {grid-column: start / 3;}
+.grid span.I {grid-column: 3 / end;}
+.grid span.J {grid-column: middle / end;}
+.grid span.K {grid-column: 2 / span 2;}
+.grid span.L {grid-column: middle / span 2;}
+.grid span.M {grid-column: middle 2 / span 2;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css-grid-1/#placement-shorthands">http://www.w3.org/TR/css-grid-1/#placement-shorthands</a></p>
+
+<div class="arena">
+
+<div class="grid" id="g01">
+	<span class="A">A</span>
+	<span class="B">B</span>
+	<span class="C">C</span>
+	<span class="D">D</span>
+	<span class="E">E</span>
+	<span class="F">F</span>
+	<span class="G">G</span>
+	<span class="H">H</span>
+	<span class="I">I</span>
+	<span class="J">J</span>
+	<span class="K">K</span>
+	<span class="L">L</span>
+	<span class="M">M</span>
+</div>
+
+<div class="grid" id="g02">
+	<span class="A">A</span>
+	<span class="B">B</span>
+	<span class="C">C</span>
+	<span class="D">D</span>
+	<span class="E">E</span>
+	<span class="F">F</span>
+	<span class="G">G</span>
+	<span class="H">H</span>
+	<span class="I">I</span>
+	<span class="J">J</span>
+	<span class="K">K</span>
+	<span class="L">L</span>
+	<span class="M">M</span>
+</div>
+
+</div>
+
+</body>
+</html>
