@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: grid-column-gap</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.grid {display: grid; width: 150px; height: 100px;
+	grid-template-columns: [start] 50px [middle] 50px [middle] 50px [end];
+	grid-template-rows: repeat(3, 50px);
+	border: 1px solid; margin: 0 2em 2em 0;}
+.grid span {border: 1px dotted red; grid-row: span 1;}
+#g01 {grid-gap: 0;}
+#g02 {grid-gap: 10px;}
+#g03 {grid-gap: 50px 15px;}
+span.A, span.D {grid-column: 1 / 2;}
+span.B, span.E {grid-column: 2 / 3;}
+span.C, span.F {grid-column: 3 / 4;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css-grid-1/#propdef-grid-gap">http://www.w3.org/TR/css-grid-1/#propdef-grid-gap</a></p>
+
+<div class="arena">
+
+<div class="grid" id="g01">
+	<span class="A">A</span>
+	<span class="B">B</span>
+	<span class="C">C</span>
+	<span class="D">D</span>
+	<span class="E">E</span>
+	<span class="F">F</span>
+</div>
+
+<div class="grid" id="g02">
+	<span class="A">A</span>
+	<span class="B">B</span>
+	<span class="C">C</span>
+	<span class="D">D</span>
+	<span class="E">E</span>
+	<span class="F">F</span>
+</div>
+
+<div class="grid" id="g03">
+	<span class="A">A</span>
+	<span class="B">B</span>
+	<span class="C">C</span>
+	<span class="D">D</span>
+	<span class="E">E</span>
+	<span class="F">F</span>
+</div>
+
+</div>
+
+</body>
+</html>
