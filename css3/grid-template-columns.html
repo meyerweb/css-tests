@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: grid-template-columns</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.grid span {border: 1px dotted red; grid-row: 1 / 2;}
+.grid {display: grid; height: 2em; width: 500px;
+	border: 1px solid; margin-bottom: 1em;
+	grid-auto-columns: 50px;}
+#g01 {grid-template-columns: none;}
+#g02 {grid-template-columns: 100px 40%;}
+#g03 {grid-template-columns: [start] 100px [middle] 40%;}
+#g04 {grid-template-columns: repeat(3, 100px);}
+#g05 {grid-template-columns: repeat(3, 20%);}
+#g06 {grid-template-columns: 150px repeat(3, 20%);}
+#g07 {grid-template-columns: 150px repeat(3, 1fr);}
+#g08 {grid-template-columns: 150px repeat(4, 1fr);}
+#g09 {grid-template-columns: 1fr minmax(min-content, 1fr);}
+#g10 {grid-template-columns: 10px repeat(2, 1fr auto minmax(30%, 1fr));}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css-grid-1/#track-sizing">http://www.w3.org/TR/css-grid-1/#track-sizing</a></p>
+
+<div class="arena">
+
+<div class="grid" id="g01">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+</div>
+
+<div class="grid" id="g02">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+</div>
+
+<div class="grid" id="g03">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+</div>
+
+<div class="grid" id="g04">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+</div>
+
+<div class="grid" id="g05">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+</div>
+
+<div class="grid" id="g06">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+</div>
+
+<div class="grid" id="g07">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+</div>
+
+<div class="grid" id="g08">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+</div>
+
+<div class="grid" id="g09">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+</div>
+
+<div class="grid" id="g10">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+	<span>F</span>
+	<span>G</span>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: grid-template-areas</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.grid span {border: 1px dotted red;}
+.grid {display: grid; height: 200px; width: 400px;
+	grid-auto-columns: 1fr; grid-auto-rows: 1fr;
+	border: 1px solid; margin: 0 1em 2em 0;}
+.grid span.A {grid-area: a;}
+.grid span.B {grid-area: b;}
+.grid span.C {grid-area: c;}
+.grid span.D {grid-area: d;}
+.grid span.E {grid-area: e;}
+#g01 {grid-template-areas: none;}
+#g02 {grid-template-areas: "a a a"
+                           "b c c"
+                           "b d e";}
+#g03 {grid-template-areas: "a b c"
+                           "a b c"
+                           "d . e";}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css-grid-1/#grid-template-areas-property">http://www.w3.org/TR/css-grid-1/#grid-template-areas-property</a></p>
+
+<div class="arena">
+
+<div class="grid" id="g01">
+	<span class="A">A</span>
+	<span class="B">B</span>
+	<span class="C">C</span>
+	<span class="D">D</span>
+	<span class="E">E</span>
+</div>
+
+<div class="grid" id="g02">
+	<span class="A">A</span>
+	<span class="B">B</span>
+	<span class="C">C</span>
+	<span class="D">D</span>
+	<span class="E">E</span>
+</div>
+
+<div class="grid" id="g03">
+	<span class="A">A</span>
+	<span class="B">B</span>
+	<span class="C">C</span>
+	<span class="D">D</span>
+	<span class="E">E</span>
+</div>
+
+</div>
+
+</body>
+</html>
