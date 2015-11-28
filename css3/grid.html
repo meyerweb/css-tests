@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: grid</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.grid span {border: 1px dotted red;}
+.grid {display: grid; height: 150px; width: 300px;
+	border: 1px solid; margin-bottom: 1em;
+	grid-auto-columns: 50px; grid-auto-rows: 30px;}
+#g01 {grid: none;}
+#g02 {grid: 100px 50px / 30%;}
+#g03 {grid: [start] 100px [middle] 40% / repeat(3, 50px);}
+#g04 {grid: repeat(3, 100px) / 1fr 1fr;}
+#g05 {grid: auto 1fr auto /
+  [header-top] "a   a   a"     [header-bottom]
+    [main-top] "b   b   b" 1fr [main-bottom];}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css-grid-1/#grid-shorthand">http://www.w3.org/TR/css-grid-1/#grid-shorthand</a></p>
+
+<div class="arena">
+
+<div class="grid" id="g01">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+</div>
+
+<div class="grid" id="g02">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+</div>
+
+<div class="grid" id="g03">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+</div>
+
+<div class="grid" id="g04">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+</div>
+
+<div class="grid" id="g05">
+	<span>A</span>
+	<span>B</span>
+	<span>C</span>
+	<span>D</span>
+	<span>E</span>
+</div>
+
+</div>
+
+</body>
+</html>
