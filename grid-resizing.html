@@ -6,19 +6,22 @@
 <link rel="stylesheet" type="text/css" href="c/style-insert-tests.css">
 <style type="text/css" id="tests">
 .grid {display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; width: 50%;
-	border: 1px solid; margin-bottom: 1em; background: #FEE;}
+	border: 1px solid; margin-bottom: 1em; background: #FFC;}
 .grid > div { grid-column: auto / span 2; padding: 0.5em;}
 .grid.g1 img {width: 100%;}
 .grid.g2 img {width: 50%;}
 .grid.g3 img {width: 300px;}
-.grid:hover img {width: auto;}
+
+:checked + .grid img {width: auto;}
 </style>
 </head>
 <body>
 
 <p>
-In the following tests, Chrome resizes the gridified element’s height to match its contents.  Firefox will make the gridified element as tall as it would need to be if the images were not scaled down using the <code>width</code> property, <em>unless</em> the images are scaled down with an explicit width (the third test).  If you hover a gridified element, the images will resume their <code>auto</code> size.  Note that in the second test, Firefox will expand the gridified element’s height to contain the images, then return the height to its original distance once you stop hovering it.
+In the following tests, Chrome resizes the gridified element’s height to match its contents.  Firefox will make the gridified element as tall as it would need to be if the images were not scaled down using the <code>width</code> property, <em>unless</em> the images are scaled down with an explicit width (the third test).  If you check the box before a gridified element, the images will resume their <code>auto</code> size.  Note that in the second test, Firefox will expand the gridified element’s height to contain the images, then return the height to its original distance once you uncheck the box.
 </p>
+
+<label for="as1">Auto-size images</label> <input type="checkbox" id="as1"> 
 
 <div class="grid g1">
 <div><img src="i/DSC03419.JPG" alt=""></div>
@@ -26,11 +29,15 @@ In the following tests, Chrome resizes the gridified element’s height to match
 <div><img src="i/DSC03821.jpg" alt=""></div>
 </div>
 
+<label for="as2">Auto-size images</label> <input type="checkbox" id="as2"> 
+
 <div class="grid g2">
 <div><img src="i/DSC03419.JPG" alt=""></div>
 <div><img src="i/DSC03691.JPG" alt=""></div>
 <div><img src="i/DSC03821.jpg" alt=""></div>
 </div>
+
+<label for="as3">Auto-size images</label> <input type="checkbox" id="as3"> 
 
 <div class="grid g3">
 <div><img src="i/DSC03419.JPG" alt=""></div>
