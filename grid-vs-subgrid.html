@@ -8,6 +8,8 @@
 form {width: 30em; margin: 2em 0; padding: 1em; background: rgba(216,192,0,0.2);}
 form ul {margin: 0; padding: 0;}
 form ul li {border: 1px dotted red; margin: 2px 0; padding: 2px;}
+form ul li label {grid-column: 1 / 2;}
+form ul li input {grid-column: 2 / 3;}
 
 form#form1 ul li {display: grid;
 	grid-template-columns: [label] min-content [input] 1fr [end];}
