@@ -19,13 +19,13 @@ form ul {margin: 0; padding: 0;}
 form ul li {border: 1px dotted red; margin: 2px 0; padding: 2px;}
 
 form#form1 ul li {display: grid;
-	grid-template-columns: [start label] min-content [input] 1fr [end];}
+	grid-template-columns: [start label] max-content [input] 1fr [end];}
 
 form#form2 ul li {display: grid;
 	grid-template-columns: [start label] 7em [input] 1fr [end];}
 
 form#form3 ul {display: grid;
-	grid-template-columns: [start label] min-content [input] 1fr [end];}
+	grid-template-columns: [start label] max-content [input] 1fr [end];}
 form#form3 ul li {display: grid; grid: subgrid; grid-column: start / end;}
 
 </style>
