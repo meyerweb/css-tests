@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Sticky Positioning</title>
+<link rel="stylesheet" type="text/css" href="c/style-insert-tests.css">
+<style type="text/css" id="tests">
+.scrollpane {border: 1px solid; height: 10em; width: 20em; overflow: scroll; margin: 1em 0;}
+.scrollpane h1 {font-size: 1em; color: black; background: rgba(0,0,0,0.42); margin: 0; padding: 0.25em;}
+.scrollpane ol {margin: 0.25em 0;}
+.scrollpane h1 {position: sticky; top: 0;}
+.scrollpane#d02 h1 {top: -1em;}
+</style>
+</head>
+<body>
+
+<div class="scrollpane">
+<h1>Sticky!</h1>
+<ol>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+<h1>Sticky again!</h1>
+<ol>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+</div>
+
+<div class="scrollpane" id="d02">
+<h1>Sticky!</h1>
+<ol>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+<h1>Sticky again!</h1>
+<ol>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+</div>
+
+</body>
+</html>

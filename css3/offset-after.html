@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: offset-after</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+div.arena div[id] p {position: absolute; top: 0; bottom: 0; right: 0; left: 0;
+	background: silver; margin: 0;
+	offset-after: 2em;}
+div.arena div[id] {position: relative; height: 8em; width: 20em; border: 1px solid; margin: 2em 0;}
+#d01 {writing-mode: horizontal-tb;}
+#d02 {writing-mode: vertical-rl;}
+#d03 {writing-mode: vertical-lr;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="https://www.w3.org/TR/css3-positioning/#logical-box-offsets-beaso">https://www.w3.org/TR/css3-positioning/#logical-box-offsets-beaso</a></p>
+<p class="warning">Warning: this property depends on <code>writing-mode</code> support to behave as intended.</p>
+
+<div class="arena">
+
+<div id="d01">
+<p>This is a paragraph. It should be offset two (2) em from the bottom of its containing block.</p>
+</div>
+<div id="d02">
+<p>This is a paragraph. It should be offset two (2) em from the left of its containing block.</p>
+</div>
+<div id="d03">
+<p>This is a paragraph. It should be offset two (2) em from the right of its containing block.</p>
+</div>
+
+
+</div>
+
+</body>
+</html>
