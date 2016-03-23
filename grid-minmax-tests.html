@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Minmax testing</title>
+<style type="text/css">
+.grid {display: grid; border: 1px solid green; padding: 5px;}
+#g01 {grid-template-columns: 100px minmax(300px, 3fr) 1fr 100px;}
+#g02 {grid-template-columns: 100px minmax(3fr, 300px) 1fr 100px;}
+
+.grid span {border: 1px dotted red;}
+</style>
+</head>
+<body>
+
+<section id="arena">
+
+<div class="grid" id="g01">
+<span class="a">A</span>
+<span class="b">B</span>
+<span class="c">C</span>
+<span class="d">D</span>
+</div>
+
+<div class="grid" id="g02">
+<span class="a">A</span>
+<span class="b">B</span>
+<span class="c">C</span>
+<span class="d">D</span>
+</div>
+
+</section>
+
+</body>
+</html>

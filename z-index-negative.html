@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Sticky Positioning</title>
+<link rel="stylesheet" type="text/css" href="c/style-insert-tests.css">
+<style type="text/css" id="tests">
+body {background: #FFE;}
+div[id] {position: relative; border: 1px solid; margin: 1em 0;}
+div[id] em {position: absolute; z-index: -10; top: 25%; right: 50%;}
+#d01 {background: transparent; z-index: auto;}
+#d02 {background: transparent; z-index: 23;}
+#d03 {background: silver; z-index: auto;}
+#d04 {background: silver; z-index: 23;}
+
+</style>
+</head>
+<body>
+
+<div id="d01">
+<p>
+This paragraph contains an <code>em</code> element.  <em>Can you see it?</em>
+</p>
+</div>
+<div id="d02">
+<p>
+This paragraph contains an <code>em</code> element.  <em>Can you see it?</em>
+</p>
+</div>
+<div id="d03">
+<p>
+This paragraph contains an <code>em</code> element.  <em>Can you see it?</em>
+</p>
+</div>
+<div id="d04">
+<p>
+This paragraph contains an <code>em</code> element.  <em>Can you see it?</em>
+</p>
+</div>
+
+</body>
+</html>
