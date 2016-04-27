@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: empty-cells</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+table {border-collapse: separate; empty-cells: show;
+	margin-bottom: 2em;}
+th, td {border: 1px solid; min-width: 1em; background: #DEF;}
+#t02 {empty-cells: hide;}
+#t03 {border-collapse: collapse; empty-cells: hide;}
+#t04 th:empty, #t04 td:empty {visibility: hidden;}
+#t05 {border-collapse: collapse;}
+#t05 th:empty, #t05 td:empty {visibility: hidden;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="https://www.w3.org/TR/CSS22/tables.html#empty-cells">https://www.w3.org/TR/CSS22/tables.html#empty-cells</a></p>
+<p class="note">Since Table Layout Level 3 proposes to do away with <code>empty-cells</code> in favor of using <code>:empty</code>, that is also tested here.</p>
+
+<div class="arena">
+
+<table id="t01">
+
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>< Empty \/</th>
+</tr>
+<tr>
+<td>A header row</td>
+<td>Contained in a <code>thead</code> element</td>
+<td></td>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>tbody</code> cell 1-1</td>
+<td><code>tbody</code> cell 1-2</td>
+<td></td>
+</tr>
+<tr>
+<td><code>tbody</code> cell 2-1</td>
+<td><code>tbody</code> cell 2-2</td>
+<td></td>
+</tr>
+<tr>
+<td><code>tbody</code> cell 3-1</td>
+<td><code>tbody</code> cell 3-2</td>
+<td></td>
+</tr>
+<tbody>
+
+<tr>
+<td>A footer row</td>
+<td>That lacks a <code>tfoot</code> parent</td>
+<td></td>
+</tr>
+
+</table>
+
+<table id="t02">
+
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>< Empty \/</th>
+</tr>
+<tr>
+<td>A header row</td>
+<td>Contained in a <code>thead</code> element</td>
+<td></td>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>tbody</code> cell 1-1</td>
+<td><code>tbody</code> cell 1-2</td>
+<td></td>
+</tr>
+<tr>
+<td><code>tbody</code> cell 2-1</td>
+<td><code>tbody</code> cell 2-2</td>
+<td></td>
+</tr>
+<tr>
+<td><code>tbody</code> cell 3-1</td>
+<td><code>tbody</code> cell 3-2</td>
+<td></td>
+</tr>
+<tbody>
+
+<tr>
+<td>A footer row</td>
+<td>That lacks a <code>tfoot</code> parent</td>
+<td></td>
+</tr>
+
+</table>
+
+<table id="t03">
+
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>< Empty \/</th>
+</tr>
+<tr>
+<td>A header row</td>
+<td>Contained in a <code>thead</code> element</td>
+<td></td>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>tbody</code> cell 1-1</td>
+<td><code>tbody</code> cell 1-2</td>
+<td></td>
+</tr>
+<tr>
+<td><code>tbody</code> cell 2-1</td>
+<td><code>tbody</code> cell 2-2</td>
+<td></td>
+</tr>
+<tr>
+<td><code>tbody</code> cell 3-1</td>
+<td><code>tbody</code> cell 3-2</td>
+<td></td>
+</tr>
+<tbody>
+
+<tr>
+<td>A footer row</td>
+<td>That lacks a <code>tfoot</code> parent</td>
+<td></td>
+</tr>
+
+</table>
+
+<table id="t04">
+
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>< Empty \/</th>
+</tr>
+<tr>
+<td>A header row</td>
+<td>Contained in a <code>thead</code> element</td>
+<td></td>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>tbody</code> cell 1-1</td>
+<td><code>tbody</code> cell 1-2</td>
+<td></td>
+</tr>
+<tr>
+<td><code>tbody</code> cell 2-1</td>
+<td><code>tbody</code> cell 2-2</td>
+<td></td>
+</tr>
+<tr>
+<td><code>tbody</code> cell 3-1</td>
+<td><code>tbody</code> cell 3-2</td>
+<td></td>
+</tr>
+<tbody>
+
+<tr>
+<td>A footer row</td>
+<td>That lacks a <code>tfoot</code> parent</td>
+<td></td>
+</tr>
+
+</table>
+
+<table id="t05">
+
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>< Empty \/</th>
+</tr>
+<tr>
+<td>A header row</td>
+<td>Contained in a <code>thead</code> element</td>
+<td></td>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>tbody</code> cell 1-1</td>
+<td><code>tbody</code> cell 1-2</td>
+<td></td>
+</tr>
+<tr>
+<td><code>tbody</code> cell 2-1</td>
+<td><code>tbody</code> cell 2-2</td>
+<td></td>
+</tr>
+<tr>
+<td><code>tbody</code> cell 3-1</td>
+<td><code>tbody</code> cell 3-2</td>
+<td></td>
+</tr>
+<tbody>
+
+<tr>
+<td>A footer row</td>
+<td>That lacks a <code>tfoot</code> parent</td>
+<td></td>
+</tr>
+
+</table>
+
+</div>
+
+</body>
+</html>
