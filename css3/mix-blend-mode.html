@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: 'mix-blend-mode'</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css">
+form {padding-top: 2em;}
+form + form {border-top: 2px solid black; margin-top: 2em;}
+label {padding: 0.5em; padding-left: 0.1em;}
+label:hover {background: yellow; cursor: pointer;}
+[class^="bg0"]:checked ~ .arena {background-color: transparent;}
+[class^="bg1"]:checked ~ .arena {background-color: white;}
+[class^="bg2"]:checked ~ .arena {background-color: black;}
+[class^="bg3"]:checked ~ .arena {background-color: gray;}
+[class^="bg4"]:checked ~ .arena {background-color: cyan;}
+[class^="bg5"]:checked ~ .arena {background-color: fuchsia;}
+[class^="bg6"]:checked ~ .arena {background-color: lime;}
+
+[class^="bg4"]:checked ~ .arena li {border-color: white;}
+
+.arena ol {margin-left: 0; padding-left: 0;}
+.arena ol li {display: inline-block; border: 1px solid; margin: 0.5em;}
+.arena ol li img {display: block; margin: 0.5em;}
+.arena ol li::before {content: attr(data-mode); display: block; padding: 0.5em 0 0.25em;
+	text-align: center; font-family: monospace;
+	color: black; background: white;}
+
+
+</style>
+<style type="text/css" id="tests">
+.t01 img {mix-blend-mode: multiply;}
+.t02 img {mix-blend-mode: screen;}
+.t03 img {mix-blend-mode: overlay;}
+.t04 img {mix-blend-mode: darken;}
+.t05 img {mix-blend-mode: lighten;}
+.t06 img {mix-blend-mode: color-dodge;}
+.t07 img {mix-blend-mode: color-burn;}
+.t08 img {mix-blend-mode: hard-light;}
+.t09 img {mix-blend-mode: soft-light;}
+.t10 img {mix-blend-mode: difference;}
+.t11 img {mix-blend-mode: exclusion;}
+.t12 img {mix-blend-mode: hue;}
+.t13 img {mix-blend-mode: saturation;}
+.t14 img {mix-blend-mode: color;}
+.t15 img {mix-blend-mode: luminosity;}
+
+img[src$="fg.png"] {filter: grayscale(1);}
+img[src$="fg.png"]:hover {filter: grayscale(0);}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="https://www.w3.org/TR/compositing-1/#mix-blend-mode">https://www.w3.org/TR/compositing-1/#mix-blend-mode</a></p>
+
+<form>
+
+Background color:
+<input type="radio" name="bg-color" id="bg0-1" class="bg0-1"><label for="bg0-1">transparent</label>
+<input type="radio" name="bg-color" id="bg1-1" class="bg1-1"><label for="bg1-1">white</label>
+<input type="radio" name="bg-color" id="bg2-1" class="bg2-1"><label for="bg2-1">black</label>
+<input type="radio" name="bg-color" id="bg3-1" class="bg3-1"><label for="bg3-1">gray</label>
+<input type="radio" name="bg-color" id="bg4-1" class="bg4-1"><label for="bg4-1">cyan</label>
+<input type="radio" name="bg-color" id="bg5-1" class="bg5-1"><label for="bg5-1">fuchsia</label>
+<input type="radio" name="bg-color" id="bg6-1" class="bg6-1"><label for="bg6-1">lime</label>
+
+<section class="arena">
+
+<ol>
+<li data-mode="(reference)"><img src="i/mbm-fg.png"></li>
+<li class="t01" data-mode="multiply"><img src="i/mbm-fg.png"></li>
+<li class="t02" data-mode="screen"><img src="i/mbm-fg.png"></li>
+<li class="t03" data-mode="overlay"><img src="i/mbm-fg.png"></li>
+<li class="t04" data-mode="darken"><img src="i/mbm-fg.png"></li>
+<li class="t05" data-mode="lighten"><img src="i/mbm-fg.png"></li>
+<li class="t06" data-mode="color-dodge"><img src="i/mbm-fg.png"></li>
+<li class="t07" data-mode="color-burn"><img src="i/mbm-fg.png"></li>
+<li class="t08" data-mode="hard-light"><img src="i/mbm-fg.png"></li>
+<li class="t09" data-mode="soft-light"><img src="i/mbm-fg.png"></li>
+<li class="t10" data-mode="difference"><img src="i/mbm-fg.png"></li>
+<li class="t11" data-mode="exclusion"><img src="i/mbm-fg.png"></li>
+<li class="t12" data-mode="hue"><img src="i/mbm-fg.png"></li>
+<li class="t13" data-mode="saturation"><img src="i/mbm-fg.png"></li>
+<li class="t14" data-mode="color"><img src="i/mbm-fg.png"></li>
+<li class="t15" data-mode="luminosity"><img src="i/mbm-fg.png"></li>
+<li data-mode="(reference)"><img src="i/mbm-fg.png"></li>
+</ol>
+
+</section>
+
+</form>
+
+
+<form>
+
+Background color:
+<input type="radio" name="bg-color" id="bg0-2" class="bg0-2"><label for="bg0-2">transparent</label>
+<input type="radio" name="bg-color" id="bg1-2" class="bg1-2"><label for="bg1-2">white</label>
+<input type="radio" name="bg-color" id="bg2-2" class="bg2-2"><label for="bg2-2">black</label>
+<input type="radio" name="bg-color" id="bg3-2" class="bg3-2"><label for="bg3-2">gray</label>
+<input type="radio" name="bg-color" id="bg4-2" class="bg4-2"><label for="bg4-2">cyan</label>
+<input type="radio" name="bg-color" id="bg5-2" class="bg5-2"><label for="bg5-2">fuchsia</label>
+<input type="radio" name="bg-color" id="bg6-2" class="bg6-2"><label for="bg6-2">lime</label>
+
+<section class="arena">
+
+<ol>
+<li data-mode="(reference)"><img src="i/mbm-fg2.png"></li>
+<li class="t01" data-mode="multiply"><img src="i/mbm-fg2.png"></li>
+<li class="t02" data-mode="screen"><img src="i/mbm-fg2.png"></li>
+<li class="t03" data-mode="overlay"><img src="i/mbm-fg2.png"></li>
+<li class="t04" data-mode="darken"><img src="i/mbm-fg2.png"></li>
+<li class="t05" data-mode="lighten"><img src="i/mbm-fg2.png"></li>
+<li class="t06" data-mode="color-dodge"><img src="i/mbm-fg2.png"></li>
+<li class="t07" data-mode="color-burn"><img src="i/mbm-fg2.png"></li>
+<li class="t08" data-mode="hard-light"><img src="i/mbm-fg2.png"></li>
+<li class="t09" data-mode="soft-light"><img src="i/mbm-fg2.png"></li>
+<li class="t10" data-mode="difference"><img src="i/mbm-fg2.png"></li>
+<li class="t11" data-mode="exclusion"><img src="i/mbm-fg2.png"></li>
+<li class="t12" data-mode="hue"><img src="i/mbm-fg2.png"></li>
+<li class="t13" data-mode="saturation"><img src="i/mbm-fg2.png"></li>
+<li class="t14" data-mode="color"><img src="i/mbm-fg2.png"></li>
+<li class="t15" data-mode="luminosity"><img src="i/mbm-fg2.png"></li>
+<li data-mode="(reference)"><img src="i/mbm-fg2.png"></li>
+</ol>
+
+</section>
+
+</form>
+	
+</body>
+</html>
