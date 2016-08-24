@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="c/base.css" type="text/css">
 <style type="text/css">
 body {background: #DDD;}
+.mbm-test {border-collapse: separate; border-spacing: 2px 3px;}
 .mbm-test th {font: 1em monospace;}
 .mbm-test tbody th {font-size: 1.33em; text-align: right; padding-right: 1em;}
 .mbm-test img {height: 80px; margin: 10px; display: block;}
@@ -34,13 +35,19 @@ body {background: #DDD;}
 .mbm-test td:nth-child(6) {background: #0C0;}
 .mbm-test td:nth-child(7) {background: #00C;}
 .mbm-test td:nth-child(8) {background: #639;}
-.mbm-test td:nth-child(9) {background: radial-gradient(circle at center, rgba(0,0,0,1), rgba(255,255,255,1) 40px);}
-.mbm-test td:nth-child(10) {background: radial-gradient(circle at center, rgba(255,255,255,1), rgba(0,0,0,1) 40px);}
+.mbm-test td:nth-child(9) {background: radial-gradient(circle at center, rgba(0,0,0,1) 10px, rgba(255,255,255,1) 40px, rgba(0,0,0,1) 120px);}
+.mbm-test td:nth-child(10) {background: radial-gradient(circle at center, rgba(255,255,255,1) 10px, rgba(0,0,0,1) 40px, rgba(255,255,255,1) 120px);}
+
+.mbm-test tr:hover {background: rgba(255,255,0,0.5);}
+.mbm-test tr:hover img {mix-blend-mode: normal;}
 </style>
 </head>
 <body id="www-meyerweb-com" class="css test suite">
 <p id="specref"><a href="https://www.w3.org/TR/compositing-1/#mix-blend-mode">https://www.w3.org/TR/compositing-1/#mix-blend-mode</a></p>
 
+<p class="note">
+Hovering over a table row will switch all its images to use <code>mix-blend-mode: normal</code>, in order to allow comparisons to the mix blending.  The row’s label will highlight yellow when a row is being hovered.
+</p>
 
 <section class="arena">
 
