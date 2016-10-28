@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: the 'q' unit</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+p span {background: #FAA;}
+p img#i1 {width: 120q; height: 12q;}
+p img#i2 {width: 3cm; height: 0.3cm;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="https://www.w3.org/TR/css3-values/#absolute-lengths">https://www.w3.org/TR/css3-values/#absolute-lengths</a></p>
+
+<div class="arena">
+
+<p id="p01">
+[#p01] This is a paragraph that contains two <tt>img</tt> elements.  The first should be ten times as wide as it is tall, and its width should be (or correspond to) 3cm wide.  The second should be the same size as the first.
+<br/>
+<img src="i/box-red.gif" alt="" id="i1">
+<br/>
+<img src="i/box-red.gif" alt="" id="i2">
+</p>
+
+</div>
+
+</body>
+</html>

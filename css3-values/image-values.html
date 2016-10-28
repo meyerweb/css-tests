@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image values</title>
+<style type="text/css">
+body {padding: 5em 1em; margin: 0 3em;}
+
+p[id] {padding: 1em;}
+p[id]::before {content: "[#" attr(id) "] ";}
+#p1 {background: url(i/yinyang.png) silver no-repeat;}
+
+#p2 {background: -webkit-image(i/yinyang.png, silver) no-repeat;
+	background: -moz-image(i/yinyang.png, silver) no-repeat;
+	background: image(i/yinyang.png, silver) no-repeat;}
+	
+#p3 {background: -moz-image-set("i/tester.jpg" 1x, "i/yinyang.png" 2x) no-repeat;
+	background: -webkit-image-set("i/tester.jpg" 1x, "i/yinyang.png" 2x) no-repeat;
+	background: image-set("i/tester.jpg" 1x, "i/yinyang.png" 2x) no-repeat;}
+	
+#p4 {background: -moz-cross-fade(i/yinyang.png,i/tester.jpg) no-repeat;
+	background: -webkit-cross-fade(i/yinyang.png,i/tester.jpg) no-repeat;
+	background: cross-fade(i/yinyang.png,i/tester.jpg) no-repeat;}
+	
+#p5 {background: -moz-element(#bg-test) no-repeat;
+	background: -webkit-element(#bg-test) no-repeat;
+	background: element(#bg-test) no-repeat;}
+</style>
+</head>
+<body>
+
+<p id="p1">A paragraph.</p>
+<p id="p2">A paragraph.</p>
+<p id="p3">A paragraph.</p>
+<p id="p4">A paragraph.</p>
+<p id="p5">A paragraph.</p>
+
+<p>
+The following image has an ID of <code>bg-test</code> and may appear in the background of certain tests above. <img src="i/yinyang.png" alt="" id="bg-test">
+</p>
+<p>
+The following image has a <code>srcset</code> attribute and may change based on the display setting. <img src="i/tester.jpg" alt="" srcset="i/tester.jpg 1x, i/yinyang.png 2x">
+</p>
+
+<a href="http://www.w3.org/TR/css3-values">Specification</a>
+
+</body>
+</html>

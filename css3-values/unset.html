@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Unset</title>
+<style type="text/css">
+body {padding: 5em 1em; margin: 0 3em;}
+div#d01 {background: #ECE; font-family: Verdana, sans-serif;}
+p {background: #CEC; font-family: serif;}
+p#p01 {background: unset; font-family: unset;}
+</style>
+</head>
+<body>
+
+<div id="d01">
+This is a <code>div</code> with an <code>id</code> of <code>d01</code>.  Its background should be a light purple and use Verdana or a fallback sans-serif font.
+
+<p>
+This is a <code>p</code> without an <code>id</code>.  Its background should be a light green and use a serif font.
+</p>
+
+<p id="p01">
+This is a <code>p</code> with an <code>id</code> of <code>p01</code>.  Its bakground should be transparent (thus allowing the light purple to show through) and its font family should be the same as its parent element, overriding other values defined by lower-specificity rules.
+</p>
+
+</div>
+
+<a href="http://www.w3.org/TR/css3-values">Specification</a>
+
+</body>
+</html>

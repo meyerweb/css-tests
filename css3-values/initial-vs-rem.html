@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Initial</title>
+<style type="text/css">
+:root {font-size: 30px;}
+div#d01 {font-size: 66.6667%;}
+p#p01 {font-size: 1rem;}
+p#p02 {font-size: initial;}
+</style>
+</head>
+<body>
+
+<p>
+This is paragraph outside the <code>div</code>.  Its font size should be 30 pixels.
+</p>
+
+<div id="d01">
+This is a <code>div</code> with an <code>id</code> of <code>d01</code>.  Its font size should be 20 pixels.
+
+<p id="p01">
+This is a <code>p</code> with an <code>id</code> of <code>p01</code>.  Its font size should be 30 pixels.
+</p>
+<p id="p02">
+This is a <code>p</code> with an <code>id</code> of <code>p02</code>.  Its font size should be user-default size (generally 16px, but your user agent may vary).
+</p>
+
+</div>
+
+<a href="http://www.w3.org/TR/css3-values">Specification</a>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Initial</title>
+<style type="text/css">
+ol li {border: 1px dotted gray;}
+li::before {content: "[" attr(class) "] <" attr(id) "> ";}
+li[maxlength] {
+	width: attr(maxlength em);
+}
+li[data-length] {
+	width: attr(data-length px);
+}
+</style>
+</head>
+<body>
+
+<ol>
+<li class="item">A list item.</li>
+<li class="item" id="li02">A list item.</li>
+<li class="item" maxlength="5">A list item.</li>
+<li class="item" data-length="100">A list item.</li>
+</ol>
+
+</div>
+
+<a href="http://www.w3.org/TR/css3-values">Specification</a>
+
+</body>
+</html>
