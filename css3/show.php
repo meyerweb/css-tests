@@ -47,14 +47,14 @@ for ($i = 0; $i < count($files); $i++) {
 
 $nav = "<ul id=\"nav\">\r";
 $nav .= "<li id=\"i\">▲ <a href=\".\">Index</a></li>\r";
-if ($prev) $nav .= "<li>◀ <a href=\"show.php?p=$prev$pref\">$prefix$prev</a></li>\r";
-if ($prefix) {
+if (isset($prev)) $nav .= "<li>◀ <a href=\"show.php?p=$prev$pref\">$prefix$prev</a></li>\r";
+if (isset($prefix)) {
 	$nav .= "<li><a href=\"show.php?p=$url\">$url</a></li>";
 } else {
 	$pre = get_prefix();
 	$nav .= "<li><a href=\"show.php?p=$url&amp;-=-$pre-\">-$pre-$url</a></li>";	
 }
-if ($next) $nav .= "<li><a href=\"show.php?p=$next$pref\">$prefix$next</a> ►</li>\r";
+if (isset($next)) $nav .= "<li><a href=\"show.php?p=$next$pref\">$prefix$next</a> ►</li>\r";
 $nav .= "<li id=\"r\"><a href=\"$url.html\">‘raw’ file</a> ▼</li>";
 $nav .= "</ul>\r";
 
