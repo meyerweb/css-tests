@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Firefox font/writing-mode/opacity test</title>
+<link type="text/css" href="../c/style-insert-tests.css" rel="stylesheet">
+<style type="text/css">
+@font-face {
+	font-family: "Rubik";
+	src: url('fonts/rubik/Rubik-Medium.ttf');
+}
+@font-face {
+	font-family: "Alegreya";
+	src: url('fonts/alegreya/Alegreya-Regular.ttf');
+}
+@font-face {
+	font-family: "Alegreya";
+	src: url('fonts/alegreya/Alegreya-Italic.ttf');
+	font-style: italic;
+}
+@font-face {
+	font-family: "Alegreya";
+	src: url('fonts/alegreya/Alegreya-Bold.ttf');
+	font-weight: 700;
+}
+@font-face {
+	font-family: "Alegreya";
+	src: url('fonts/alegreya/Alegreya-BoldItalic.ttf');
+	font-style: italic;
+	font-weight: 700;
+}
+
+#rubik:checked ~ h2,
+#rubik:checked ~ h3,
+#rubik:checked ~ h4 {font: bold 3em Rubik, sans-serif;}
+
+#alegreya:checked ~ h2,
+#alegreya:checked ~ h3,
+#alegreya:checked ~ h4 {font: bold 3em Alegreya, serif;}
+
+#default:checked ~ h2,
+#default:checked ~ h3,
+#default:checked ~ h4 {font: bold 3em "Karrank%%";}
+</style>
+<style type="text/css" id="tests">
+h2, h3, h4 {margin: 0;
+	color: rgba(0,0,0,0.998039);
+	writing-mode: vertical-rl;
+	border: 1px dotted;}
+h2 {margin-top: 1em;}
+h3 {color: rgba(0,0,0,0.998304);}
+h4 {writing-mode: horizontal-tb;}
+</style>
+</head>
+<body>
+
+<form>
+
+<input type="radio" name="fontpick" id="rubik" checked> <label for="rubik">Rubik</label>
+<input type="radio" name="fontpick" id="alegreya"> <label for="alegreya">Alegreya</label>
+<input type="radio" name="fontpick" id="default"> <label for="default">Browser default (applying font family “Karrank%%” to cause fallback)</label>
+
+<h2>Code H2</h2>
+<h3>Code H3</h3>
+<h4>Code H4</h4>
+
+</form>
+
+</body>
+</html>
