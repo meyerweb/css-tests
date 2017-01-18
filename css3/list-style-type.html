@@ -7,6 +7,14 @@
 <style type="text/css">
 style#tests {height: 14.33em; position: fixed; width: 97%;}
 body {margin-top: 12.33em;}
+.arena div {float: left; clear: left;}
+.arena div h2 {margin: 0.75em 0 0; font-size: 125%;}
+hr.clr {clear: both;}
+
+@media screen and (min-width: 60em) {
+	style#tests {width: 35em; height: 95%; max-height: 100%; left: 0;}
+	body {margin: 0 0 0 31em;}
+}
 </style>
 <style type="text/css" id="tests">
 /* --- Symbolic list types --- */
@@ -19,35 +27,57 @@ body {margin-top: 12.33em;}
 /* --- Numeric list types --- */
 #d02 .l01 {list-style-type: decimal;}
 #d02 .l02 {list-style-type: decimal-leading-zero;}
-#d02 .l03 {list-style-type: cjk-decimal;}
-#d02 .l04 {list-style-type: lower-roman;}
-#d02 .l05 {list-style-type: upper-roman;}
-#d02 .l06 {list-style-type: armenian;}
-#d02 .l07 {list-style-type: georgian;}
-#d02 .l08 {list-style-type: hebrew;}
+#d02 .l03 {list-style-type: arabic-indic;}
+#d02 .l04 {list-style-type: armenian;}
+#d02 .l05 {list-style-type: upper-armenian;}
+#d02 .l06 {list-style-type: lower-armenian;}
+#d02 .l07 {list-style-type: bengali;}
+#d02 .l08 {list-style-type: cambodian;}
+#d02 .l09 {list-style-type: khmer;}
+#d02 .l10 {list-style-type: cjk-decimal;}
+#d02 .l11 {list-style-type: devanagari;}
+#d02 .l12 {list-style-type: gujarati;}
+#d02 .l13 {list-style-type: gurmukhi;}
+#d02 .l14 {list-style-type: georgian;}
+#d02 .l15 {list-style-type: hebrew;}
+#d02 .l16 {list-style-type: kannada;}
+#d02 .l17 {list-style-type: lao;}
+#d02 .l18 {list-style-type: malayalam;}
+#d02 .l19 {list-style-type: mongolian;}
+#d02 .l20 {list-style-type: myanmar;}
+#d02 .l21 {list-style-type: oriya;}
+#d02 .l22 {list-style-type: persian;}
+#d02 .l23 {list-style-type: lower-roman;}
+#d02 .l24 {list-style-type: upper-roman;}
+#d02 .l25 {list-style-type: telugu;}
+#d02 .l26 {list-style-type: thai;}
+#d02 .l27 {list-style-type: tibetan;}
 
 /* --- Alphabetic list types --- */
 #d03 .l01 {list-style-type: lower-alpha;}
 #d03 .l02 {list-style-type: lower-latin;}
 #d03 .l03 {list-style-type: upper-alpha;}
 #d03 .l04 {list-style-type: upper-latin;}
-#d03 .l05 {list-style-type: lower-greek;}
-#d03 .l06 {list-style-type: hiragana;}
-#d03 .l07 {list-style-type: hiragana-iroha;}
-#d03 .l08 {list-style-type: katakana;}
-#d03 .l09 {list-style-type: katakana-iroha;}
+#d03 .l05 {list-style-type: cjk-earthly-branch;}
+#d03 .l06 {list-style-type: cjk-heavenly-stem;}
+#d03 .l07 {list-style-type: lower-greek;}
+#d03 .l08 {list-style-type: hiragana;}
+#d03 .l09 {list-style-type: hiragana-iroha;}
+#d03 .l10 {list-style-type: katakana;}
+#d03 .l11 {list-style-type: katakana-iroha;}
 
 /* --- Complex predefined counter types --- */
 #d04 .l01 {list-style-type: japanese-informal;}
 #d04 .l02 {list-style-type: japanese-formal;}
 #d04 .l03 {list-style-type: korean-hangul-formal;}
 #d04 .l04 {list-style-type: korean-hanja-informal;}
-#d04 .l05 {list-style-type: simp-chinese-formal;}
+#d04 .l05 {list-style-type: korean-hanja-formal;}
 #d04 .l06 {list-style-type: simp-chinese-informal;}
-#d04 .l07 {list-style-type: trad-chinese-formal;}
+#d04 .l07 {list-style-type: simp-chinese-formal;}
 #d04 .l08 {list-style-type: trad-chinese-informal;}
-#d04 .l09 {list-style-type: cjk-ideographic;} /* equivalent to 'trad-chinese-informal' */
-#d04 .l10 {list-style-type: ethiopic-numeric;}
+#d04 .l09 {list-style-type: trad-chinese-formal;}
+#d04 .l11 {list-style-type: ethiopic-numeric;}
+
 
 /* --- Legacy algorithmic list types --- */
 #d05 .l01 {list-style-type: lower-armenian;}
@@ -56,76 +86,56 @@ body {margin-top: 12.33em;}
 #d05 .l04 {list-style-type: upper-armenian;}
 
 /* --- Legacy numeric list types --- */
-#d06 .l01 {list-style-type: arabic-indic;}
-#d06 .l02 {list-style-type: binary;}
-#d06 .l03 {list-style-type: bengali;}
-#d06 .l04 {list-style-type: cambodian;}
-#d06 .l05 {list-style-type: devanagari;}
-#d06 .l06 {list-style-type: gujarati;}
-#d06 .l07 {list-style-type: gurmukhi;}
-#d06 .l08 {list-style-type: kannada;}
-#d06 .l09 {list-style-type: khmer;}
-#d06 .l10 {list-style-type: lao;}
-#d06 .l11 {list-style-type: lower-hexadecimal;}
-#d06 .l12 {list-style-type: malayalam;}
-#d06 .l13 {list-style-type: mongolian;}
-#d06 .l14 {list-style-type: myanmar;}
-#d06 .l15 {list-style-type: octal;}
-#d06 .l16 {list-style-type: oriya;}
-#d06 .l17 {list-style-type: persian;}
-#d06 .l18 {list-style-type: telugu;}
-#d06 .l19 {list-style-type: tibetan;}
-#d06 .l20 {list-style-type: thai;}
-#d06 .l21 {list-style-type: upper-hexadecimal;}
-#d06 .l22 {list-style-type: urdu;}
+#d06 .l01 {list-style-type: lower-hexadecimal;}
+#d06 .l02 {list-style-type: upper-hexadecimal;}
+#d06 .l03 {list-style-type: octal;}
+#d06 .l04 {list-style-type: binary;}
+#d06 .l05 {list-style-type: urdu;}
 
 /* --- Legacy alphabetic list types --- */
 #d07 .l01 {list-style-type: afar;}
 #d07 .l02 {list-style-type: amharic;}
 #d07 .l03 {list-style-type: amharic-abegede;}
-#d07 .l04 {list-style-type: cjk-earthly-branch;}
-#d07 .l05 {list-style-type: cjk-heavenly-stem;}
-#d07 .l06 {list-style-type: ethiopic;}
-#d07 .l07 {list-style-type: ethiopic-abegede;}
-#d07 .l08 {list-style-type: ethiopic-abegede-am-et;}
-#d07 .l09 {list-style-type: ethiopic-abegede-gez;}
-#d07 .l10 {list-style-type: ethiopic-abegede-ti-er;}
-#d07 .l11 {list-style-type: ethiopic-abegede-ti-et;}
-#d07 .l12 {list-style-type: ethiopic-halehame-aa-er;}
-#d07 .l13 {list-style-type: ethiopic-halehame-aa-et;}
-#d07 .l14 {list-style-type: ethiopic-halehame-am-et;}
-#d07 .l15 {list-style-type: ethiopic-halehame-gez;}
-#d07 .l16 {list-style-type: ethiopic-halehame-om-et;}
-#d07 .l17 {list-style-type: ethiopic-halehame-sid-et;}
-#d07 .l18 {list-style-type: ethiopic-halehame-so-et;}
-#d07 .l19 {list-style-type: ethiopic-halehame-ti-er;}
-#d07 .l20 {list-style-type: ethiopic-halehame-ti-et;}
-#d07 .l21 {list-style-type: ethiopic-halehame-tig;}
-#d07 .l22 {list-style-type: hangul;}
-#d07 .l23 {list-style-type: hangul-consonant;}
-#d07 .l24 {list-style-type: lower-norwegian;}
-#d07 .l25 {list-style-type: oromo;}
-#d07 .l26 {list-style-type: sidama;}
-#d07 .l27 {list-style-type: somali;}
-#d07 .l28 {list-style-type: tigre;}
-#d07 .l29 {list-style-type: tigrinya-er;}
-#d07 .l30 {list-style-type: tigrinya-er-abegede;}
-#d07 .l31 {list-style-type: tigrinya-et;}
-#d07 .l32 {list-style-type: tigrinya-et-abegede;}
-#d07 .l33 {list-style-type: upper-greek;}
-#d07 .l34 {list-style-type: upper-norwegian;}
+#d07 .l04 {list-style-type: ethiopic;}
+#d07 .l05 {list-style-type: ethiopic-abegede;}
+#d07 .l06 {list-style-type: ethiopic-abegede-am-et;}
+#d07 .l07 {list-style-type: ethiopic-abegede-gez;}
+#d07 .l08 {list-style-type: ethiopic-abegede-ti-er;}
+#d07 .l09 {list-style-type: ethiopic-abegede-ti-et;}
+#d07 .l10 {list-style-type: ethiopic-halehame-aa-er;}
+#d07 .l11 {list-style-type: ethiopic-halehame-aa-et;}
+#d07 .l12 {list-style-type: ethiopic-halehame-am-et;}
+#d07 .l13 {list-style-type: ethiopic-halehame-gez;}
+#d07 .l14 {list-style-type: ethiopic-halehame-om-et;}
+#d07 .l15 {list-style-type: ethiopic-halehame-sid-et;}
+#d07 .l16 {list-style-type: ethiopic-halehame-so-et;}
+#d07 .l17 {list-style-type: ethiopic-halehame-ti-er;}
+#d07 .l18 {list-style-type: ethiopic-halehame-ti-et;}
+#d07 .l19 {list-style-type: ethiopic-halehame-tig;}
+#d07 .l20 {list-style-type: hangul;}
+#d07 .l21 {list-style-type: hangul-consonant;}
+#d07 .l22 {list-style-type: lower-norwegian;}
+#d07 .l23 {list-style-type: oromo;}
+#d07 .l24 {list-style-type: sidama;}
+#d07 .l25 {list-style-type: somali;}
+#d07 .l26 {list-style-type: tigre;}
+#d07 .l27 {list-style-type: tigrinya-er;}
+#d07 .l28 {list-style-type: tigrinya-er-abegede;}
+#d07 .l29 {list-style-type: tigrinya-et;}
+#d07 .l30 {list-style-type: tigrinya-et-abegede;}
+#d07 .l31 {list-style-type: upper-greek;}
+#d07 .l32 {list-style-type: upper-norwegian;}
 
-.arena ul {float: left; width: 3em; margin: 0.5em; padding: 0.5em 0.25em 0.5em 2em;
+.arena ul {float: left; width: 3em;
+	margin: 0.5em; padding: 0.5em 0.25em 0.5em 2em;
 	border: 1px solid gray; background: #EEE;}
-.arena ul::before {content: "[." attr(class) "]"; display: list-item;}
-.arena div {float: left; clear: left;}
-.arena div h2 {margin: 0.75em 0 0; font-size: 125%;}
+.arena ul::before {content: "[." attr(class) "]";
+	display: list-item;}
 .arena ul {list-style-type: none;}
-hr.clr {clear: both;}
 </style>
 </head>
 <body id="www-meyerweb-com" class="css test suite">
-<p id="specref"><a href="http://www.w3.org/TR/css3-lists/#list-style-type">http://www.w3.org/TR/css3-lists/#list-style-type</a></p>
+<p id="specref"><a href="https://www.w3.org/TR/css-counter-styles-3/">https://www.w3.org/TR/css-counter-styles-3/</a></p>
 
 <div class="arena">
 
@@ -148,53 +158,6 @@ hr.clr {clear: both;}
 <ul class="l06"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
 <ul class="l07"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
 <ul class="l08"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-</div>
-
-<div id="d03">
-<h2>[#d03] Alphabetic list types</h2>
-<ul class="l01"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l02"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l03"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l04"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l05"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l06"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l07"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l08"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l09"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-</div>
-
-<div id="d04">
-<h2>[#d04] Complex predefined list types</h2>
-<ul class="l01"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l02"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l03"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l04"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l05"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l06"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l07"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l08"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l09"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l10"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-</div>
-
-<div id="d05">
-<h2>[#d05] Legacy algorithmic list types</h2>
-<ul class="l01"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l02"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l03"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l04"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-</div>
-
-<div id="d06">
-<h2>[#d06] Legacy numeric list types</h2>
-<ul class="l01"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l02"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l03"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l04"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l05"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l06"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l07"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l08"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
 <ul class="l09"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
 <ul class="l10"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
 <ul class="l11"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
@@ -209,6 +172,58 @@ hr.clr {clear: both;}
 <ul class="l20"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
 <ul class="l21"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
 <ul class="l22"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l23"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l24"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l25"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l26"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l27"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+</div>
+
+<div id="d03">
+<h2>[#d03] Alphabetic list types</h2>
+<ul class="l01"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l02"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l03"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l04"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l05"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l06"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l07"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l08"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l09"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l10"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l11"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+</div>
+
+<div id="d04">
+<h2>[#d04] Complex predefined list types</h2>
+<ul class="l01"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l02"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l03"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l04"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l05"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l06"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l07"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l08"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l09"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l10"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l11"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+</div>
+
+<div id="d05">
+<h2>[#d05] Legacy algorithmic list types</h2>
+<ul class="l01"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l02"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l03"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l04"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+</div>
+
+<div id="d06">
+<h2>[#d06] Legacy numeric list types</h2>
+<ul class="l01" start="8"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l02" start="8"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l03" start="6"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l04"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
+<ul class="l05"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
 </div>
 
 <div id="d07">
@@ -245,8 +260,6 @@ hr.clr {clear: both;}
 <ul class="l30"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
 <ul class="l31"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
 <ul class="l32"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l33"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
-<ul class="l34"><li>two</li><li>three</li><li>four</li><li>five</li></ul>
 </div>
 
 <hr class="clr">
