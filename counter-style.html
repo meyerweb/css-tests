@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"
+			"http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+<head>
+<title>@counter-style</title>
+<style type="text/css">
+.list01 {
+	@counter-style triangle {
+		system: cyclic;
+		symbols: ‣;
+		suffix: " ";
+	}
+}
+.list02 {
+	@counter-style box-corner {
+		system: fixed;
+		symbols: ◰ ◳ ◲ ◱;
+		suffix: ': ';
+	}
+}
+</style>
+</head>
+
+<body>
+
+<ul class="list01">
+<li>one</li>
+<li>two</li>
+<li>three</li>
+<li>four</li>
+<li>five</li>
+</ul>
+
+<ol class="list01">
+<li>one</li>
+<li>two</li>
+<li>three</li>
+<li>four</li>
+<li>five</li>
+</ol>
+
+</body>
+</html>

@@ -5,8 +5,18 @@
 <link rel="stylesheet" href="c/base.css" type="text/css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style type="text/css" id="tests">
-p span {content: "without a trace of sense";}
-p + p span {content: url(i/dot-red.gif);}
+ol {counter-set: counter1 100; counter-reset: counter2 100;}
+ol li {counter-increment: counter1 counter2;}
+
+*[class^="li"]::after {color: green;}
+.li01::after {content: " with trailing generated content.";}
+.li02::after {content: " [class " attr(class) "]";}
+.li03::after {content: leader(dotted) "with trailing generated content.";}
+.li04::after,
+.li05::after {content: " with a counter as part of its trailing generated content. " counter(nullcount);}
+.li06::after,
+.li07::after {content: " with counters as part of its trailing generated content. " counter(counter1) " | " counter(counter2);}
+.li08 {content: "This list item’s content has been replaced with generated content.";}
 </style>
 </head>
 <body id="www-meyerweb-com" class="css test suite">
@@ -14,12 +24,16 @@ p + p span {content: url(i/dot-red.gif);}
 
 <div class="arena">
 
-<p>
-This is a paragraph <span>containing a <code>span</code> element</span> within its content.
-</p>
-<p>
-This is a paragraph <span>containing a <code>span</code> element</span> within its content.
-</p>
+<ol>
+<li class="li01">A list item</li>
+<li class="li02">A list item</li>
+<li class="li03">A list item</li>
+<li class="li04">A list item</li>
+<li class="li05">A list item</li>
+<li class="li06">A list item</li>
+<li class="li07">A list item</li>
+<li class="li08">A list item</li>
+</ol>
 
 </div>
 

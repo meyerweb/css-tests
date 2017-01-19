@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: quotes</title>
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css" id="tests">
+blockquote {border: 1px solid rgba(0,0,0,0.25); padding: 0 0.5em;}
+blockquote::before {content: "[" attr(lang) "]:"; font-style: italic;
+	display: block; margin-top: 0.5em;}
+blockquote:lang(en-us) > * {quotes: "\201C" "\201D" "\2018" "\2019";}
+blockquote:lang(en-gb) > * {quotes: "‘" "’" "“" "”";}
+blockquote:lang(fr) > * {quotes: "« " " »" "‹ " " ›";}
+blockquote:lang(symb) > * {quotes: "👁‍🗨 " " 👁‍🗨" "💡️️ " " 💡";}
+blockquote p:before {content: open-quote;}
+blockquote p:after {content: no-close-quote;}
+blockquote p:last-child::after {content: close-quote;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-content/#content">http://www.w3.org/TR/css3-content/#content</a></p>
+
+<div class="arena">
+
+<div>
+<p>In the beginning, there was nothing. And God said: <q>Let there be light!</q> And there was still nothing, but you could see it.</p>
+</div>
+<blockquote lang="en-us">
+<p>In the beginning, there was nothing. And God said: <q>Let there be light!</q> And there was still nothing, but you could see it.</p>
+</blockquote>
+<blockquote lang="en-gb">
+<p>In the beginning, there was nothing. And God said: <q>Let there be light!</q> And there was still nothing, but you could see it.</p>
+</blockquote>
+<blockquote lang="fr">
+<p>In the beginning, there was nothing. And God said: <q>Let there be light!</q> And there was still nothing, but you could see it.</p>
+</blockquote>
+<blockquote lang="symb">
+<p>In the beginning, there was nothing. And God said: <q>Let there be light!</q> And there was still nothing, but you could see it.</p>
+</blockquote>
+
+<blockquote lang="en-us">
+<p>“ ”</p>
+</blockquote>
+<blockquote lang="fr">
+<p>« »</p>
+</blockquote>
+
+</div>
+
+</body>
+</html>
