@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: list-style-position</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css">
+style#tests {height: 14.33em; position: fixed; width: 97%;}
+body {margin-top: 12.33em;}
+.arena div h2 {margin: 0.75em 0 0; font-size: 125%;}
+hr.clr {clear: both;}
+</style>
+<style type="text/css" id="tests">
+/* --- Symbolic and string list types --- */
+#d01 .l01 {list-style-image: url(i/box-red.gif); list-style-position: outside;}
+#d01 .l02 {list-style-image: url(i/box-red.gif); list-style-position: inside;}
+#d01 .l03 {list-style-type: disc; list-style-position: outside;}
+#d01 .l04 {list-style-type: disc; list-style-position: inside;}
+
+.arena ul {float: left; width: 8em;
+	margin: 0.5em; padding: 0.5em 0.25em 0.5em 2em;
+	border: 1px solid gray; background: #EEE;}
+.arena ul::before {content: "[." attr(class) "]";
+	display: list-item;}
+.arena ul {list-style-type: none;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="https://www.w3.org/TR/css-lists-3/#propdef-list-style-position">https://www.w3.org/TR/css-lists-3/#propdef-list-style-position</a></p>
+
+<div class="arena">
+
+<div id="d01">
+<h2>[#d01]</h2>
+<ul class="l01"><li>two is the number of this list item</li><li>this is the third list item</li></ul>
+<ul class="l02"><li>two is the number of this list item</li><li>this is the third list item</li></ul>
+<ul class="l03"><li>two is the number of this list item</li><li>this is the third list item</li></ul>
+<ul class="l04"><li>two is the number of this list item</li><li>this is the third list item</li></ul>
+</div>
+<hr class="clr">
+
+</div>
+
+</body>
+</html>
