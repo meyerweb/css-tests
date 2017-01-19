@@ -48,7 +48,7 @@ for ($i = 0; $i < count($files); $i++) {
 $nav = "<ul id=\"nav\">\r";
 $nav .= "<li id=\"i\">▲ <a href=\".\">Index</a></li>\r";
 if (isset($prev)) $nav .= "<li>◀ <a href=\"show.php?p=$prev$pref\">$prefix$prev</a></li>\r";
-if (isset($prefix)) {
+if (!isset($prefix)) {
 	$nav .= "<li><a href=\"show.php?p=$url\">$url</a></li>";
 } else {
 	$pre = get_prefix();

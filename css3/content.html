@@ -11,11 +11,11 @@ ol li {counter-increment: counter1 counter2;}
 *[class^="li"]::after {color: green;}
 .li01::after {content: " with trailing generated content.";}
 .li02::after {content: " [class " attr(class) "]";}
-.li03::after {content: leader(dotted) "with trailing generated content.";}
-.li04::after,
-.li05::after {content: " with a counter as part of its trailing generated content. " counter(nullcount);}
-.li06::after,
-.li07::after {content: " with counters as part of its trailing generated content. " counter(counter1) " | " counter(counter2);}
+.li03::after,
+.li04::after {content: " with a counter in its trailing generated content. " counter(nullcount);}
+.li05::after,
+.li06::after {content: " with counters in its trailing generated content. " counter(counter1) " | " counter(counter2);}
+.li07::after {content: leader(dotted) "with trailing generated content.";}
 .li08 {content: "This list item’s content has been replaced with generated content.";}
 </style>
 </head>
@@ -23,6 +23,8 @@ ol li {counter-increment: counter1 counter2;}
 <p id="specref"><a href="http://www.w3.org/TR/css3-content/#content">http://www.w3.org/TR/css3-content/#content</a></p>
 
 <div class="arena">
+
+<h3>Generated Content!</h3>
 
 <ol>
 <li class="li01">A list item</li>
