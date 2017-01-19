@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: counter-reset</title>
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css" id="tests">
+.arena ol {counter-reset: c2 100;}
+.arena ol li {counter-increment: c1 c2;}
+.arena li::after {content: " c1 = " counter(c1) ", c2 = " counter(c2); color: brown; font: 1em monospace;}
+.arena li::before {content: "[." attr(class) "] ";}
+.li05 {counter-reset: c1 10;}
+.li06 {counter-reset: c2 -1001; display: none;}
+.li07 {counter-reset: c2 1;}
+.li10 {counter-reset: c1 99 c2 999;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-content/#content">http://www.w3.org/TR/css3-content/#content</a></p>
+
+<div class="arena">
+
+<ol>
+<li class="li01">List item</li>
+<li class="li02">List item</li>
+<li class="li03">List item</li>
+<li class="li04">List item</li>
+<li class="li05">List item</li>
+<li class="li06">List item</li>
+<li class="li07">List item</li>
+<li class="li08">List item</li>
+<li class="li09">List item</li>
+<li class="li10">List item</li>
+<li class="li11">List item</li>
+</ol>
+
+</div>
+
+</body>
+</html>
