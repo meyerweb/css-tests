@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>::marker</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="c/style-insert-tests.css">
+<style type="text/css" media="all" id="tests">
+
+ul li {list-style-type: square;}
+ul li::marker {color: green; height: 1.5em; width: 3em;}
+
+ol li {list-style: upper-alpha;}
+ol li::marker {content: "Note " counter(note-counter) ":"; text-align: left; width: 10em;}
+
+li:first-child {font-size: 200%;}
+li {font-size: 150%;}
+li:last-child {font-size: 100%;}
+</style>
+</head>
+<body>
+
+
+
+<ul>
+<li>This is a list item.</li>
+<li>So is this.</li>
+<li>The list is unordered.</li>
+</ul>
+
+
+<ol>
+<li>This is a list item.</li>
+<li>So is this.</li>
+<li>The list is ordered.</li>
+</ol>
+
+
+</body>
+</html>
