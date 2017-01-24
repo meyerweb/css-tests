@@ -5,6 +5,11 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <title>@counter-style</title>
 <link rel="stylesheet" type="text/css" href="c/style-insert-tests.css">
+<style type="text/css">
+ol {float: left; margin-right: 2em; background: #EEE;}
+ol::before {content: "[." attr(class) "]";
+	font-style: italic; margin-bottom: 0.5em; display: block;}
+</style>
 <style type="text/css" id="tests">
 @counter-style triangle {
 	system: cyclic;
@@ -58,14 +63,14 @@
 
 <body>
 
-<ul class="list01">
+<ol class="list01">
 <li>one</li>
 <li>two</li>
 <li>three</li>
 <li>four</li>
 <li>five</li>
 <li>six</li>
-</ul>
+</ol>
 
 <ol class="list02">
 <li>one</li>
