@@ -9,6 +9,10 @@
 ol {float: left; margin-right: 2em; background: #EEE;}
 ol::before {content: "[." attr(class) "]";
 	font-style: italic; margin-bottom: 0.5em; display: block;}
+@supports (display: flex) {
+	body {display: flex; flex-wrap: wrap; align-items: flex-start;}
+	ol {float: none; padding: 0.25em 0.25em 0.25em 2.5em;}
+}
 </style>
 <style type="text/css" id="tests">
 @counter-style triangle {
@@ -27,11 +31,6 @@ ol::before {content: "[." attr(class) "]";
 	symbols: ◰ ◳ ◲ ◱;
 	suffix: ': ';
 }
-@counter-style footnote {
-	system: symbolic;
-	symbols: '*' ⁑ † ‡;
-	suffix: '';
-}
 @counter-style binary {
 	system: numeric;
 	symbols: '0' '1';
@@ -40,6 +39,11 @@ ol::before {content: "[." attr(class) "]";
 	system: numeric;
 	symbols: '0' '1' '2';
 	width: 5 "0";
+}
+@counter-style footnote {
+	system: symbolic;
+	symbols: '*' ⁑ † ‡;
+	suffix: '';
 }
 @counter-style roman {
 	/* lightly adapted from http://codepen.io/Kseso/pen/Kwowdg */
@@ -53,10 +57,10 @@ ol::before {content: "[." attr(class) "]";
 .list01 {list-style-type: triangle;}
 .list02 {list-style-type: phases;}
 .list03 {list-style-type: box-corner;}
-.list04 {list-style-type: footnote;}
-.list05 {list-style-type: binary;}
-.list06 {list-style-type: trinary;}
-.list07 {list-style-type: symbols("*" "\2020" "\2021" "\A7");}
+.list04 {list-style-type: binary;}
+.list05 {list-style-type: trinary;}
+.list06 {list-style-type: footnote;}
+.list07 {list-style-type: symbols("*" "\A7" "\2020" "\2021");}
 .list08 {list-style-type: roman;}
 </style>
 </head>
@@ -70,6 +74,11 @@ ol::before {content: "[." attr(class) "]";
 <li>four</li>
 <li>five</li>
 <li>six</li>
+<li>seven</li>
+<li>eight</li>
+<li>nine</li>
+<li>ten</li>
+<li>eleven</li>
 </ol>
 
 <ol class="list02">
@@ -83,6 +92,7 @@ ol::before {content: "[." attr(class) "]";
 <li>eight</li>
 <li>nine</li>
 <li>ten</li>
+<li>eleven</li>
 </ol>
 
 <ol class="list03">
@@ -92,6 +102,11 @@ ol::before {content: "[." attr(class) "]";
 <li>four</li>
 <li>five</li>
 <li>six</li>
+<li>seven</li>
+<li>eight</li>
+<li>nine</li>
+<li>ten</li>
+<li>eleven</li>
 </ol>
 
 <ol class="list04">
@@ -101,6 +116,11 @@ ol::before {content: "[." attr(class) "]";
 <li>four</li>
 <li>five</li>
 <li>six</li>
+<li>seven</li>
+<li>eight</li>
+<li>nine</li>
+<li>ten</li>
+<li>eleven</li>
 </ol>
 
 <ol class="list05">
@@ -110,6 +130,11 @@ ol::before {content: "[." attr(class) "]";
 <li>four</li>
 <li>five</li>
 <li>six</li>
+<li>seven</li>
+<li>eight</li>
+<li>nine</li>
+<li>ten</li>
+<li>eleven</li>
 </ol>
 
 <ol class="list06">
@@ -119,6 +144,11 @@ ol::before {content: "[." attr(class) "]";
 <li>four</li>
 <li>five</li>
 <li>six</li>
+<li>seven</li>
+<li>eight</li>
+<li>nine</li>
+<li>ten</li>
+<li>eleven</li>
 </ol>
 
 <ol class="list07">
@@ -128,6 +158,11 @@ ol::before {content: "[." attr(class) "]";
 <li>four</li>
 <li>five</li>
 <li>six</li>
+<li>seven</li>
+<li>eight</li>
+<li>nine</li>
+<li>ten</li>
+<li>eleven</li>
 </ol>
 
 <ol class="list08">
