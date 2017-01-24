@@ -12,15 +12,16 @@
 	symbols: ▶ ▷;
 	suffix: " • ";
 }
+@counter-style phases {
+	/* inspired by https://twitter.com/elbym/status/823986388060274689 */
+	system: cyclic;
+	symbols: 🌕 🌖 🌗 🌘 🌑 🌒 🌓 🌔;
+	suffix: ' ';
+}
 @counter-style box-corner {
 	system: fixed;
 	symbols: ◰ ◳ ◲ ◱;
 	suffix: ': ';
-}
-@counter-style phases {
-	system: cyclic;
-	symbols: 🌕 🌖 🌗 🌘 🌑 🌒 🌓 🌔;
-	suffix: ' ';
 }
 @counter-style footnote {
 	system: symbolic;
