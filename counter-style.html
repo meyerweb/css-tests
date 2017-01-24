@@ -7,20 +7,51 @@
 
 <link rel="stylesheet" type="text/css" href="c/style-insert-tests.css">
 <style type="text/css" id="tests">
-.list01 {
-	@counter-style triangle {
-		system: cyclic;
-		symbols: ‣;
-		suffix: " ";
-	}
+@counter-style triangle {
+	system: cyclic;
+	symbols: ▶ ▷;
+	suffix: " • ";
 }
-.list02 {
-	@counter-style box-corner {
-		system: fixed;
-		symbols: ◰ ◳ ◲ ◱;
-		suffix: ': ';
-	}
+@counter-style box-corner {
+	system: fixed;
+	symbols: ◰ ◳ ◲ ◱;
+	suffix: ': ';
 }
+@counter-style phases {
+	system: cyclic;
+	symbols: 🌕 🌖 🌗 🌘 🌑 🌒 🌓 🌔;
+	suffix: ' ';
+}
+@counter-style footnote {
+	system: symbolic;
+	symbols: '*' ⁑ † ‡;
+	suffix: '';
+}
+@counter-style binary {
+	system: numeric;
+	symbols: '0' '1';
+}
+@counter-style trinary {
+	system: numeric;
+	symbols: '0' '1' '2';
+	width: 5 "0";
+}
+@counter-style roman {
+	/* lightly adapted from http://codepen.io/Kseso/pen/Kwowdg */
+	system: additive;
+	range: 1 19;
+	additive-symbols: 1000 M, 900 CM, 500 D, 400 CD,
+		100 C, 90 XC, 50 L, 40 XL,
+		10 X, 9 IX, 5 V, 4 IV, 1 I;
+}
+
+.list01 {list-style-type: triangle;}
+.list02 {list-style-type: phases;}
+.list03 {list-style-type: box-corner;}
+.list04 {list-style-type: footnote;}
+.list05 {list-style-type: binary;}
+.list06 {list-style-type: trinary;}
+.list07 {list-style-type: roman;}
 </style>
 </head>
 
@@ -32,14 +63,78 @@
 <li>three</li>
 <li>four</li>
 <li>five</li>
+<li>six</li>
 </ul>
 
-<ol class="list01">
+<ol class="list02">
 <li>one</li>
 <li>two</li>
 <li>three</li>
 <li>four</li>
 <li>five</li>
+<li>six</li>
+<li>seven</li>
+<li>eight</li>
+<li>nine</li>
+<li>ten</li>
+</ol>
+
+<ol class="list03">
+<li>one</li>
+<li>two</li>
+<li>three</li>
+<li>four</li>
+<li>five</li>
+<li>six</li>
+</ol>
+
+<ol class="list04">
+<li>one</li>
+<li>two</li>
+<li>three</li>
+<li>four</li>
+<li>five</li>
+<li>six</li>
+</ol>
+
+<ol class="list05">
+<li>one</li>
+<li>two</li>
+<li>three</li>
+<li>four</li>
+<li>five</li>
+<li>six</li>
+</ol>
+
+<ol class="list06">
+<li>one</li>
+<li>two</li>
+<li>three</li>
+<li>four</li>
+<li>five</li>
+<li>six</li>
+</ol>
+
+<ol class="list07">
+<li>one</li>
+<li>two</li>
+<li>three</li>
+<li>four</li>
+<li>five</li>
+<li>six</li>
+<li value="9">nine (enforced via <tt>value="9"</tt>)</li>
+<li>ten</li>
+<li>11</li>
+<li>12</li>
+<li>13</li>
+<li>14</li>
+<li>15</li>
+<li>16</li>
+<li>17</li>
+<li>18</li>
+<li>19</li>
+<li>20</li>
+<li>21</li>
 </ol>
 
 </body>
