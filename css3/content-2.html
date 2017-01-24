@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: content</title>
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css" id="tests">
+.ol01 ol {counter-reset: c2 100;}
+.ol01 ol li {counter-increment: c1 c2;}
+.ol01 li::after {content: " c1 = " counter(c1, decimal-leading-zero) ", c2 = " counter(c2, upper-alpha);
+	color: brown; font: 1em monospace;}
+.ol01 li::before {content: "[." attr(class) "] ";}
+.ol01 .li05 {counter-reset: c1 10;}
+.ol01 .li06 {counter-reset: c2 -1001; display: none;}
+.ol01 .li07 {counter-reset: c2 1;}
+.ol01 .li10 {counter-reset: c1 99 c2 999;}
+
+.ul01 {counter-reset: list-item;}
+.ul01 li {counter-increment: list-item;}
+.ul01 li::before {content: '[' counters(list-item,'.') '] ';}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="http://www.w3.org/TR/css3-content/#content">http://www.w3.org/TR/css3-content/#content</a></p>
+
+<div class="arena">
+
+<ol class="ol01">
+<li class="li01">List item</li>
+<li class="li02">List item</li>
+<li class="li03">List item</li>
+<li class="li04">List item</li>
+<li class="li05">List item</li>
+<li class="li06">List item</li>
+<li class="li07">List item</li>
+<li class="li08">List item</li>
+<li class="li09">List item</li>
+<li class="li10">List item</li>
+<li class="li11">List item</li>
+</ol>
+
+<ul class="ul01">
+<li class="li01">List item</li>
+<li class="li02">List item
+<ul>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+</ul>
+</li>
+<li class="li03">List item</li>
+<li class="li04">List item
+<ul>
+<li>List item</li>
+<li>List item
+<ul>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+</ul>
+</li>
+<li>List item</li>
+</ul>
+</li>
+<li class="li05">List item</li>
+</ul>
+
+</div>
+
+</body>
+</html>
