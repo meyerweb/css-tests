@@ -13,6 +13,8 @@ ol::before {content: "[." attr(class) "]";
 	body {display: flex; flex-wrap: wrap; align-items: flex-start;}
 	ol {float: none; padding: 0.25em 0.25em 0.25em 2.5em;}
 }
+.thisisfine {display: none; background: transparent;}
+.list08:hover ~ .thisisfine {display: block;}
 </style>
 <style type="text/css" id="tests">
 @counter-style triangle {
@@ -38,7 +40,7 @@ ol::before {content: "[." attr(class) "]";
 @counter-style trinary {
 	system: numeric;
 	symbols: '0' '1' '2';
-	width: 5 "0";
+	pad: 5 "0";
 }
 @counter-style footnote {
 	system: symbolic;
@@ -53,6 +55,12 @@ ol::before {content: "[." attr(class) "]";
 		100 C, 90 XC, 50 L, 40 XL,
 		10 X, 9 IX, 5 V, 4 IV, 1 I;
 }
+@counter-style thisisfine {
+    system: cyclic;
+    symbols: 🔥 🐶 ☕ 🔥;
+    prefix: "🔥";
+    suffix: 🔥;
+}
 
 .list01 {list-style-type: triangle;}
 .list02 {list-style-type: phases;}
@@ -64,6 +72,7 @@ ol::before {content: "[." attr(class) "]";
 .list08 {list-style-type: roman;}
 .list08 li[value] {margin-top: 0.5em;}
 .list08 li[value]::after {content: " (enforced via value=\"" attr(value) "\")"; font-size: smaller;}
+.thisisfine {list-style-type: thisisfine;}
 </style>
 </head>
 
@@ -213,6 +222,23 @@ ol::before {content: "[." attr(class) "]";
 <li>103</li>
 <li>104</li>
 <li>105</li>
+</ol>
+
+
+<ol class="thisisfine">
+<li>one</li>
+<li>two</li>
+<li>three</li>
+<li>four</li>
+<li>five</li>
+<li>six</li>
+<li>seven</li>
+<li>eight</li>
+<li>nine</li>
+<li>ten</li>
+<li>eleven</li>
+<li>twelve</li>
+<li>thirteen</li>
 </ol>
 
 </body>
