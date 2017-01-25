@@ -42,13 +42,13 @@ ol::before {content: "[." attr(class) "]";
 }
 @counter-style footnote {
 	system: symbolic;
-	symbols: '*' ⁑ † ‡;
+	symbols: '*' "⁑" '†' "‡";
 	suffix: '';
 }
 @counter-style roman {
 	/* lightly adapted from http://codepen.io/Kseso/pen/Kwowdg */
 	system: additive;
-	range: 1 19;
+	range: 1 19, 49 51, 89 102;
 	additive-symbols: 1000 M, 900 CM, 500 D, 400 CD,
 		100 C, 90 XC, 50 L, 40 XL,
 		10 X, 9 IX, 5 V, 4 IV, 1 I;
@@ -62,6 +62,8 @@ ol::before {content: "[." attr(class) "]";
 .list06 {list-style-type: footnote;}
 .list07 {list-style-type: symbols("*" "\A7" "\2020" "\2021");}
 .list08 {list-style-type: roman;}
+.list08 li[value] {margin-top: 0.5em;}
+.list08 li[value]::after {content: " (enforced via value=\"" attr(value) "\")"; font-size: smaller;}
 </style>
 </head>
 
@@ -172,7 +174,7 @@ ol::before {content: "[." attr(class) "]";
 <li>four</li>
 <li>five</li>
 <li>six</li>
-<li value="9">nine (enforced via <tt>value="9"</tt>)</li>
+<li value="9">nine</li>
 <li>ten</li>
 <li>11</li>
 <li>12</li>
@@ -185,6 +187,32 @@ ol::before {content: "[." attr(class) "]";
 <li>19</li>
 <li>20</li>
 <li>21</li>
+<li value="47">47</li>
+<li>48</li>
+<li>49</li>
+<li>50</li>
+<li>51</li>
+<li>52</li>
+<li>53</li>
+<li value="87">87</li>
+<li>88</li>
+<li>89</li>
+<li>90</li>
+<li>91</li>
+<li>92</li>
+<li>93</li>
+<li>94</li>
+<li>95</li>
+<li>96</li>
+<li>97</li>
+<li>98</li>
+<li>99</li>
+<li>100</li>
+<li>101</li>
+<li>102</li>
+<li>103</li>
+<li>104</li>
+<li>105</li>
 </ol>
 
 </body>
