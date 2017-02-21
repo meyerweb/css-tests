@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Media Query tests</title>
+<link type="text/css" href="c/style-insert-tests.css" rel="stylesheet">
+<link type="text/css" href="c/style-insert-classes.css" rel="stylesheet">
+<link type="text/css" href="c/mq-test-01.css" rel="stylesheet" media="screen,print">
+<style type="text/css" id="tests">
+/* <link type="text/css" href="c/mq-test-01.css" rel="stylesheet"
+	media="screen,print"> */
+/*   links '.arena .c01 {color: green;}' */
+
+@import url(c/mq-test-02.css) print,screen;
+/* imports '.arena .c02 {color: green;}' */
+
+@media screen,print {
+	.arena .c03 {color: green;}
+}
+
+.arena p {color: red;}
+</style>
+</head>
+<body>
+
+<div class="arena">
+
+<p class="c01">This is a paragraph.</p>
+<p class="c02">This is a paragraph.</p>
+<p class="c03">This is a paragraph.</p>
+
+</div>
+
+</body>
+</html>
