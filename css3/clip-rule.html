@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: clip-rule</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+li[class^="li"] {float: left; margin: 2.5%; background: rgba(216,216,0,1);}
+li[class^="li"] img {height: 200px; width: 200px; padding: 0.5em; margin: 0.5em; background: silver;
+	vertical-align: text-top;}
+
+.li01 > img {clip-path: polygon(51% 0%, 83% 100%, 0 38%, 100% 38%, 20% 100%);}
+.li02 > img {clip-path: polygon(nonzero, 51% 0%, 83% 100%, 0 38%, 100% 38%, 20% 100%);}
+.li03 > img {clip-path: polygon(evenodd, 51% 0%, 83% 100%, 0 38%, 100% 38%, 20% 100%);}
+.li04 > img {clip-path: url(c/clip-rule.svg#star);}
+.li05 > img {clip-path: url(c/clip-rule.svg#star); clip-rule: nonzero;}
+.li06 > img {clip-path: url(c/clip-rule.svg#star); clip-rule: evenodd;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="https://www.w3.org/TR/css-masking-1/#the-clip-rule">https://www.w3.org/TR/css-masking-1/#the-clip-rule</a></p>
+
+<div class="arena">
+
+<ol start="0">
+<li class="li01"><img src="i/Compass_Card.png"></li>
+<li class="li02"><img src="i/Compass_Card.png"></li>
+<li class="li03"><img src="i/Compass_Card.png"></li>
+<li class="li04"><img src="i/Compass_Card.png"></li>
+<li class="li05"><img src="i/Compass_Card.png"></li>
+<li class="li06"><img src="i/Compass_Card.png"></li>
+</ol>
+
+</div>
+
+</body>
+</html>

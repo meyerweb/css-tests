@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: clip-path</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+li[class^="li"] {float: left; margin: 2.5%; background: gray;}
+li[class^="li"] img {height: 200px; width: 200px; padding: 0.5em; margin: 0.5em; background: silver;
+	vertical-align: text-top;}
+
+.li00 > img {clip-path: none;}
+.li01 > img {clip-path: inset(0.5em);}
+.li02 > img {clip-path: inset(0.5em 2em);}
+.li03 > img {clip-path: inset(0.5em 2em) fill-box;}
+.li04 > img {clip-path: circle(closest-side at 80px 50px);}
+.li05 > img {clip-path: circle(farthest-side at 80px 50px);}
+.li06 > img {clip-path: ellipse(50px 80px at 80px 50px);}
+.li07 > img {clip-path: ellipse(closest-side farthest-side at 80px 50px);}
+.li08 > img {clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);}
+.li09 > img {clip-path: url(c/clip-path.svg#clip0);}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="https://www.w3.org/TR/css-masking-1/#the-clip-path">https://www.w3.org/TR/css-masking-1/#the-clip-path</a></p>
+
+<div class="arena">
+
+<ol start="0">
+<li class="li00"><img src="i/Compass_Card.png"></li>
+<li class="li01"><img src="i/Compass_Card.png"></li>
+<li class="li02"><img src="i/Compass_Card.png"></li>
+<li class="li03"><img src="i/Compass_Card.png"></li>
+<li class="li04"><img src="i/Compass_Card.png"></li>
+<li class="li05"><img src="i/Compass_Card.png"></li>
+<li class="li06"><img src="i/Compass_Card.png"></li>
+<li class="li07"><img src="i/Compass_Card.png"></li>
+<li class="li08"><img src="i/Compass_Card.png"></li>
+<li class="li09"><img src="i/Compass_Card.png"></li>
+</ol>
+
+</div>
+
+</body>
+</html>
