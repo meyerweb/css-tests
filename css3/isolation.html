@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: 'isolation'</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css">
+body, ol {transition: 0.5s; transition-property: background;}
+body {height: calc(100vh - 20em);}
+ol {padding: 1em;}
+.arena > ol {display: flex; flex-wrap: wrap;}
+.arena > ol li {height: 100px; width: 100px; margin: 0 1em;}
+.arena > ol li img {display: block; height: 100%; width: 100%;}
+</style>
+<style type="text/css" id="tests">
+body:hover {background: goldenrod;}
+ol:hover {background: teal;}
+
+.arena li .one {mix-blend-mode: multiply;}
+.arena li .two {mix-blend-mode: saturation; margin-top: -100px;}
+.arena li:nth-child(1) {isolation: auto;}
+.arena li:nth-child(2) {isolation: isolate;}
+.arena li:nth-child(3) {mix-blend-mode: multiply;}
+.arena li:nth-child(4) {transform: rotate(0deg);}
+.arena li:nth-child(5) {opacity: 0.9;}
+.arena li:nth-child(6) {filter: blur(0.01px);}
+.arena li:nth-child(7) {position: relative;}
+.arena li:nth-child(8) {position: relative; z-index: 1;}
+.arena li:nth-child(9) {z-index: 1;} /* works because list items are flex items in this test*/
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="https://www.w3.org/TR/compositing-1/#background-blend-mode">https://www.w3.org/TR/compositing-1/#background-blend-mode</a></p>
+
+<section class="arena">
+
+<ol>
+<li><img class="one" src="i/mbm-img.png"><img class="two" src="i/box-red.gif"></li>
+<li><img class="one" src="i/mbm-img.png"><img class="two" src="i/box-red.gif"></li>
+<li><img class="one" src="i/mbm-img.png"><img class="two" src="i/box-red.gif"></li>
+<li><img class="one" src="i/mbm-img.png"><img class="two" src="i/box-red.gif"></li>
+<li><img class="one" src="i/mbm-img.png"><img class="two" src="i/box-red.gif"></li>
+<li><img class="one" src="i/mbm-img.png"><img class="two" src="i/box-red.gif"></li>
+<li><img class="one" src="i/mbm-img.png"><img class="two" src="i/box-red.gif"></li>
+<li><img class="one" src="i/mbm-img.png"><img class="two" src="i/box-red.gif"></li>
+<li><img class="one" src="i/mbm-img.png"><img class="two" src="i/box-red.gif"></li>
+</ol>
+
+</section>
+	
+</body>
+</html>

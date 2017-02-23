@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: 'background-blend-mode'</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css">
+body, ol {transition: 0.5s; transition-property: background;}
+body {height: calc(100vh - 20em);}
+ol {padding: 1em;}
+.arena > ol {display: flex; flex-wrap: wrap;}
+.arena > ol li {height: 100px; width: 100px; margin: 0 1em;}
+</style>
+<style type="text/css" id="tests">
+body:hover {background: goldenrod;}
+ol:hover {background: teal;}
+.bbm {background-image:
+		url(i/mbm-img.png),
+		linear-gradient(to right, #F00, #FFF);
+	background-color: gray;}
+.bbm2 {background:
+		linear-gradient(to right, #F00, #FFF),
+		url(i/mbm-img.png);
+	background-color: gray;}
+.arena li[class^="bbm"] {background-repeat: no-repeat;
+	background-size: 100% 100%;}
+.arena li[class]:nth-child(1) {background-blend-mode: normal;}
+.arena li[class]:nth-child(2) {background-blend-mode: multiply;}
+.arena li[class]:nth-child(3) {background-blend-mode: darken;}
+.arena li[class]:nth-child(4) {background-blend-mode: screen;}
+.arena li[class]:nth-child(5) {background-blend-mode: lighten;}
+.arena li[class]:nth-child(6) {background-blend-mode: color-dodge, color-burn;}
+.arena li[class]:nth-child(7) {background-blend-mode: color-burn, color-dodge;}
+.arena li[class]:nth-child(8) {background-blend-mode: color-burn, luminosity; background-color: transparent;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="https://www.w3.org/TR/compositing-1/#background-blend-mode">https://www.w3.org/TR/compositing-1/#background-blend-mode</a></p>
+
+<section class="arena">
+
+<ol>
+<li class="bbm"></li>
+<li class="bbm"></li>
+<li class="bbm"></li>
+<li class="bbm"></li>
+<li class="bbm"></li>
+<li class="bbm"></li>
+<li class="bbm"></li>
+<li class="bbm"></li>
+</ol>
+
+<ol>
+<li class="bbm2"></li>
+<li class="bbm2"></li>
+<li class="bbm2"></li>
+<li class="bbm2"></li>
+<li class="bbm2"></li>
+<li class="bbm2"></li>
+<li class="bbm2"></li>
+<li class="bbm2"></li>
+</ol>
+
+</section>
+	
+</body>
+</html>
