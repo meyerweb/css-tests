@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Blend modes</title>
+<link type="text/css" href="c/style-insert-tests.css" rel="stylesheet">
+<style type="text/css">
+.layer {height: 6em; width: 6em;}
+.foreground {background: linear-gradient(
+	to right, rgb(255,128,0) 2em,
+		rgb(0,128,255) 2em, rgb(0,128,255) 4em,
+		rgba(0,150,0) 4em);}
+.backdrop {background: linear-gradient(
+	to bottom, rgb(0,0,0) 2em,
+		rgb(128,128,128) 2em, rgb(128,128,128) 4em,
+		rgb(255,255,255) 4em);}
+.arena > div {display: inline-block; border: 2px solid gray;}
+.arena ol {display: flex; flex-wrap: wrap;}
+</style>
+<style type="text/css" id="tests">
+li {margin: 1em; border: 2px solid gray;}
+li:nth-child(1) .foreground {mix-blend-mode: normal;}
+li:nth-child(2) .foreground {mix-blend-mode: darken;}
+li:nth-child(3) .foreground {mix-blend-mode: lighten;}
+li:nth-child(4) .foreground {mix-blend-mode: difference;}
+li:nth-child(5) .foreground {mix-blend-mode: exclusion;}
+li:nth-child(6) .foreground {mix-blend-mode: multiply;}
+li:nth-child(7) .foreground {mix-blend-mode: screen;}
+li:nth-child(8) .foreground {mix-blend-mode: overlay;}
+li:nth-child(9) .foreground {mix-blend-mode: hard-light;}
+li:nth-child(10) .foreground {mix-blend-mode: soft-light;}
+</style>
+</head>
+<body>
+
+<div class="arena">
+
+<div class="foreground layer"></div>
+<div class="backdrop layer"></div>
+
+<ol>
+<li>
+	<div class="backdrop layer">
+	<div class="foreground layer"></div>
+	</div>
+</li>
+<li>
+	<div class="backdrop layer">
+	<div class="foreground layer"></div>
+	</div>
+</li>
+<li>
+	<div class="backdrop layer">
+	<div class="foreground layer"></div>
+	</div>
+</li>
+<li>
+	<div class="backdrop layer">
+	<div class="foreground layer"></div>
+	</div>
+</li>
+<li>
+	<div class="backdrop layer">
+	<div class="foreground layer"></div>
+	</div>
+</li>
+<li>
+	<div class="backdrop layer">
+	<div class="foreground layer"></div>
+	</div>
+</li>
+<li>
+	<div class="backdrop layer">
+	<div class="foreground layer"></div>
+	</div>
+</li>
+<li>
+	<div class="backdrop layer">
+	<div class="foreground layer"></div>
+	</div>
+</li>
+<li>
+	<div class="backdrop layer">
+	<div class="foreground layer"></div>
+	</div>
+</li>
+<li>
+	<div class="backdrop layer">
+	<div class="foreground layer"></div>
+	</div>
+</li>
+</ol>
+
+</body>
+</html>
