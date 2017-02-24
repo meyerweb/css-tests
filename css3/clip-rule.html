@@ -12,9 +12,12 @@ li[class^="li"] img {height: 200px; width: 200px; padding: 0.5em; margin: 0.5em;
 .li01 > img {clip-path: polygon(51% 0%, 83% 100%, 0 38%, 100% 38%, 20% 100%);}
 .li02 > img {clip-path: polygon(nonzero, 51% 0%, 83% 100%, 0 38%, 100% 38%, 20% 100%);}
 .li03 > img {clip-path: polygon(evenodd, 51% 0%, 83% 100%, 0 38%, 100% 38%, 20% 100%);}
-.li04 > img {clip-path: url(c/clip-rule.svg#star);}
-.li05 > img {clip-path: url(c/clip-rule.svg#star); clip-rule: nonzero;}
-.li06 > img {clip-path: url(c/clip-rule.svg#star); clip-rule: evenodd;}
+.li04 > img {clip-path: url(#star);}
+.li05 > img {clip-path: url(#star); clip-rule: nonzero;}
+.li06 > img {clip-path: url(#star); clip-rule: evenodd;}
+.li07 > img {clip-path: url(c/clip-rule.svg#star);}
+.li08 > img {clip-path: url(c/clip-rule.svg#star); clip-rule: nonzero;}
+.li09 > img {clip-path: url(c/clip-rule.svg#star); clip-rule: evenodd;}
 </style>
 </head>
 <body id="www-meyerweb-com" class="css test suite">
@@ -29,9 +32,20 @@ li[class^="li"] img {height: 200px; width: 200px; padding: 0.5em; margin: 0.5em;
 <li class="li04"><img src="i/Compass_Card.png"></li>
 <li class="li05"><img src="i/Compass_Card.png"></li>
 <li class="li06"><img src="i/Compass_Card.png"></li>
+<li class="li07"><img src="i/Compass_Card.png"></li>
+<li class="li08"><img src="i/Compass_Card.png"></li>
+<li class="li09"><img src="i/Compass_Card.png"></li>
 </ol>
 
 </div>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+	<defs>
+	<clipPath id="star">
+		<path d="M 102,0 166,200 0,76 200,76 40,200" />
+     </clipPath>
+	</defs>
+</svg>
 
 </body>
 </html>

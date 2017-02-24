@@ -18,7 +18,8 @@ li[class^="li"] img {height: 200px; width: 200px; padding: 0.5em; margin: 0.5em;
 .li06 > img {clip-path: ellipse(50px 80px at 80px 50px);}
 .li07 > img {clip-path: ellipse(closest-side farthest-side at 80px 50px);}
 .li08 > img {clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);}
-.li09 > img {clip-path: url(c/clip-path.svg#clip0);}
+.li09 > img {clip-path: url(#clip0);}
+.li10 > img {clip-path: url(c/clip-path.svg#clip0);}
 </style>
 </head>
 <body id="www-meyerweb-com" class="css test suite">
@@ -37,9 +38,18 @@ li[class^="li"] img {height: 200px; width: 200px; padding: 0.5em; margin: 0.5em;
 <li class="li07"><img src="i/Compass_Card.png"></li>
 <li class="li08"><img src="i/Compass_Card.png"></li>
 <li class="li09"><img src="i/Compass_Card.png"></li>
+<li class="li10"><img src="i/Compass_Card.png"></li>
 </ol>
 
 </div>
+
+<svg>
+	<defs>
+	<clipPath id="clip0" clipPathUnits="objectBoundingBox">
+		<polygon points="0.5,0 1,0.25 1,0.75 0.5,1 0,0.75 0,0.25"/>
+	</clipPath>
+	</defs>
+</svg>
 
 </body>
 </html>
