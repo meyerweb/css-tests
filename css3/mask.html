@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: mask</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+.arena li[class] {float: left; margin: 2.5%; background: gray;}
+.arena li[class] img {height: 150px; width: 150px; padding: 0.5em; margin: 0.5em; background: silver;
+	vertical-align: text-top;}
+.t01 img {mask: url(i/hexlike.svg);}
+.t02 img {mask: url(i/border-circles.png), url(i/hexlike.svg);}
+.t03 img {mask: url(i/border-circles.png) no-repeat bottom right, url(i/hexlike.svg) no-repeat top left;}
+.t04 img {mask: url(i/border-circles.png) intersect, url(i/hexlike.svg);}
+.t05 img {mask: url(i/border-circles.png) luminance exclude, url(i/hexlike.svg) alpha repeat-y;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="https://www.w3.org/TR/css-masking-1/#the-mask-composite">https://www.w3.org/TR/css-masking-1/#the-mask-composite</a></p>
+
+<div class="arena">
+
+<ol>
+<li class="t01"><img src="i/Compass_Card.png"></li>
+<li class="t02"><img src="i/Compass_Card.png"></li>
+<li class="t03"><img src="i/Compass_Card.png"></li>
+<li class="t04"><img src="i/Compass_Card.png"></li>
+<li class="t05"><img src="i/Compass_Card.png"></li>
+</ol>
+
+</div>
+
+</body>
+</html>
