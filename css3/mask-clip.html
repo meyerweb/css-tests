@@ -7,16 +7,18 @@
 <link rel="stylesheet" href="c/base.css" type="text/css">
 <style type="text/css" id="tests">
 .arena li[class] {float: left; margin: 2.5%; background: gray;}
-.arena li[class] img {height: 150px; width: 150px; padding: 1em; border: 0.5em solid red; margin: 0.5em; background: silver;
-	vertical-align: text-top; mask-repeat: repeat;}
+.arena li[class] img, .arena li[class] svg {
+	height: 150px; width: 150px; padding: 1em; border: 0.5em solid red; margin: 0.5em; background: silver;
+	vertical-align: text-top;}
 .png img {mask-image: url(i/border-circles.png);}
 .svg img {mask-image: url(i/hexlike.svg);}
 .t01 img {mask-clip: content-box;}
 .t02 img {mask-clip: padding-box;}
 .t03 img {mask-clip: border-box;} /* default value */
-.t04 img {mask-clip: fill-box;}
-.t05 img {mask-clip: stroke-box;}
-.t06 img {mask-clip: view-box;}
+.svg svg g {mask-image: url(i/border-circles.png);}
+.t04 svg g {mask-clip: fill-box;}
+.t05 svg g {mask-clip: stroke-box;}
+.t06 svg g {mask-clip: view-box;}
 </style>
 </head>
 <body id="www-meyerweb-com" class="css test suite">
@@ -32,13 +34,37 @@
 <li class="png t04"><img src="i/Compass_Card.png"></li>
 <li class="png t05"><img src="i/Compass_Card.png"></li>
 <li class="png t06"><img src="i/Compass_Card.png"></li>
-<li class="svg"><img src="i/Compass_Card.png"></li>
-<li class="svg t01"><img src="i/Compass_Card.png"></li>
-<li class="svg t02"><img src="i/Compass_Card.png"></li>
-<li class="svg t03"><img src="i/Compass_Card.png"></li>
-<li class="svg t04"><img src="i/Compass_Card.png"></li>
-<li class="svg t05"><img src="i/Compass_Card.png"></li>
-<li class="svg t06"><img src="i/Compass_Card.png"></li>
+<li class="svg"><img src="i/hatchgrid.svg"></li>
+<li class="svg t01"><img src="i/hatchgrid.svg"></li>
+<li class="svg t02"><img src="i/hatchgrid.svg"></li>
+<li class="svg t03"><img src="i/hatchgrid.svg"></li>
+<li class="svg t04"><svg viewbox="0 0 100 100" height="100" width="100" xmlns="http://www.w3.org/2000/svg" version="1.1">
+	<g>
+		<rect x="0" y="0" width="100" height="100" stroke="black" stroke-width="10" fill="gray" />
+		<path stroke-width="1" stroke="black" fill="hsla(0,100%,50%,0.5)"   d="M 0,0 50,50 100,0 z"/>
+		<path stroke-width="1" stroke="black" fill="hsla(90,100%,50%,0.5)"  d="M 100,0 50,50 100,100 z"/>
+		<path stroke-width="1" stroke="black" fill="hsla(180,100%,50%,0.5)" d="M 100,100 50,50 0,100 z"/>
+		<path stroke-width="1" stroke="black" fill="hsla(270,100%,50%,0.5)" d="M 0,100 50,50 0,0 z"/>
+	</g>
+</svg></li>
+<li class="svg t05"><svg viewbox="0 0 100 100" height="100" width="100" xmlns="http://www.w3.org/2000/svg" version="1.1">
+	<g>
+		<rect x="0" y="0" width="100" height="100" stroke="black" stroke-width="10" fill="gray" />
+		<path stroke-width="1" stroke="black" fill="hsla(0,100%,50%,0.5)"   d="M 0,0 50,50 100,0 z"/>
+		<path stroke-width="1" stroke="black" fill="hsla(90,100%,50%,0.5)"  d="M 100,0 50,50 100,100 z"/>
+		<path stroke-width="1" stroke="black" fill="hsla(180,100%,50%,0.5)" d="M 100,100 50,50 0,100 z"/>
+		<path stroke-width="1" stroke="black" fill="hsla(270,100%,50%,0.5)" d="M 0,100 50,50 0,0 z"/>
+	</g>
+</svg></li>
+<li class="svg t06"><svg viewbox="0 0 100 100" height="100" width="100" xmlns="http://www.w3.org/2000/svg" version="1.1">
+	<g>
+		<rect x="0" y="0" width="100" height="100" stroke="black" stroke-width="10" fill="gray" />
+		<path stroke-width="1" stroke="black" fill="hsla(0,100%,50%,0.5)"   d="M 0,0 50,50 100,0 z"/>
+		<path stroke-width="1" stroke="black" fill="hsla(90,100%,50%,0.5)"  d="M 100,0 50,50 100,100 z"/>
+		<path stroke-width="1" stroke="black" fill="hsla(180,100%,50%,0.5)" d="M 100,100 50,50 0,100 z"/>
+		<path stroke-width="1" stroke="black" fill="hsla(270,100%,50%,0.5)" d="M 0,100 50,50 0,0 z"/>
+	</g>
+</svg></li>
 </ol>
 
 </div>

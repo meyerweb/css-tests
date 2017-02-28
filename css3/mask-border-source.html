@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: mask-border-source</title>
+<!-- mask-border-slice -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+li[class^="li"] {float: left; margin: 2.5%; background: gray;}
+li[class^="li"] img {height: 200px; width: 200px; padding: 0.5em; border: 0.5em solid red; margin: 0.5em; background: silver;
+	vertical-align: text-top;
+	mask-border-slice: 25 30 fill;}
+.li00 img {mask-border-source: none;}
+.li01 img {mask-border-source: linear-gradient(45deg, rgb(0,0,0), transparent);}
+.li02 img {mask-border-source: linear-gradient(45deg, rgb(0,0,0), rgba(255,0,0,1));}
+.li03 img {mask-border-source: linear-gradient(45deg, rgb(0,0,0), rgba(255,0,0,0));}
+.li04 img {mask-border-source: url(i/border-circles.png);}
+.li05 img {mask-border-source: image(url(i/nosuchimage), rgba(255,0,0,0.5));}
+.li06 img {mask-border-source: url(i/border-circles.png), rgba(255,0,0,0.5);}
+.li07 img {mask-border-source: url(i/nosuchimage), rgba(255,0,0,0.5);}
+.li08 img {mask-border-source: url(i/hexlike.svg);}
+.li09 img {mask-border-source: url(#hexembed);}
+.li10 img {mask-border-source: url(#hexembed2);}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="https://www.w3.org/TR/css-masking-1/#the-mask-border-source">https://www.w3.org/TR/css-masking-1/#the-mask-border-source</a></p>
+
+<div class="arena">
+
+<ol start="0">
+<li class="li00"><img src="i/Compass_Card.png"></li>
+<li class="li01"><img src="i/Compass_Card.png"></li>
+<li class="li02"><img src="i/Compass_Card.png"></li>
+<li class="li03"><img src="i/Compass_Card.png"></li>
+<li class="li04"><img src="i/Compass_Card.png"></li>
+<li class="li05"><img src="i/Compass_Card.png"></li>
+<li class="li06"><img src="i/Compass_Card.png"></li>
+<li class="li07"><img src="i/Compass_Card.png"></li>
+<li class="li08"><img src="i/Compass_Card.png"></li>
+<li class="li09"><img src="i/Compass_Card.png"></li>
+<li class="li10"><img src="i/Compass_Card.png"></li>
+</ol>
+
+</div>
+
+
+<p style="clear: both;">
+An embedded SVG with an ID of <code>svgembed</code>:
+<svg viewbox="0 0 100 100" height="100" width="100" xmlns="http://www.w3.org/2000/svg" version="1.1" id="hexembed">
+	<path fill="#FF0000" d="M 50,0 100,25 100,75 50,100 0,75 0,25" />
+</svg>
+
+<svg viewbox="0 0 100 100" height="100" width="100" xmlns="http://www.w3.org/2000/svg" version="1.1">
+	<mask id="hexembed2">
+		<path fill="#FF0000" d="M 50,0 100,25 100,75 50,100 0,75 0,25" />
+	</mask>
+</svg>
+</p>
+
+</body>
+</html>
