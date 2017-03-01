@@ -5,6 +5,11 @@
 <!-- mask-image mask-repeat -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="c/base.css" type="text/css">
+<link rel="stylesheet" href="c/show-class-id.css" type="text/css">
+<style type="text/css">
+.arena li[class] {position: relative;}
+.arena li[class]::before {position: absolute; top: -1.33em;}
+</style>
 <style type="text/css" id="tests">
 .arena li[class] {float: left; margin: 2.5%; background: gray;}
 .arena li[class] img, .arena li[class] svg {
