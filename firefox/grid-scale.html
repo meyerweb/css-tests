@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Firefox grid inspector scaling bug</title>
+<link type="text/css" href="../c/style-insert-tests.css" rel="stylesheet">
+<style type="text/css" id="tests">
+#test {
+	display: grid;
+	grid-template-columns: 10em 10em;
+	grid-template-rows: min-content min-content;
+	grid-gap: 10px;
+	border: 2px solid red; padding: 1em; width: 20em;
+	transform: scale(1.5);
+	transform-origin: top left;
+}
+#test p {border: 1px dotted blue;margin: 0;}
+</style>
+</head>
+<body>
+
+<div id="test">
+<p>One</p>
+<p>Two</p>
+<p>Three</p>
+<p>Four</p>
+</div>
+
+</body>
+</html>

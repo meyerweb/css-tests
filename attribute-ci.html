@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS test</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="c/style-insert-tests.css">
+<style type="text/css" media="all" id="tests">
+*[class~="test"] {background: #DDD;}
+*[class~="test" i] {color: green;}
+</style>
+</head>
+<body>
+
+<div class="arena">
+
+<ol>
+<li class="test">List item</li>
+<li class="TEST">List item</li>
+<li class="test element">List item</li>
+<li class="TEST element">List item</li>
+<li class="tested element">List item</li>
+<li class="TESTED element">List item</li>
+</ol>
+
+</div>
+
+</body>
+</html>
