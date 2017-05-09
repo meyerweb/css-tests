@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: text-orientation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css">
+[lang="jp"] {color: red;}
+</style>
+<style type="text/css" id="tests">
+.arena p[class] {border: 1px dotted; width: 15em; height: 10em; margin: 1em;
+	writing-mode: vertical-lr;}
+.cl1 {text-orientation: mixed;}
+.cl2 {text-orientation: upright;}
+.cl3 {text-orientation: sideways;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="https://www.w3.org/TR/css-writing-modes-3/#text-orientation">https://www.w3.org/TR/css-writing-modes-3/#text-orientation</a></p>
+
+<div class="arena">
+
+<p>
+This is a paragraph of <span lang="jp">日本語</span> and English text, largely unstyled. <span lang="jp">これより多くのテキストです。</span>
+</p>
+
+<p class="cl1">
+This is a paragraph of <span lang="jp">日本語</span> and English text, largely unstyled. <span lang="jp">これより多くのテキストです。</span>
+</p>
+
+<p class="cl2">
+This is a paragraph of <span lang="jp">日本語</span> and English text, largely unstyled. <span lang="jp">これより多くのテキストです。</span>
+</p>
+
+<p class="cl3">
+This is a paragraph of <span lang="jp">日本語</span> and English text, largely unstyled. <span lang="jp">これより多くのテキストです。</span>
+</p>
+
+</div>
+
+</body>
+</html>
