@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hinted Gradients</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style type="text/css" media="all">
+ol {margin: 0; padding: 0; display: flex;}
+li {font: 1em/1 Georgia, serif; margin: 0 2em;}
+li div {background: #F77; color: #FFF; text-shadow: 0 0 0.125em black, 0 0 0.125em black;
+	padding: 1.5em;
+	font-weight: bold;}
+li div::before {content: attr(class);}
+
+li .base {margin-top: 0.5em;}
+#l1 {width: 10em;}
+#l1 .base {background: linear-gradient(to right, black, transparent 10em);}
+#l1 .one {background: linear-gradient(to right, black, 4em, transparent 10em);}
+#l1 .two {background: linear-gradient(to right, black, gray 3em, 4em, transparent 10em);}
+#l1 .three {background: linear-gradient(to right, black, 8em, transparent 10em);}
+#l1 .four {background: linear-gradient(to right, black, 9.95em, transparent 10em);}
+
+#l2 {width: 20em;}
+#l2 div {text-align: center;}
+#l2 .base {background: radial-gradient(circle at center, black, transparent 10em);}
+#l2 .one {background: radial-gradient(circle at center, black, 4em, transparent 10em);}
+#l2 .two {background: radial-gradient(circle at center, black, gray 3em, 4em, transparent 10em);}
+#l2 .three {background: radial-gradient(circle at center, black, 8em, transparent 10em);}
+#l2 .four {background: radial-gradient(circle at center, black, 9.95em, transparent 10em);}
+</style>
+</head>
+<body>
+
+<h1>Hinted gradients</h1>
+
+<ol>
+<li id="l1">
+<div class="base"></div>
+<div class="one"></div>
+<div class="two"></div>
+<div class="base"></div>
+<div class="three"></div>
+<div class="four"></div>
+</li>
+
+<li id="l2">
+<div class="base"></div>
+<div class="one"></div>
+<div class="two"></div>
+<div class="base"></div>
+<div class="three"></div>
+<div class="four"></div>
+</li>
+</ol>
+
+</body>
+</html>
