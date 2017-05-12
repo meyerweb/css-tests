@@ -12,21 +12,28 @@ li div {background: #F77; color: #FFF; text-shadow: 0 0 0.125em black, 0 0 0.125
 li div::before {content: attr(class);}
 
 li .base, li .five {margin-top: 0.5em;}
-#l1 {width: 10em;}
-#l1 .base {background: linear-gradient(to right, black, transparent 10em);}
-#l1 .one {background: linear-gradient(to right, black, 3em, transparent 10em);}
-#l1 .two {background: linear-gradient(to right, black, 1em, transparent 10em);}
-#l1 .three {background: linear-gradient(to right, black, 7em, transparent 10em);}
-#l1 .four {background: linear-gradient(to right, black, 9.95em, transparent 10em);}
-#l1 .five {background: linear-gradient(to right, black 1em, 1em, transparent 2em, 2em, black 3em, 3em, transparent 4em, 4em, black);}
+#li1 {width: 10em;}
+#li1 .base {background: linear-gradient(to right, black, transparent 10em);}
+#li1 .one {background: linear-gradient(to right, black, 3em, transparent 10em);}
+#li1 .two {background: linear-gradient(to right, black, 1em, transparent 10em);}
+#li1 .three {background: linear-gradient(to right, black, 7em, transparent 10em);}
+#li1 .four {background: linear-gradient(to right, black, 9.95em, transparent 10em);}
+#li1 .five {background: linear-gradient(to right, black 1em, 1em, transparent 2em, 2em, black 3em, 3em, transparent 4em, 4em, black);}
 
-#l2 {width: 20em;}
-#l2 .base {background: radial-gradient(circle at center, black, transparent 10em);}
-#l2 .one {background: radial-gradient(circle at center, black, 3em, transparent 10em);}
-#l2 .two {background: radial-gradient(circle at center, black, 1em, transparent 10em);}
-#l2 .three {background: radial-gradient(circle at center, black, 7em, transparent 10em);}
-#l2 .four {background: radial-gradient(circle at center, black, 9.95em, transparent 10em);}
-#l2 .five {background: radial-gradient(circle at center, black 1em, 1em, transparent 2em, 2em, black 3em, 3em, transparent 4em, 4em, black);}
+#li2 {width: 20em;}
+#li2 .base {background: radial-gradient(circle at center, black, transparent 10em);}
+#li2 .one {background: radial-gradient(circle at center, black, 3em, transparent 10em);}
+#li2 .two {background: radial-gradient(circle at center, black, 1em, transparent 10em);}
+#li2 .three {background: radial-gradient(circle at center, black, 7em, transparent 10em);}
+#li2 .four {background: radial-gradient(circle at center, black, 9.95em, transparent 10em);}
+#li2 .five {background: radial-gradient(circle at center, black 1em, 1em, transparent 2em, 2em, black 3em, 3em, transparent 4em, 4em, black);}
+
+#li3 {width: 20em;}
+#li3 div {padding: 2.5em 5em;}
+#li3 .base {background: radial-gradient(circle at center, red, orange, yellow, green, blue, purple);}
+#li3 .one {background: radial-gradient(circle at center, red, 15%, orange 15%, 35%, yellow 35%, 55%, green 55%, 75%, blue 75%, 95%, purple 95%);}
+#li3 .two {background: radial-gradient(circle at center, red, 10%, orange 15%, 30%, yellow 35%, 50%, green 55%, 70%, blue 75%, 90%, purple 95%);}
+#li3 .three {background: radial-gradient(circle at center, red, 5%, orange 15%, 20%, yellow 35%, 40%, green 55%, 60%, blue 75%, 80%, purple 95%);}
 </style>
 </head>
 <body>
@@ -34,7 +41,8 @@ li .base, li .five {margin-top: 0.5em;}
 <h1>Hinted gradients</h1>
 
 <ol>
-<li id="l1">
+
+<li id="li1">
 <div class="base"></div>
 <div class="one"></div>
 <div class="two"></div>
@@ -44,7 +52,7 @@ li .base, li .five {margin-top: 0.5em;}
 <div class="five"></div>
 </li>
 
-<li id="l2">
+<li id="li2">
 <div class="base"></div>
 <div class="one"></div>
 <div class="two"></div>
@@ -53,6 +61,14 @@ li .base, li .five {margin-top: 0.5em;}
 <div class="four"></div>
 <div class="five"></div>
 </li>
+
+<li id="li3">
+<div class="base"></div>
+<div class="one"></div>
+<div class="two"></div>
+<div class="three"></div>
+</li>
+
 </ol>
 
 </body>
