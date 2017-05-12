@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<title>Cicadients</title>
+<style type="text/css" media="all">
+
+h1 { margin: 1.25em 0 0; border-bottom: 1px solid #666;}
+h2 {margin: 1.5em 0 0; border-bottom: 1px solid #BBB;}
+p {margin: 0.5em 0;}
+div[id^="d"] {
+	margin: 0 0 2em 0; padding: 0;
+	border: 1px solid gray; background: #FFF;}
+#d1 {
+	background-image:
+		repeating-linear-gradient(
+			90deg,
+			rgba(171,191,196,0.6),
+			rgba(171,191,196,8) 14.5px,			
+			rgba(255,0,0,0) 14.5px,
+			rgba(255,0,0,0) 29px
+		),
+		repeating-linear-gradient(
+			90deg,
+			rgba(203,138,153,0.7),
+			rgba(203,138,153,0.7) 18.4px,
+			rgba(203,138,153,0.5) 18.5px,
+			rgba(255,0,0,0) 18.5px,
+			rgba(255,0,0,0) 37px
+		),
+		repeating-linear-gradient(
+			90deg,
+			rgba(220,209,185,0),
+			rgba(220,209,185,0) 10.6px,
+			rgba(220,209,185,0.4) 10.6px,
+			rgba(220,209,185,0.8) 42.4px,
+			rgba(255,0,0,0) 42.4px,
+			rgba(255,0,0,0) 53px
+		)
+		;
+	height: 200px;
+}
+#d2 {
+	background-image:
+		linear-gradient(
+			0deg,
+			rgba(255,128,128,0.25),
+			rgba(255,128,128,0) 75%
+		)
+		,
+		linear-gradient(
+			89deg,
+			transparent 30%,
+			rgba(0,0,0,0.25) 35%,
+			rgba(0,0,0,0.25) 40%,
+			rgba(0,0,0,0.1) 45%,
+			rgba(255,255,255,0.08) 48%,
+			rgba(255,255,255,0.175) 50%,
+			rgba(0,0,0,0.2) 55%,
+			rgba(0,0,0,0.15) 60%,
+			rgba(0,0,0,0.15) 65%,
+			rgba(0,0,0,0.2) 70%,
+			rgba(0,0,0,0.1) 75%,
+			rgba(0,0,0,0) 80%,
+			transparent
+		)
+		,
+		linear-gradient(
+			92deg,
+			rgba(0,0,0,0.5),
+			rgba(0,0,0,0.5) 20%,
+			rgba(0,0,0,0.38) 25%,
+			rgba(255,255,255,0.08) 40%,
+			rgba(255,255,255,0.175) 43%,
+			rgba(0,0,0,0.5) 55%,
+			rgba(0,0,0,0.5) 70%,
+			rgba(0,0,0,0.32) 80%,
+			rgba(0,0,0,0.5) 90%,
+			rgba(0,0,0,0.5)
+		)		
+		;
+	background-size:
+		auto,
+		300px 100%,
+		109px 100%;
+	background-blend-mode:
+		normal, normal, hard-light;
+	background-repeat: repeat-x;
+	background-color: maroon;
+	height: 400px;
+}
+#d3 {filter: grayscale(1);}
+</style>
+</head>
+<body>
+
+<h1>Cicadients</h1>
+<p>
+A reworking of the first two examples of “<a href="http://designfestival.com/the-cicada-principle-and-why-it-matters-to-web-designers/">The Cicada Principle and Why It Matters to Web Designers</a>” using CSS gradients.  (The third example would be theoretically possible to do with gradients, but it would be the worst possible approach.)
+</p>
+
+<h2>Example #1</h2>
+<p>Unprefixed CSS: <strong>0.59KB</strong> (604 characters, unminified).  Total CSS, both prefixed and not: <strong>2.66KB</strong> (2,720 characters, unminified).  Total, original images: <strong>~7KB</strong> (plus two extra server hits).</p>
+<div id="d1"></div>
+
+<h2>Example #2</h2>
+<p>
+Testing.
+</p>
+<div id="d2"></div>
+
+</body>
+</html>
