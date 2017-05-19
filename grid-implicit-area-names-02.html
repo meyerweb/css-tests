@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Grid overlaps</title>
+<style type="text/css">
+ol {margin: 1em; padding: 0; border: 1px solid rgba(0,0,0,0.2);}
+
+ol li {display: flex; justify-content: center; align-items: center;
+	border: 2px solid; font-weight: bold;
+	text-shadow: 0 0 2px white, 0 0 2px white, 0 0 3px white;}
+ol li:nth-child(1) {color: hsla(0,50%,50%,1);      background-color: hsla(0,100%,50%,0.1);}
+ol li:nth-child(2) {color: hsla(45deg,50%,50%,1);  background-color: hsla(45deg,100%,50%,0.1);}
+ol li:nth-child(3) {color: hsla(90deg,50%,50%,1);  background-color: hsla(90deg,100%,50%,0.1);}
+ol li:nth-child(4) {color: hsla(135deg,50%,50%,1); background-color: hsla(135deg,100%,50%,0.1);}
+ol li:nth-child(5) {color: hsla(180deg,50%,50%,1); background-color: hsla(180deg,100%,50%,0.1);}
+ol li:nth-child(6) {color: hsla(225deg,50%,50%,1); background-color: hsla(225deg,100%,50%,0.1);}
+ol li:nth-child(7) {color: hsla(270deg,50%,50%,1); background-color: hsla(270deg,100%,50%,0.1);}
+ol li:nth-child(8) {color: hsla(315deg,50%,50%,1); background-color: hsla(315deg,100%,50%,0.1);}
+ol li:nth-child(odd) {background-image: repeating-linear-gradient(45deg,rgba(0,0,0,0.1),5px,transparent 10px);}
+ol li:nth-child(even) {background-image: repeating-linear-gradient(135deg,rgba(0,0,0,0.1),5px,transparent 10px);}
+
+ol li:nth-child(1) {grid-area: emil;}
+ol li:nth-child(2) {grid-area: jan;}
+ol li:nth-child(3) {grid-area: josef;}
+ol li:nth-child(4) {grid-area: lella;}
+ol li:nth-child(5) {grid-area: massimo;}
+ol li:nth-child(6) {grid-area: max;}
+ol li:nth-child(7) {grid-area: piet;}
+ol li:nth-child(8) {grid-area: villard;}
+
+#grid01 {display: grid; justify-content: center;
+	grid-template-columns: 
+		[emil-start massimo-start]
+		10vmin 
+		[jan-start]
+		10vmin 10vmin 
+		[max-start lella-start
+		emil-end jan-end]
+		10vmin 
+		[josef-start villard-start
+		max-end]
+		10vmin 10vmin
+		[piet-start
+		lella-end massimo-end]
+		10vmin
+		[josef-end piet-end villard-end];
+	grid-template-rows:
+		[emil-start piet-start josef-start]
+		10vmin 
+		[jan-start lella-start
+		emil-end]
+		10vmin 10vmin
+		[massimo-start villard-start
+		piet-end]
+		10vmin 
+		[max-start
+		josef-end]
+		10vmin 10vmin
+		[
+		jan-end massimo-end lella-end]
+		10vmin
+		[max-end villard-end];
+	width: 80vmin;
+	height: 75vmin;
+	padding-top: 5vmin;
+	}
+#grid01 li {list-style: none;}
+</style>
+</head>
+<body>
+
+<ol id="grid01">
+<li>Emil</li>
+<li>Jan</li>
+<li>Josef</li>
+<li>Lella</li>
+<li>Massimo</li>
+<li>Max</li>
+<li>Piet</li>
+<li>Villard</li>
+</ol>
+
+</body>
+</html>
