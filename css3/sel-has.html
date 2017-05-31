@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 test: the :has() selector</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css" id="tests">
+p:has(em) {font-weight: bold;}
+p:has(*) {font-style: italic;}
+p:has(code) {color: green;}
+p:has(:not(*)) {text-decoration: underline;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css test suite">
+<p id="specref"><a href="https://drafts.csswg.org/selectors-4/#relational">https://drafts.csswg.org/selectors-4/#relational</a></p>
+
+<div class="arena">
+
+<p>This is a normal paragraph with no descendants.</p>
+<p>This is a paragraph containing <em>emphasized text</em>.</p>
+<p>This is a paragraph containing <made-up>text in a made-up element</made-up> (literally, that’s what I called it).</p>
+<p>This is a paragraph containing <made-up>text in a <code>made-up</code> element</made-up> that contains a descendant element.</p>
+
+</div>
+
+</body>
+</html>
