@@ -20,6 +20,7 @@ body {background: white; margin: 1em; padding: 1em;}
 	#333 100%
 	);}
 .label {text-align: center; font: 2em Arvo, serif;}
+code {font: 1em monospace, serif;}
 section .label {background: url(i/anim-arrow.png) no-repeat 0 100% / 900px 40px;
 	width: 1000px; padding: 30px 0; margin: 0;}
 #dg02 + .label {background-position: 100px 0;}
@@ -29,21 +30,21 @@ body:hover * {animation-play-state: paused;}
 .stepanim {height: 100px; width: 100px;
 	background: green; color: white; display: flex;
 	justify-content: center; align-items: center; font: 2em Arvo, serif;
-	animation: stepcolor 7.5s steps(10,end) forwards, stepmove 7.5s steps(10,end) forwards;}
-#an02 {animation-timing-function: steps(10,start), steps(10,start);}
+	animation: stepcolor 7.5s steps(9,end) forwards, stepmove 7.5s steps(9,end) forwards;}
+#an02 {animation-timing-function: steps(9,start), steps(9,start);}
 @keyframes stepcolor {
 	from {background: #CCC;}
 	to {background: #333;}
 }
 @keyframes stepmove {
 	from {margin-left: 0;}
-	to {margin-left: 1000px;}
+	to {margin-left: 900px;}
 }
 
 </style>
 </head>
 <body>
-<p class="label">Hover the mouse pointer over the <code>body</code> (the white area) to pause animations.</p>
+<p class="label">Hover the mouse pointer over the <code>body</code> (the white area) to pause animations.  Reload to restart them.</p>
 
 <section>
 
