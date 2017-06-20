@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Animating font (and text) properties</title>
+<style type="text/css">
+html {background: silver;}
+body {background: white; margin: 1em; padding: 1em;}
+label {border: 1px solid rgba(0,0,0,0.5); border-radius: 2ch; padding: 0.5ch 1.5ch; font: bold 1em sans-serif;}
+label:focus {background: yellow;}
+#run:checked + label {color: white; background: darkgreen;}
+
+.arena ol {margin-top: 1em; border-top: 1px solid gray;}
+.arena ol li {animation: 2s 0s paused linear alternate infinite;}
+#run:checked ~ ol li {animation-play-state: running;}
+
+.arena li:nth-child(1) {animation-name: sizer;}
+.arena li:nth-child(2) {animation-name: adjuster;}
+.arena li:nth-child(3) {animation-name: weighter;}
+.arena li:nth-child(4) {animation-name: styler;}
+.arena li:nth-child(5) {animation-name: stretcher;}
+.arena li:nth-child(6) {animation-name: heighter;}
+
+@keyframes sizer {
+	from {font-size: 1em;}
+	to {font-size: 2em;}
+}
+
+@keyframes heighter {
+	from {line-height: 1em;}
+	to {line-height: 4em;}
+}
+
+@keyframes weighter {
+	from {font-weight: 400;}
+	to {font-weight: 900;}
+}
+
+@keyframes styler {
+	from {font-style: normal;}
+	to {font-style: italic;}
+}
+
+@keyframes styler {
+	from {font-stretch: ultra-condensed;}
+	to {font-stretch: ultra-expanded;}
+}
+
+@keyframes adjuster {
+	from {font-size-adjust: 0.5;}
+	to {font-size-adjust: 1;}
+}
+</style>
+</head>
+<body>
+
+
+<form class="arena">
+
+<input type="checkbox" id="run"> <label for="run">Run animations</label>
+
+<ol>
+<li><p>A paragraph.</p></li>
+<li><p>A paragraph.</p></li>
+<li><p>A paragraph.</p></li>
+<li><p>A paragraph.</p></li>
+<li><p>A paragraph.</p></li>
+<li><p>A paragraph.</p></li>
+</ol>
+
+</form>
+
+
+
+</body>
+</html>
