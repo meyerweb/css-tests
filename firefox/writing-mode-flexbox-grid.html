@@ -8,21 +8,15 @@
 
 body {
 	display: grid;
-	grid-template-columns: 1fr minmax(30ch,90ch) 1fr;
-	grid-template-rows: repeat(2,min-content) auto minmax(3ch,10vh) min-content;
 	}
 body > * {
-	grid-column: 2;
 	border: 1px dotted red;
 	}
-nav {grid-row: 1;}
 
 header {
-	grid-column: 1 / 2; grid-row: 2 / 3;
-	display: flex; flex-direction: row-reverse;
+	display: flex;
 	flex-direction: row-reverse;
 	justify-content: flex-end;
-	align-items: flex-start;
 	}
 header > * {
 	writing-mode: sideways-lr;
@@ -39,7 +33,7 @@ header > * {
 <main>
 main
 
-<p>The header (over on the left) should have an <code>h1</code> and an <code>h2</code>.  The h1 has been thrown <strong>waaaaay</strong> to the right, such that I can’t reach it via the scrollbar.</p>
+<p>The header (over on the left) should have an <code>h1</code> and an <code>h2</code>.  The <code>h1</code> has been thrown <strong>waaaaay</strong> to the right, such that I can’t reach it via the scrollbar.</p>
 
 <p>Furthermore, if you remove the <code>justify-content</code> from the header element, <em>both</em> heading elements will disappear, as will the horizontal scrollbar.  If it’s set to <code>center</code>, the <code>h1</code> will appear and the <code>h2</code> will disappear.</p>
 
@@ -48,14 +42,6 @@ If the <code>writing-mode</code> is set to be horizontal value, both headings wi
 </p>
 
 </main>
-
-<nav>
-nav
-</nav>
-
-<footer>
-footer
-</footer>
 
 </body>
 </html>
