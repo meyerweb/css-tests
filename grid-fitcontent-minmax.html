@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>fit-content vs. minmax</title>
+<style type="text/css">
+body {width: auto; padding: 2em; font-family: consolas, monospace, serif;}
+h1 {margin: 0; padding: 0.5ch 0 0; font-size: 2.5em; text-align: center; background: #FED;}
+.grid {display: grid; border: 1px solid; margin-bottom: 5em;}
+#fitcontent {grid-template-columns: repeat(3, fit-content(50ch));}
+#minmax {grid-template-columns: repeat(3, minmax(min-content,50ch));}
+p {border-right: 1px dotted; margin: 0; padding: 1em 0;}
+p img {height: 100px; width: 500px;}
+
+</style>
+</head>
+<body>
+
+<section>
+
+<h1>fit-content(50ch)</h1>
+<div class="grid" id="fitcontent">
+<p>Short content, 29 characters.</p>
+<p><img src="ph.png">This is longer content, which reaches a total of 63 characters.</p>
+<p>This is still longer content, going on and on, causing line-wraps and the growth of the row’s height as it makes its way up to 151 characters in total.</p>
+
+</div>
+
+<h1>minmax(min-content,50ch)</h1>
+<div class="grid" id="minmax">
+<p>Short content, 29 characters.</p>
+<p><img src="ph.png">This is longer content, which reaches a total of 63 characters.</p>
+<p>This is still longer content, going on and on, causing line-wraps and the growth of the row’s height as it makes its way up to 151 characters in total.</p>
+
+</div>
+
+
+</section>
+
+</body>
+</html>
