@@ -4,9 +4,22 @@
 <title>CSS3 test: border-radius</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="c/base.css" type="text/css">
+<style type="text/css">
+.arena [class]::before {content: "[." attr(class) "]"; font: 1em Consolas, monospace, serif;}
+</style>
 <style type="text/css" id="tests">
-.arena p {border: 3px solid; border-radius: 10px;}
-.arena .p02 {border-radius: -10px;}
+.arena p {border: 5px solid black; padding: 10px; display: inline-block; color: gray;}
+.p01 {border-radius: 10px;}
+.p02 {border-radius: -10px;}
+.p03 {border-radius: 10px 20px;}
+.p04 {border-radius: 10px 20px 30px;}
+.p05 {border-radius: 10px 20px 30px 40px;}
+.p06 {border-radius: 10px / 20px;}
+.p07 {border-radius: 10px 20px / 30px 40px;}
+.p08 {border-radius: 10px 20px 30px / 40px 50px 60px;}
+.p09 {border-radius: 10px 20px 30px 40px / 50px 60px 70px 80px;}
+.p10 {border-radius: 10px / 20px 30px 40px 50px;}
+.p11 {border-radius: 10px 20px 30px 40px / 50px;}
 </style>
 </head>
 <body id="www-meyerweb-com" class="css test suite">
@@ -14,8 +27,17 @@
 
 <div class="arena">
 
-<p class="p01">[p01] A paragraph.</p>
-<p class="p02">[p02] Another paragraph.</p>
+<p class="p01">A paragraph.</p>
+<p class="p02">A paragraph.</p>
+<p class="p03">A paragraph.</p>
+<p class="p04">A paragraph.</p>
+<p class="p05">A paragraph.</p>
+<p class="p06">A paragraph.</p>
+<p class="p07">A paragraph.</p>
+<p class="p08">A paragraph.</p>
+<p class="p09">A paragraph.</p>
+<p class="p10">A paragraph.</p>
+<p class="p11">A paragraph.</p>
 
 </div>
 
