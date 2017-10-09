@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Min-content</title>
+<style type="text/css">
+head, #tests {display: block;}
+#tests {background: #DDD; padding: 1ch 2ch 2ch; border-bottom: 3px double gray;
+	white-space: pre-wrap; font: smaller Consolas, monospace;}
+</style>
+<style type="text/css" id="tests">
+div[id] {outline: 1px dashed red; margin-bottom: 2em; width: 10em;}
+div[id] > b {outline: 1px dotted green;}
+#t01 {
+	display: grid;
+	grid-template-columns: 1fr min-content;
+	grid-template-rows: min-content min-content;
+}
+#t02 {
+	display: grid;
+	grid-template-columns: 1fr min-content;
+	grid-template-rows: min-content 1fr;
+}
+</style>
+</head>
+<body>
+
+<p>Prefixfree is <strong>not loaded</strong> in this test.  See <a href="prefixfree-on.html">the same test with prefixfree loaded</a>.</p>
+
+<div id="t01">
+<b>1</b>
+<b>2</b>
+<b>3</b>
+<b>4</b>
+</div>
+
+<div id="t02">
+<b>1</b>
+<b>2</b>
+<b>3</b>
+<b>4</b>
+</div>
+
+</body>
+</html>
