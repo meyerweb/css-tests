@@ -11,6 +11,10 @@ li img {height: 1.5em;}
  li[lang|="en"] {color: green;}
 li[class|="select"] {color: green;}
  img[src|="i/tester"] {border: 5px solid green;}
+
+li::after {font: 0.9em monospace, serif; margin-left: 0.5ch;}
+ li[lang]::after {content: attr(lang);}
+li[class]::after {content: attr(class);}
 </style>
 </head>
 <body>
@@ -18,15 +22,15 @@ li[class|="select"] {color: green;}
 <div>
 
 <ol>
-<li lang="en">List item, language of <code>en</code></li>
-<li lang="en-US">List item, language of <code>en-US</code></li>
-<li lang="en-US-GL">List item, language of <code>en-US-GL</code></li>
-<li class="select">List item, class <code>select</code></li>
-<li class="select-me">List item, class <code>select-me</code></li>
-<li class="select-me please">List item, class <code>select-me please</code></li>
-<li class="select me please">List item, class <code>select-me-please</code></li>
-<li class="please select-me">List item, class <code>please select-me</code></li>
-<li class="please select me">List item, class <code>please select me</code></li>
+<li lang="en">List item, language</li>
+<li lang="en-US">List item, language</li>
+<li lang="en-US-GL">List item, language</li>
+<li class="select">List item, class</li>
+<li class="select-me">List item, class</li>
+<li class="select-me please">List item, class</li>
+<li class="select-me-please">List item, class</li>
+<li class="please select-me">List item, class</li>
+<li class="please select me">List item, class</li>
 <li><img src="i/tester.jpg"> Image, source <code>tester.jpg</code></li>
 <li><img src="i/tester-sm.jpg"> Image, source <code>tester-sm.jpg</code></li>
 </ol>
