@@ -5,7 +5,7 @@
 <LINK rel="stylesheet" type="text/css" href="static.css" media="screen" title="Default Styles">
 <LINK rel="alternate stylesheet" type="text/css" href="W3C-rsrc-test.css" media="screen" title="Experimental W3C Styles">
 <STYLE type="text/css">
-H1 {border: solid 1px black; border-left: 3px solid black; background-color: #FFFFFF;}
+H1 {border: solid 1px black; border-left: 3px solid black; background-colour: #FFFFFF;}
 H4 {border-bottom: 1px solid black; margin-left: 2em; margin-right: 5em; font-variant: small-caps; margin-bottom: 0.5em;}
 UL {list-style-type: none;}
 </STYLE>
@@ -32,7 +32,7 @@ For each property, there is at least one page which tests the property's values 
 <LI>3.0 <A HREF="sec30.htm">The Cascade</A>
 <LI>4.0 <A HREF="sec40.htm">Formatting Model</A>
 <LI>5.2 <A HREF="sec52.htm">Font Properties</A>
-<LI>5.3 <A HREF="sec53.htm">Color and Background Properties</A>
+<LI>5.3 <A HREF="sec53.htm">colour and Background Properties</A>
 <LI>5.4 <A HREF="sec54.htm">Text Properties</A>
 <LI>5.5 <A HREF="sec55.htm">Box Properties</A>
 <LI>5.6 <A HREF="sec56.htm">Classification Properties</A>
@@ -53,7 +53,7 @@ Feedback regarding the CSS1 Test Suite should be sent to <TT><A HREF="mailto:css
 </P>
 
 <TABLE cellpadding="5" cellspacing="0" border="0" style="border: solid 1px black;">
-<TR bgcolor="white" valign="middle">
+<TR bgcolour="white" valign="middle">
 <TD width="50%" style="border: none 0px;">
 <SMALL>The CSS1 Test Suite is a joint effort of the <A HREF="http://www.w3.org/">World Wide Web Consortium</A>, the <A HREF="http://www.nist.gov/">National Insititue of Standards and Technology</A>, and <A HREF="http://www.cwru.edu/">Case Western Reserve University</A>.</SMALL>
 </TD>

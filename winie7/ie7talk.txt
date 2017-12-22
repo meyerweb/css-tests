@@ -98,19 +98,19 @@ img[alt] {
 
 a[href$=".pdf"] {
 	padding-right: 18px;
-	background: url(/pix/pdf-icon.gif) 
+	background: url(/pix/pdf-icon.gif)
 	  100% 50% no-repeat;
 }
 
 a[title*="(PDF"] {
 	padding-right: 18px;
-	background: url(/pix/pdf-icon.gif) 
+	background: url(/pix/pdf-icon.gif)
 	  100% 50% no-repeat;
 }
 
 *[href*="aneventapart.com"] {
 	font-weight: bold;
-	color: maroon;
+	colour: maroon;
 	background: #AEA571;
 }
 

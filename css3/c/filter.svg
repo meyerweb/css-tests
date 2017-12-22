@@ -30,8 +30,8 @@
 			<feConvolveMatrix kernelMatrix="-2 0 0 0 1 0 0 0 2" divisor="1" />
 		</filter>
 		<filter id="emboss" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
-			<feColorMatrix type="luminanceToAlpha" />
-			<feDiffuseLighting surfaceScale="5" diffuseConstant="2.7171" lighting-color="rgb(255,216,128)">
+			<fecolourMatrix type="luminanceToAlpha" />
+			<feDiffuseLighting surfaceScale="5" diffuseConstant="2.7171" lighting-colour="rgb(255,216,128)">
 				<feDistantLight azimuth="42" elevation="13" />
 			</feDiffuseLighting>
 		</filter>

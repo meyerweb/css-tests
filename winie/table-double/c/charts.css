@@ -6,7 +6,7 @@ table {padding: 0.5em; margin: 0.25em 0 1em;
 table th, table td {padding: 0.25em 0.4em;
 	vertical-align: middle;}
 .main table p {margin: 0;}
-p.note {font-style: italic; font-size: 92.5%; margin: -0.75em 0 0.75em;}	
+p.note {font-style: italic; font-size: 92.5%; margin: -0.75em 0 0.75em;}
 
 /* data tables */
 
@@ -19,11 +19,11 @@ table.data thead th:empty {border-top: none; background: none;}
 table.data tbody th, table.data tfoot th {text-align: left; border-left: 1px solid #CCC;}
 
 table.data tbody td {width: 4em;}
-table.data tbody td.zero {color: #666;}
+table.data tbody td.zero {colour: #666;}
 table.data tbody td.hilt {background: #EEE;}
 table.data thead th.total, table.data tbody td.total {
-	border-left: 2px solid #CCC; color: gray;}
-table.data tfoot {color: gray;}
+	border-left: 2px solid #CCC; colour: gray;}
+table.data tfoot {colour: gray;}
 table.data tfoot th, table.data thead th.total {
 	text-align: right; background: none; padding: 0.6em 0.33em 0.4em;}
 table.data tfoot th, table.data tfoot td {border-top: 2px solid #CCC;}
@@ -38,7 +38,7 @@ table.chart.bar tbody td {width: 30em;}
 table.chart.bar tbody td p {position: relative; top: 0;
 	padding: 3px 0 1px 1px; height: 1em;
 	text-align: right;
-	background-color: #5CB9DC;}
+	background-colour: #5CB9DC;}
 table.chart.bar tbody td p span {position: absolute; top: 0.25em; left: 100%;
   margin-left: 0.33em; font-size: 93%;}
 
@@ -70,14 +70,14 @@ table.chart.combo.double tbody td {width: 50%;}
 table.chart.combo.double tbody td div {background: #5CB9DC;}
 table.chart.combo.double tbody td.p1 div {width: 200%;}
 table.chart.combo.double tbody td.p1 p {text-align: left;
-	background-color: #B2D43A; position: relative; z-index: 1;}
+	background-colour: #B2D43A; position: relative; z-index: 1;}
 
 table.chart.combo.double tbody td.p2 {text-align: right;}
 table.chart.combo.double tbody td.p2 p {width: auto !important; position: relative; z-index: 2;}
 
 table.chart.combo.double tfoot th span {padding-left: 0.5em; border-left: 1.2em solid;}
-table.chart.combo.double tfoot th.p1 span {border-left-color: #B2D43A;}
-table.chart.combo.double tfoot th.p2 span {border-left-color: #5CB9DC;}
+table.chart.combo.double tfoot th.p1 span {border-left-colour: #B2D43A;}
+table.chart.combo.double tfoot th.p2 span {border-left-colour: #5CB9DC;}
 
 /* treys */
 
@@ -86,7 +86,7 @@ table.chart.combo.triple tbody td div {width: 300%; position: relative;}
 
 table.chart.combo.triple tbody td.p1 div {background: #FEA318;}
 table.chart.combo.triple tbody td.p1 p {text-align: left;
-	background-color: #B2D43A;}
+	background-colour: #B2D43A;}
 
 table.chart.combo.triple tbody td.p2 {text-align: center; vertical-align: top;}
 table.chart.combo.triple tbody td.p2 div {margin-left: -100%;
@@ -100,9 +100,9 @@ table.chart.combo.triple tbody td.p3 p {margin-left: auto;
 	background: #5CB9DC;}
 
 table.chart.combo.triple tfoot th span {padding-left: 0.5em; border-left: 1.2em solid;}
-table.chart.combo.triple tfoot th.p1 span {border-left-color: #B2D43A;}
-table.chart.combo.triple tfoot th.p2 span {border-left-color: #FEA318;}
-table.chart.combo.triple tfoot th.p3 span {border-left-color: #5CB9DC;}
+table.chart.combo.triple tfoot th.p1 span {border-left-colour: #B2D43A;}
+table.chart.combo.triple tfoot th.p2 span {border-left-colour: #FEA318;}
+table.chart.combo.triple tfoot th.p3 span {border-left-colour: #5CB9DC;}
 
 /* IE7 hack to fix middle bars on treys */
 
