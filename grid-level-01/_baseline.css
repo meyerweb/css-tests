@@ -7,7 +7,7 @@ head {display: block;}
 	border-bottom: 3px double #999;
 	background: #DDD;
 	background: linear-gradient(to top, #DDD, #EEE);
-	color: #333;
+	colour: #333;
 }
 body {
 	padding-top: 3em;

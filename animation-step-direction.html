@@ -8,7 +8,7 @@ html {background: silver;}
 body {background: white; margin: 1em; padding: 1em;}
 .diagram {height: 100px; width: 1000px;
 	background: linear-gradient(to right,
-	#CCC 10%, 10%, 
+	#CCC 10%, 10%,
 	#BBB 20%, 20%,
 	#AAA 30%, 30%,
 	#999 40%, 40%,
@@ -28,11 +28,11 @@ section .label {background: url(i/anim-arrow.png) no-repeat 0 100% / 900px 40px;
 body:hover {background: #FFE;}
 body:hover * {animation-play-state: paused;}
 .stepanim {height: 100px; width: 100px;
-	background: green; color: white; display: flex;
+	background: green; colour: white; display: flex;
 	justify-content: center; align-items: center; font: 2em Arvo, serif;
-	animation: stepcolor 7.5s steps(9,end) forwards, stepmove 7.5s steps(9,end) forwards;}
+	animation: stepcolour 7.5s steps(9,end) forwards, stepmove 7.5s steps(9,end) forwards;}
 #an02 {animation-timing-function: steps(9,start), steps(9,start);}
-@keyframes stepcolor {
+@keyframes stepcolour {
 	from {background: #CCC;}
 	to {background: #333;}
 }

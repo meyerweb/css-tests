@@ -5,20 +5,20 @@
 <title>Custom Properties</title>
 <style type="text/css">
 html {
-    --base-color: #639;
+    --base-colour: #639;
 }
 aside {
-    --base-color: #F60;
+    --base-colour: #F60;
 }
 
-h1 {color: var(--base-color);}
+h1 {colour: var(--base-colour);}
 
-id[^="support"] {color: silver;}
-@supports (color: var(--test)) {
-	#support1 {color: green;}
+id[^="support"] {colour: silver;}
+@supports (colour: var(--test)) {
+	#support1 {colour: green;}
 }
 @supports (--test: pass) {
-	#support2 {color: green;}
+	#support2 {colour: green;}
 }
 
 </style>
