@@ -1,0 +1,26 @@
+body {background-position: top left;}
+h1 {background-position : 50% 67%;}
+h2 {top: 1em; left : 2ch; bottom: 30%; right: 4q}
+h3 {-webkit-animation-delay : 5s;}
+h3 {-webkit-animation-delay: 5 s ;}
+h4 {box-align: flex-start; justify-content: flex-end;}
+h4 {box-align : flex-start ; justify-content : flex-end ;}
+h5:nth-child(odd) {}
+*:nth-column(2n+2) {dominant-baseline: center;}
+*:nth-column (2n+2) {dominant-baseline : center;}
+
+@media (screen and min-width: 960px) {
+	background: white;
+	h1 em {color: #334455;}
+	h1:first-child {color: white;}
+}
+@media (screen and max-width: 960px ) {
+	background : rgba(100%, 98% ,100%, 0.67);
+}
+
+@supports (display: grid) {
+	body {display: grid;
+		grid-template-columns: repeat(2,1fr) 80ch repeat(2,1fr);
+		grid-template-rows : repeat( 4, 1fr ) repeat(2,10ch);
+	}
+}
