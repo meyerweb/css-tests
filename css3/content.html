@@ -9,14 +9,22 @@ ol {counter-set: counter1 100; counter-reset: counter2 100;}
 ol li {counter-increment: counter1 counter2;}
 
 *[class^="li"]::after {color: green;}
+
 .li01::after {content: " with trailing generated content.";}
 .li02::after {content: " [class " attr(class) "]";}
-.li03::after,
-.li04::after {content: " with a counter in its trailing generated content. " counter(nullcount);}
-.li05::after,
-.li06::after {content: " with counters in its trailing generated content. " counter(counter1) " | " counter(counter2);}
-.li07::after {content: leader(dotted) "with trailing generated content.";}
-.li08 {content: "This list item’s content has been replaced with generated content.";}
+.li03::after {content: url(i/box-red.gif);}
+.li04::after {content: " " url(i/box-red.gif) "class " attr(class) url(i/box-red.gif);}
+.li05::after {content: close-quote;}
+.li07::after,
+.li08::after {content: " with a counter in its trailing generated content. " counter(nullcount);}
+.li09::after,
+.li10::after {content: " with counters in its trailing generated content. " counter(counter1) " | " counter(counter2);}
+.li11::after {content: leader(dotted) "with trailing generated content.";}
+.li12 {content: "This list item’s content has been replaced with generated content.";}
+.li13::after {content: linear-gradient(45deg, red, white, red);
+		display: inline-block; height: 1em; width: 1em;
+		border: 2px solid gray; margin: 0 1em;}
+
 </style>
 </head>
 <body id="www-meyerweb-com" class="css test suite">
@@ -33,6 +41,11 @@ ol li {counter-increment: counter1 counter2;}
 <li class="li06">A list item</li>
 <li class="li07">A list item</li>
 <li class="li08">A list item</li>
+<li class="li09">A list item</li>
+<li class="li10">A list item</li>
+<li class="li11">A list item</li>
+<li class="li12">A list item</li>
+<li class="li13">A list item</li>
 </ol>
 
 </div>
