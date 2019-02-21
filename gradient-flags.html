@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title></title>
+<style type="text/css">
+div {height: 10em; width: 19em; margin: 3em;
+	box-shadow: 0 0 0.5em rgba(0,0,0,0.25),
+		0.4em 0.6em 0.5em rgba(0,0,0,0.25);}
+div#rainbow {
+	background: linear-gradient(180deg,
+		red 0%, red 16.7%, 
+		orange 16.7%, orange 33.3%,
+		yellow 33.3%, yellow 50%, 
+		green 50%, green 66.7%, 
+		blue 66.7%, blue 83.3%, 
+		purple 83.3%, purple 100%);
+}
+
+div#usa {
+	background-image:
+		linear-gradient(0deg, #3C3B6E, #3C3B6E),
+		repeating-linear-gradient(180deg,
+			#B22234, #B22234 7.7%, white 7.7%, white 15.4%);
+	background-size: 40% 53.85%, 100% 100%;
+	background-repeat: no-repeat;
+	background-position: top left, top center;
+}
+
+div#distress {
+	background-image:
+		linear-gradient(0deg, #3C3B6E, #3C3B6E),
+		repeating-linear-gradient(180deg,
+			#B22234, #B22234 7.7%, white 7.7%, white 15.4%);
+	background-size: 40% 53.85%, 100% 100%;
+	background-repeat: no-repeat;
+	background-position: bottom left, top center;
+}
+</style>
+</head>
+<body>
+
+<div id="rainbow"></div>
+<div id="usa"></div>
+<div id="distress"></div>
+
+</body>
+</html>
