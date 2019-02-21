@@ -7,9 +7,9 @@ $inc = $_SERVER['DOCUMENT_ROOT'] . '/inc/';
 <title>CSS3 tests: index</title>
 <?php include($inc . "head.html"); ?>
 <style type="text/css" media="all">
-table {margin: 1em; border-collapse: collapse;}
+table {margin: 1em; border-collapse: collapse; font-family: Source Sans Pro, Open Sans, Helvetica, sans-serif;}
 th {text-align: left;}
-th, td {padding: 0.25em 1.25em 0.1em 1.25em;}
+th, td {padding: 0.25em 1.25em 0.1em 0.5em;}
 td {border-bottom: 1px solid silver;}
 tr:first-child td {border-top: 1px solid silver;}
 </style>
