@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Logical Properties</title>
+<style type="text/css">
+th:not(:empty) {background: gray; color: white; padding: 0.33em;}
+tbody th {writing-mode: vertical-lr; padding: 1px;}
+td {border: 1px solid;}
+section {display: flex;}
+ol {display: flex; align-items: flex-start; background: hsla(180,100%,25%,0.2);}
+ol li {background: green; border: 1px solid; margin-inline-end: 2em;}
+ol li div {background: silver; height: 3em; width: 3em;
+	align-items: stretch; margin: 0;}
+
+.hrl {direction: rtl;}
+.vrl {writing-mode: vertical-rl;}
+.vlr {writing-mode: vertical-lr;}
+
+.row {flex-direction: row;}
+.row.reverse {flex-direction: row-reverse;}
+.col {flex-direction: column;}
+.col.reverse {flex-direction: column-reverse;}
+
+.margin li:nth-child(1) div {margin-block-start: 1em;}
+.margin li:nth-child(2) div {margin-block-end: 1em;}
+.margin li:nth-child(3) div {margin-inline-start: 1em;}
+.margin li:nth-child(4) div {margin-inline-end: 1em;}
+
+.border li:nth-child(1) div {border-block-start: 1em double green;}
+.border li:nth-child(2) div {border-block-end: 1em double green;}
+.border li:nth-child(3) div {border-inline-start: 1em double green;}
+.border li:nth-child(4) div {border-inline-end: 1em double green;}
+
+.padding li:nth-child(1) div {margin: 0; padding-block-start: 1em;}
+.padding li:nth-child(2) div {margin: 0; padding-block-end: 1em;}
+.padding li:nth-child(3) div {margin: 0; padding-inline-start: 1em;}
+.padding li:nth-child(4) div {margin: 0; padding-inline-end: 1em;}
+.padding li div {background: transparent;}
+.padding li div img {max-height: 100%; max-width: 100%; opacity: 0.5;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css">
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Left-to-right</th>
+<th>Right-to-left</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Horizontal</th>
+
+<td>
+
+<ol class="margin">
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+</ol>
+
+<ol class="border">
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+</ol>
+
+<ol class="padding">
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+</ol>
+
+</td>
+<td>
+
+<ol class="margin hrl">
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+</ol>
+
+<ol class="border hrl">
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+</ol>
+
+<ol class="padding hrl">
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+</ol>
+
+</td>
+</tr>
+<tr>
+<th>Vertical</th>
+
+<td>
+
+<section>
+<ol class="margin vlr">
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+</ol>
+
+<ol class="border vlr">
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+</ol>
+
+<ol class="padding vlr">
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+</ol>
+</section>
+
+</td>
+<td>
+
+<section>
+<ol class="margin vrl">
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+</ol>
+
+<ol class="border vrl">
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+</ol>
+
+<ol class="padding vrl">
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+</ol>
+</section>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Row flex</th>
+<th>Column flex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Normal</th>
+
+<td>
+
+<ol class="margin row">
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+</ol>
+
+<ol class="border row">
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+</ol>
+
+<ol class="padding row">
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+</ol>
+
+</td>
+<td>
+
+<section>
+<ol class="margin col">
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+</ol>
+
+<ol class="border col">
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+</ol>
+
+<ol class="padding col">
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+</ol>
+</section>
+
+</td>
+</tr>
+<tr>
+<th>Reverse</th>
+
+<td>
+
+<ol class="margin row reverse">
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+</ol>
+
+<ol class="border row reverse">
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+</ol>
+
+<ol class="padding row reverse">
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+</ol>
+
+</td>
+<td>
+
+<section>
+<ol class="margin col reverse">
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+</ol>
+
+<ol class="border col reverse">
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+<li><div></div></li>
+</ol>
+
+<ol class="padding col reverse">
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+<li><div><img src="i/redbox.gif"></div></li>
+</ol>
+</section>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>

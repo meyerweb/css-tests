@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Logical Properties</title>
+<style type="text/css">
+th:not(:empty) {background: gray; color: white; padding: 0.33em;}
+tbody th {writing-mode: vertical-lr; padding: 1px;}
+td {border: 1px solid;}
+section {display: flex;}
+article {display: flex; align-items: flex-start; justify-content: flex-start;
+	margin: 1em; padding: 1px;
+	background: hsla(180,100%,25%,0.2);
+	counter-reset: count;}
+article div {border: 1px solid;
+	counter-increment: count;}
+article div::before {display: flex; justify-content: center; align-items: center;
+	height: 3em; width: 3em; background: hsl(120,100%,20%,0.5);
+	content: counter(count);}
+article b {background: black; align-self: stretch; min-width: 1px; min-height: 1px;}
+
+.hrl {direction: rtl;}
+.vrl {writing-mode: vertical-rl;}
+.vlr {writing-mode: vertical-lr;}
+
+.row {flex-direction: row;}
+.row.reverse {flex-direction: row-reverse;}
+.col {flex-direction: column;}
+.col.reverse {flex-direction: column-reverse;}
+
+.margin div:nth-of-type(1) {margin-block-start: 1em;}
+.margin div:nth-of-type(2) {margin-block-end: 1em;}
+.margin div:nth-of-type(3) {margin-inline-start: 1em;}
+.margin div:nth-of-type(4) {margin-inline-end: 1em;}
+
+.border div:nth-of-type(1) {border-block-start: 1em double;}
+.border div:nth-of-type(2) {border-block-end: 1em double;}
+.border div:nth-of-type(3) {border-inline-start: 1em double;}
+.border div:nth-of-type(4) {border-inline-end: 1em double;}
+
+.padding div:nth-of-type(1) {padding-block-start: 1em;}
+.padding div:nth-of-type(2) {padding-block-end: 1em;}
+.padding div:nth-of-type(3) {padding-inline-start: 1em;}
+.padding div:nth-of-type(4) {padding-inline-end: 1em;}
+</style>
+</head>
+<body id="www-meyerweb-com" class="css">
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Left-to-right</th>
+<th>Right-to-left</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Horizontal</th>
+
+<td>
+
+<article class="margin">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+
+<article class="border">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+
+<article class="padding">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+
+</td>
+<td>
+
+<article class="margin hrl">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+
+<article class="border hrl">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+
+<article class="padding hrl">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+
+</td>
+</tr>
+<tr>
+<th>Vertical</th>
+
+<td>
+
+<section>
+<article class="margin vlr">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+
+<article class="border vlr">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+
+<article class="padding vlr">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+</section>
+
+</td>
+<td>
+
+<section>
+<article class="margin vrl">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+
+<article class="border vrl">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+
+<article class="padding vrl">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+</section>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Normal</th>
+<th>Reverse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Row flex</th>
+
+<td>
+
+<article class="margin row">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+
+<article class="border row">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+
+<article class="padding row">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+
+</td>
+<td>
+
+<article class="margin row reverse">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+
+<article class="border row reverse">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+
+<article class="padding row reverse">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+
+</td>
+</tr>
+<tr>
+<th>Column flex</th>
+
+<td>
+
+<section>
+<article class="margin col">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+
+<article class="border col">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+
+<article class="padding col">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+</section>
+
+</td>
+<td>
+
+<section>
+<article class="margin col reverse">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+
+<article class="border col reverse">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+
+<article class="padding col reverse">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</article>
+</section>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>

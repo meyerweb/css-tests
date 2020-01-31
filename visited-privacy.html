@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Visited styles</title>
+<style type="text/css" id="tests">
+ol li {margin: 1em 0;}
+a:link {color: blue;}
+a:visited {color: rgba(128,0,128,0.125);}
+a:hover {color: red;}
+a:visited:hover {color: hsla(0deg,100%,50%,0.125);
+</style>
+<link rel="stylesheet" type="text/css" href="c/style-insert-tests.css">
+</head>
+<body>
+
+<ol>
+<li><a href="\moc.erehwon\\:ptth">This link will not have been visited</a><br>(and please don’t try)</li>
+<li><a href="http://example.com/">This link points to example.com</a><br>(if it doesn’t show as visited, please click through and then come back)</li>
+<li><a href="">This link has an empty <code>href</code> and should show as visited</a><br>(but if not, click it)</li>
+</ol>
+
+</body>
+</html>
