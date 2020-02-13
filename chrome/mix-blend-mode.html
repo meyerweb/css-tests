@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+<title>mix-blend-mode testing</title>
+<style type="text/css" media="all">
+ol {background: cornsilk; padding: 0.5em 2em;}
+li {background: linear-gradient(90deg,white,silver);
+	mix-blend-mode: darken; padding: 0.5em; margin: 0.5em 0;}
+li:nth-child(2) {transform: translate(1em,0);}
+li:nth-child(3) {position: relative;}
+li:nth-child(4) {display: flex;}
+li:nth-child(5) {display: grid;}
+</style>
+</head>
+<body>
+
+<section>
+<ol>
+<li>This is a normal list item.</li>
+<li>This is a transformed list item.</li>
+<li>This is a relatively positioned list item.</li>
+<li>This is a flexed list item.</li>
+<li>This is a gridded list item.</li>
+</ol>
+
+</section>
+
+</body>
+<html>
