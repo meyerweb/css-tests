@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>03 Cascade Layers</title>
+<style type="text/css">
+@layer page {
+   h1 {color: maroon;}
+   p {margin-top: 0;}
+}
+
+@layer site {
+   body {font-size: 1.1rem;}
+   h1 {color: orange;}
+   p {margin-top: 0.5em;}
+}
+
+p {margin-top: 1em;}
+
+@layer site, component, page;
+</style>
+</head>
+<body>
+
+
+<h1>This is an H1</h1>
+<p>
+This is a paragraph.
+</p>
+
+</body>
+</html>
