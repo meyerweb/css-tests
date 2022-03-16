@@ -1,0 +1,8 @@
+main {
+    max-width: 40em;
+    margin: 0 auto;
+}
+figure.numbered.equation {
+    display: grid;
+    grid-template-columns: auto min-content;
+}
